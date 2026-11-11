@@ -5,11 +5,11 @@
 ---
 
 # CUADERNO MAESTRO DE CONSTRUCCIÓN Y DOCUMENTACIÓN TÉCNICA
-**Nombre del Videojuego:** EcoCircuit: Misión Red Eléctrica Inteligente (Smart Grid Guardian)  
+**Nombre del Videojuego:** Tesoros de Colombia: Guardianes del Patrimonio  
 **Curso:** Grado 11°  
 **Equipo de Proyecto:**
 - **Supervisor & Auditor Técnico (Lead):** AI Lead Engineer (Antigravity)
-- **Ingeniero Frontend & Desarrollador Principal:** Ingeniero Frontend de Proyecto
+- **Ingeniero en Sistemas & Desarrollador Frontend:** Desarrollador Senior de Software
 - **Rol de la IA:** Copiloto Técnico, Asistente de Investigación y Validador Instruccional
 
 ---
@@ -36,7 +36,7 @@
    - [Misión 15: Game Design Document (GDD Completo)](#misión-15-game-design-document-gdd-completo)
    - [Rúbrica de Evaluación Entrega 1](#rúbrica-de-evaluación-entrega-1)
 4. [ENTREGA 2: PROTOTIPO FUNCIONAL (30%)](#4-entrega-2-prototipo-funcional-30)
-   - [Misión 16: Selección y Justificación de la Tecnología](#misión-16-selección-y-justificación-de-la-tecnología)
+   - [Misión 16: Selección y Justificación de la Tecnología (Phaser 3)](#misión-16-selección-y-justificación-de-la-tecnología-phaser-3)
    - [Misión 17: Arquitectura de Software y Archivos](#misión-17-arquitectura-de-software-y-archivos)
    - [Misión 18: Construcción Modular por Componentes (1 al 10)](#misión-18-construcción-modular-por-componentes-1-al-10)
    - [Misión 19: Comprensión y Explicación del Código](#misión-19-comprensión-y-explicación-del-código)
@@ -61,7 +61,7 @@
 # 1. MARCO DEL PROYECTO Y REGLAS METODOLÓGICAS
 
 ### 🎯 La Misión Central
-Diseñar y desarrollar un videojuego que permita aprender, practicar o comprender un tema educativo mediante una experiencia interactiva funcional web basada en JavaScript.
+Diseñar y desarrollar un videojuego que permita aprender, practicar o comprender un tema educativo sobre la **historia y cultura de Colombia** mediante una experiencia interactiva funcional web basada en JavaScript.
 > **Pregunta Clave:** *¿Qué aprenderá el jugador al jugar?*  
 > **Premisa:** *No basta con que sea divertido; debe tener un propósito pedagógico verificable y real.*
 
@@ -69,15 +69,15 @@ Diseñar y desarrollar un videojuego que permita aprender, practicar o comprende
 > **«Si no puedes explicar cómo funciona, todavía no puedes decir que lo construiste.»**
 
 ### 🤖 Política de Uso de Inteligencia Artificial (IA como Copiloto)
-- **La IA no hace el proyecto por ti.** El equipo humano toma las decisiones de arquitectura, diseño estético y mecánicas.
-- **Prohibido solicitar:** *"Hazme el videojuego completo"*. Todo desarrollo se realiza por **componentes modulares progresivos**.
-- Cada interacción relevante con la IA debe registrarse en la **Bitácora de IA**, demostrando criterio de aceptación, refactorización y entendimiento de cada línea de código.
+- **La IA no hace el proyecto por ti.** El equipo humano toma las decisiones conceptuales y comprende cada bloque de código.
+- **Prohibido solicitar:** *"Hazme el videojuego completo"*. El desarrollo se realiza por **componentes modulares progresivos**.
+- Cada interacción relevante con la IA debe registrarse en la **Bitácora de IA**.
 
 ### 📊 Desglose de Evaluación Oficial
 | Entrega | Producto | Ponderación |
 | :--- | :--- | :--- |
-| **Entrega 1** | Diseño del proyecto STEAM (GDD, Storyboard, Wireframes, Fórmulas) | **30%** |
-| **Entrega 2** | Prototipo Funcional (Arquitectura, 10 Componentes, Interacción JS) | **30%** |
+| **Entrega 1** | Diseño del proyecto STEAM (GDD, Storyboard, Wireframes, Salas) | **30%** |
+| **Entrega 2** | Prototipo Funcional con Phaser 3 (Arquitectura, 10 Componentes) | **30%** |
 | **Entrega 3** | Videojuego Final, Pruebas con Usuarios, Mejoras y Sustentación | **40%** |
 | **TOTAL** | | **100%** |
 
@@ -85,32 +85,32 @@ Diseñar y desarrollar un videojuego que permita aprender, practicar o comprende
 
 # 2. ESTRUCTURA DEL PROYECTO Y REPOSITORIO
 
-La arquitectura de archivos adoptada para garantizar modularidad y mantenibilidad es:
+Repositorio en GitHub: `https://github.com/ohundelshaussen/Videojuego-STEAM.git`
 
 ```text
-EcoCircuit-Videojuego-STEAM/
+Videojuego-STEAM/
 │
 ├── docs/
-│   ├── DOCUMENTACION_COMPLETA_STEAM.md   <-- (Documento maestro base para exportar a .docx)
-│   ├── GDD.md                            <-- Game Design Document ejecutivo
-│   ├── BITACORA_IA.md                    <-- Registro cronológico de prompts y decisiones
-│   └── BITACORA_ERRORES.md               <-- Control de fallos, causas y soluciones
+│   └── DOCUMENTACION_COMPLETA_STEAM.md   <-- (Documento maestro para exportar a .docx)
 │
 ├── src/
-│   ├── index.html                        <-- Estructura de vistas (Inicio, Tutorial, Juego, HUD, Fin)
-│   ├── style.css                         <-- Estilos visuales modernos (Solarpunk / Cyber-Eco)
+│   ├── index.html                        <-- Contenedor de la aplicación y modales
+│   ├── style.css                         <-- Estilos de museo, paleta tricolor y HUD
+│   ├── lib/
+│   │   └── phaser.min.js                 <-- Motor oficial Phaser 3 (Uso offline y CDN fallback)
 │   ├── js/
-│   │   ├── config.js                     <-- Constantes físicas, parámetros de nivel y balance
-│   │   ├── gameState.js                  <-- Estado global (puntuación, energía, baterías, tiempo)
-│   │   ├── simulationEngine.js           <-- Núcleo matemático de generación, consumo y física
-│   │   ├── uiController.js               <-- Manejo de pantallas, HUD y retroalimentación didáctica
-│   │   ├── challengeSystem.js            <-- Sistema de preguntas y micro-retos didácticos
-│   │   └── game.js                       <-- Ciclo de juego principal (Game Loop y eventos)
+│   │   ├── config.js                     <-- Configuración de Phaser y base de datos de artefactos
+│   │   ├── scenes/
+│   │   │   ├── BootScene.js              <-- Precarga y generación de texturas vectoriales
+│   │   │   ├── MenuScene.js              <-- Menú interactivo y selección de salas
+│   │   │   ├── GameScene.js              <-- Mecánica Drag & Drop y validación de vitrinas
+│   │   │   └── ResultScene.js            <-- Pantalla de resultados, medallas y diplomas
+│   │   └── main.js                       <-- Inicialización de la instancia de Phaser.Game
 │   └── assets/
-│       ├── images/                       <-- Iconos SVG/PNG (paneles, turbinas, baterías, ciudad)
-│       └── sounds/                       <-- Efectos de audio (click, alerta, sobrecarga, victoria)
+│       ├── images/                       <-- Ilustraciones de artefactos colombianos
+│       └── sounds/                       <-- Efectos de acierto, error y música tradicional
 │
-└── README.md                             <-- Instrucciones de instalación y ejecución local
+└── README.md                             <-- Instrucciones de ejecución y documentación rápida
 ```
 
 ---
@@ -118,142 +118,145 @@ EcoCircuit-Videojuego-STEAM/
 # 3. ENTREGA 1: DISEÑO DEL PROYECTO STEAM (30%)
 
 ## Misión 1: Encontrar un Problema
-- **Área:** Ciencia, Medio Ambiente y Tecnología.
+- **Área:** Historia, Cultura, Ciencias Sociales y Tecnología.
 - **¿Qué problema queremos abordar?**  
-  La crisis de la transición energética global y la inestabilidad de las redes eléctricas modernas. A medida que las ciudades abandonan el carbón y el gas, surge el desafío de integrar fuentes renovables intermitentes (el sol no siempre brilla con la misma intensidad y el viento fluctúa). Los estudiantes desconocen la física y la matemática básica que permite balancear la oferta y la demanda eléctrica, entender la degradación de baterías y el impacto del CO2 en tiempo real.
+  El progresivo desconocimiento y desconexión de los jóvenes respecto al patrimonio histórico, arqueológico y cultural de Colombia. En la educación secundaria, las reliquias precolombinas (como la orfebrería Muisca o Quimbaya), los símbolos de la Independencia y las tradiciones vivas regionales suelen verse de manera abstracta o aburrida en textos planos, provocando que los estudiantes no sepan identificar ni valorar los símbolos de nuestra identidad nacional.
 - **¿A quién afecta?**  
-  A las comunidades urbanas y rurales que sufren cortes eléctricos (blackouts), a los ecosistemas afectados por emisiones térmicas y a los futuros ciudadanos que deben liderar la transición hacia matrices energéticas limpias.
+  A los estudiantes de educación media, a las comunidades escolares y a la memoria colectiva del país.
 - **¿Por qué es importante?**  
-  Porque el cambio climático exige descarbonizar la matriz eléctrica sin sacrificar la confiabilidad del servicio en hospitales, hogares y centros de producción.
+  Porque la identidad cultural y el reconocimiento de la diversidad es la base de la convivencia pacífica y el orgullo nacional. Conocer los tesoros de Colombia permite proteger nuestro patrimonio material e inmaterial frente al olvido y la apropiación indebida.
 - **¿Qué podría aprender una persona sobre este problema?**  
-  Aprenderá los principios de potencia eléctrica ($P = V \cdot I$), la relación entre radiación solar/velocidad de viento y generación eléctrica, la gestión de almacenamiento químico en baterías, el concepto de carga base vs. carga pico y la toma de decisiones basada en optimización de recursos finitos.
+  Aprenderá a reconocer artefactos y símbolos esenciales de tres grandes etapas de Colombia:
+  1. **Época Precolombina / Indígena:** La Balsa Muisca (leyenda de El Dorado), el Poporo Quimbaya, las Estatuas de San Agustín y la orfebrería Tairona.
+  2. **Época Colonial e Independencia:** El Florero de Llorente (20 de Julio), la Espada Libertadora de Simón Bolívar, las cartas secretas de Policarpa Salavarrieta ("La Pola") y las Murallas de Cartagena.
+  3. **Patrimonio Vivo y Tradición Regional:** El Sombrero Vueltiao (cultura Zenú), la Marimba de Chonta (música del Pacífico), el Canasto Cafetero (Eje Cafetero) y las Flores silleteras.
 
 ---
 
 ## Misión 2: Investigar el Problema
 ### Conceptos Clave Fundamentales:
-1. **Generación Renovable Variable:** La potencia de una celda fotovoltaica depende directamente de la irradiancia ($W/m^2$); una turbina eólica responde a una curva cúbica respecto a la velocidad del viento ($P \propto v^3$) entre velocidades de corte (cut-in y cut-out).
-2. **Ley de Conservación y Balance de Potencia:** En todo instante, la potencia total inyectada a la red más la potencia descargada de baterías debe satisfacer la demanda comunitaria ($\sum P_{gen} + P_{batería} \ge P_{demanda}$).
-3. **Eficiencia y Ciclo de Batería:** Las baterías no almacenan el 100% de la energía inyectada (pérdidas por calor, eficiencia $\approx 85\%$) y poseen una profundidad máxima de descarga (DoD) para evitar fallos.
-4. **Respaldo Térmico y Emisiones:** Cuando las fuentes limpias y las baterías no alcanzan, se debe encender generación fósil de respaldo, disparando la huella de carbono ($gCO_2/kWh$).
-5. **Sobrecarga y Estabilidad de Red:** Si la demanda supera críticamente a la generación o si un transformador supera el 120% de su capacidad nominal, la frecuencia decae provocando un fallo en cascada (apagón general).
+1. **Periodización Histórica Colombiana:** La transición desde las grandes sociedades indígenas prehispánicas, el choque colonial hispánico, el grito y consolidación de la República independiente, hasta la consolidación de las regiones culturales modernas.
+2. **Orfebrería y Metalurgia Prehispánica:** El uso de la aleación *tumbaga* (oro y cobre) por parte de los Muiscas y Quimbayas, no solo como adorno sino con un profundo sentido sagrado y cosmológico.
+3. **Memoria de la Gesta Libertadora:** El papel de los símbolos cotidianos (el florero que desató la revuelta del 20 de Julio de 1810) y el heroísmo de las mujeres en la Independencia (como La Pola).
+4. **Patrimonio Cultural Inmaterial (UNESCO):** Tradiciones vivas colombianas como la música de marimba del Pacífico Sur y las técnicas artesanales del Sombrero Vueltiao Zenú.
+5. **Conservación y Museología:** Las técnicas que emplean los curadores de museos para clasificar, contextualizar y proteger piezas históricas del polvo, la humedad y el desgaste temporal.
 
 ### Fuentes Confiables de Referencia:
-- Agencia Internacional de Energía Renovable (IRENA).
-- Laboratorio Nacional de Energías Renovables (NREL) - Modelos de Microredes.
-- Textos de Física General (Leyes de Circuitos y Termodinámica).
+- Museo del Oro del Banco de la República de Colombia.
+- Museo Nacional de Colombia.
+- Instituto Colombiano de Antropología e Historia (ICANH).
+- Ministerio de las Culturas, las Artes y los Saberes de Colombia.
 
 ---
 
 ## Misión 3: Definir el Jugador
 - **Edad:** 14 a 18 años.
-- **Grado:** 10° a 11° de Bachillerato / Educación Media Técnica.
-- **Conocimientos previos:** Operaciones aritméticas elementales, nociones básicas de energía, concepto cualitativo de corriente y medio ambiente.
-- **Intereses:** Videojuegos de estrategia, simulación de ciudades (estilo *SimCity* / *Factorio*), rompecabezas, tecnología y ecología.
-- **Necesidad educativa:** Conectar fórmulas abstractas de física y matemáticas con un impacto ecológico tangible y comprensible mediante la simulación visual.
+- **Grado:** 10° a 11° de Bachillerato.
+- **Conocimientos previos:** Nociones básicas sobre las regiones de Colombia y conocimiento general de los próceres patrios.
+- **Intereses:** Juegos visuales interactivos, puzzles de clasificación, retos de observación y coleccionismo.
+- **Necesidad educativa:** Una forma dinámica, interactiva y sin cálculos matemáticos pesados para interiorizar la historia de su país jugando.
 
 ---
 
 ## Misión 4: Crear el Objetivo Educativo
 > **Objetivo Definitivo:**  
-> *"Después de jugar **EcoCircuit**, el estudiante será capaz de calcular y equilibrar el balance de potencia entre generación limpia y demanda comunitaria ($\sum P_{gen} \ge P_{demanda}$), seleccionar y posicionar estratégicamente generadores solares y eólicos según las condiciones climáticas dinámicas, administrar ciclos de carga/descarga de baterías y prevenir apagones minimizando las emisiones de CO2."*
+> *"Después de jugar **Tesoros de Colombia: Guardianes del Patrimonio**, el estudiante será capaz de identificar y clasificar correctamente piezas icónicas del patrimonio cultural e histórico de Colombia, ubicándolas con precisión en sus períodos y salas históricas (Precolombina, Colonial/Independencia y Patrimonio Regional Vivo), reconociendo su significado cultural y fortaleciendo su sentido de identidad nacional."*
 
 ---
 
 ## Misión 5: Crear la Idea del Videojuego
-- **Nombre Provisional:** **EcoCircuit: Smart Grid 2050**
-- **Género:** Simulación de Estrategia, Gestión y Puzzle en Tiempo Real 2D.
+- **Nombre:** **Tesoros de Colombia: Guardianes del Patrimonio**
+- **Género:** Puzzle Didáctico / Clasificador Drag & Drop / Simulación de Curaduría de Museo 2D.
 - **Descripción (< 100 palabras):**  
-  *En el año 2050, la ciudad de Neovalle sufre apagones constantes y altos niveles de polución. Como Ingeniero(a) Jefe de la Micro-red Eléctrica Inteligente, debes abastecer hospitales, escuelas e industrias gestionando paneles solares, turbinas eólicas y baterías químicas. Cada hora virtual trae cambios climáticos y picos de demanda imprevistos. Realiza balances de carga en tiempo real, resuelve micro-retos de cálculo de potencia y evita colapsos en la red para alcanzar la neutralidad de carbono antes de que la ciudad quede a oscuras.*
+  *Una repentina confusión en el inventario del Museo Nacional de Colombia ha mezclado las reliquias más valiosas de nuestra historia en el piso del vestíbulo. En el papel de Sara, una joven aprendiz de curaduría, debes examinar cada pieza y arrastrarla a su sala histórica correcta: la Sala Precolombina, la Sala de Independencia o la Sala de Patrimonio Regional. Cuida tus vidas de curador, lee las pistas culturales, vence al reloj y restaura la memoria viva de Colombia antes de la gran reapertura.*
 
 ---
 
 ## Misión 6: Diseñar la Mecánica Principal
 - **¿Qué hace el jugador durante el juego?**  
-  - Observa el panel telemétrico en tiempo real (clima: radiación $W/m^2$, viento $m/s$; demanda: $kW$ consumidos).
-  - Selecciona e instala generadores renovables (paneles, aerogeneradores) y almacenes (baterías) en una cuadrícula topológica.
-  - Conecta líneas eléctricas y activa conmutadores para derivar excedentes hacia baterías o suministrar energía a sectores de emergencia.
-  - Resuelve micro-desafíos de cálculo rápido para reparar sobrecargas y desbloquear condensadores de estabilización.
-- **Para ganar debe:** Mantener la red 100% estable durante los 3 días virtuales del nivel, abastecer continuamente los edificios prioritarios (hospital) y mantener la huella de carbono por debajo del 20%.
-- **Para perder debe:** Dejar que la barra de Estabilidad de la Red caiga a 0% debido a déficit no mitigado o sobrecarga sostenida de transformadores (Apagón General).
+  1. Observa el artefacto presentado en la bandeja de recepción inferior con su tarjeta de detalle y pista cultural.
+  2. Mediante el ratón o pantalla táctil, hace clic sobre la pieza y la **arrastra y suelta (Drag & Drop)** hacia una de las 3 grandes vitrinas/pedestales de la pantalla.
+  3. Si la pieza corresponde a esa sala histórica: Se ancla a la vitrina con una animación de destello dorado, suena una fanfarria y se suma puntuación.
+  4. Si la pieza no corresponde: Vuelve a la bandeja con una pequeña vibración, resta 1 "Lupa de Curador" (vida) y despliega una pista didáctica instantánea.
+- **Para ganar debe:** Clasificar exitosamente las piezas de cada sala antes de que se agoten las vidas o el tiempo.
+- **Para perder debe:** Cometer 3 errores de clasificación en una misma sala (perder las 3 vidas de curador) o dejar que el cronómetro llegue a 0.
 
 ---
 
 ## Misión 7: Crear las Reglas del Juego (Mínimo 5 Reglas)
-1. **Regla de Prioridad de Carga:** El hospital y las bombas de agua potable deben recibir energía en todo momento; si pierden suministro por más de 3 segundos virtuales, la Estabilidad se penaliza con -15% por segundo.
-2. **Regla de Intermitencia Solar:** Los paneles solares generan potencia en función de la hora del día ($06:00$ a $18:00$), alcanzando su pico al mediodía virtual ($1000\, W/m^2$) y cayendo a $0\, W/m^2$ de noche.
-3. **Regla de Umbral Eólico:** Los aerogeneradores solo operan si el viento se encuentra entre $3\, m/s$ (arranque) y $25\, m/s$ (freno por seguridad para evitar daños mecánicos).
-4. **Regla de Conservación y Almacenamiento:** Cuando $P_{gen} > P_{demanda}$, el excedente carga automáticamente las baterías activas hasta el 100% con un factor de eficiencia del 85%. Cuando $P_{gen} < P_{demanda}$, las baterías se descargan hasta su nivel de seguridad (20% SoC).
-5. **Regla del Respaldo Fósil de Emergencia:** Si las baterías se agotan y persiste un déficit, el jugador puede encender el generador térmico para evitar el apagón, pero cada segundo encendido incrementa el medidor de CO2 en +2% y descuenta 20 Puntos Eco.
+1. **Regla de Correspondencia Histórica:** Cada pieza u objeto patrimonial pertenece de forma única a una de las tres salas históricas.
+2. **Regla de Vidas de Curador:** El jugador cuenta con 3 vidas ("Lupas de Curaduría") por nivel; soltar un artefacto en una sala equivocada resta 1 vida.
+3. **Regla de Anclaje Seguro (Drop Zone):** La pieza solo se considera clasificada si es soltada dentro del área delimitada del pedestal correspondiente.
+4. **Regla del Tiempo de Curaduría:** Cada sala cuenta con un temporizador de 60 segundos para incentivar la atención y la toma de decisiones ágiles.
+5. **Regla de Pista Didáctica Inmediata:** Si el jugador se equivoca, el juego no lo castiga ciegamente: aparece una ventana con un dato histórico clave para que comprenda por qué la pieza pertenece a otra época.
 
 ---
 
 ## Misión 8: Sistema de Puntuación y Progresión
-- **Puntos iniciales:** 1000 Puntos Eco.
+- **Puntos iniciales:** 0 Puntos de Patrimonio.
 - **Gana puntos cuando:**
-  - $+10$ puntos por cada hora virtual de balance limpio perfecto (cero uso de carbón/gas).
-  - $+50$ puntos por cada micro-reto de cálculo de potencia resuelto al primer intento.
-  - $+200$ puntos de bonificación al finalizar el día sin interrupciones en edificios críticos.
+  - $+100$ puntos por cada artefacto correctamente clasificado en su pedestal al primer intento.
+  - $+50$ puntos por acierto con ayuda de pista.
+  - $+200$ puntos de bonificación si completa la sala sin perder ninguna vida ("Curador Impecable").
 - **Pierde puntos cuando:**
-  - $-5$ puntos por segundo de déficit energético en zonas residenciales o comerciales.
-  - $-20$ puntos por segundo de operación del generador térmico de respaldo.
-  - $-100$ puntos por cada evento de sobrecarga térmica en un transformador.
-- **¿Habrá vidas?** Sí, representadas por la **Barra de Integridad / Estabilidad de la Red** (100 HP). Se reduce por sobrecargas y apagones.
-- **¿Habrá tiempo?** Sí, reloj de simulación acelerada (1 segundo real = 1 hora virtual; 24 segundos reales = 1 día virtual).
-- **¿Habrá niveles?** Sí (Nivel 1: Comunidad Rural "El Roble"; Nivel 2: Bahía Costera Eólica; Nivel 3: Metrópolis Neovalle).
-- **¿Habrá recompensas?** Sí, medallas STEAM ("Ingeniero Cero Emisiones", "Maestro del Balance", "Calculador Relámpago") y desbloqueo de baterías de grafeno de alta eficiencia.
+  - $-25$ puntos por cada intento erróneo en una vitrina equivocada.
+- **¿Habrá vidas?** Sí, 3 vidas representadas por lupas de curador.
+- **¿Habrá tiempo?** Sí, 60 segundos por sala.
+- **¿Habrá niveles?** Sí, 3 salas históricas consecutivas:
+  - **Nivel 1:** *Sala Precolombina (Tesoros Ancestrales)*: Balsa Muisca, Poporo Quimbaya, Estatua San Agustín, Tumbaga Tairona.
+  - **Nivel 2:** *Sala de la Independencia (Gesta Libertadora)*: Florero de Llorente, Espada de Bolívar, Cartas secretas de Policarpa Salavarrieta, Murallas de Cartagena.
+  - **Nivel 3:** *Sala de Patrimonio Vivo (Colombia Multicolor)*: Sombrero Vueltiao Zenú, Marimba de Chonta del Pacífico, Canasto Cafetero, Silleta Floral de Antioquia.
+- **¿Habrá recompensas?** Sí, 3 insignias coleccionables: *Medalla de Oro Precolombino*, *Sello de la Libertad* y *Gran Diploma de Guardián del Patrimonio de Colombia*.
 
 ---
 
 ## Misión 9: Crear los Personajes
-
-### Personaje Principal:
-- **Nombre:** Valeria "Volt" Gómez.
-- **Edad:** 17 años.
-- **Personalidad:** Curiosa, ágil resolviendo problemas matemáticos, líder comunitaria y apasionada por la sostenibilidad ecológica.
-- **Misión:** Diseñar la red de energía inteligente de Neovalle para librar a su comunidad del humo tóxico de la vieja termoeléctrica y garantizar energía limpia continua.
-- **Habilidades:** 
-  - *Diagnóstico Rápido:* Identifica cuellos de botella en la cuadrícula de distribución.
-  - *Cálculo Eficiente:* Resuelve balances de potencia con precisión en micro-retos.
-- **Debilidades:** Poca tolerancia al desperdicio de energía; se frustra cuando la infraestructura colapsa por falta de previsión.
-- **Guía / Mentor:** *Dra. Ada Faraday*, científica del centro de control que provee retroalimentación teórica y fórmulas didácticas.
+- **Personaje Principal:**
+  - **Nombre:** Sara Martínez ("La Guardiana").
+  - **Edad:** 17 años (estudiante de Grado 11°).
+  - **Personalidad:** Curiosa, respetuosa de la memoria cultural, ágil visualmente y apasionada por los relatos tradicionales de su país.
+  - **Misión:** Rescatar y ordenar las piezas del museo antes de que abran las puertas al público, evitando que la historia se pierda en el desorden.
+  - **Habilidades:** Agudeza visual para reconocer formas, texturas de orfebrería y estilos arquitectónicos.
+  - **Debilidades:** La prisa ante el reloj; debe evitar precipitarse sin leer las pistas.
+- **Mentor / Guía:**
+  - **Don Gabriel:** El restaurador veterano del museo, quien brinda las frases introductorias y explica la importancia de cada pieza recuperada.
 
 ---
 
-## Misión 10: Diseñar los Escenarios
+## Misión 10: Diseñar los Escenarios (3 Salas del Museo)
 
-### Escenario 1: Aldea Solar "El Roble"
-- **Descripción:** Zona rural con alta radiación solar pero sin red eléctrica troncal. Demanda concentrada en una escuela, un centro de salud y bombeo de riego.
-- **¿Qué ocurre aquí?** El jugador aprende las bases de la energía fotovoltaica, el cálculo de paneles requeridos y la importancia de las baterías para cubrir la noche.
+### Escenario 1: Sala Precolombina ("La Huella de los Sabios")
+- **Descripción:** Ambiente cálido con iluminación focal, paredes con texturas de piedra y pedestales de madera tallada.
+- **¿Qué ocurre aquí?** El jugador clasifica las obras maestras de los pueblos originarios indígenas (Muisca, Quimbaya, Tairona, San Agustín).
 
-### Escenario 2: Valle Eólico "Punta Huracán"
-- **Descripción:** Costa marítima con vientos fuertes pero racheados y variables. Abastece a un pueblo pesquero y una planta procesadora de alimentos.
-- **¿Qué ocurre aquí?** El jugador enfrenta la intermitencia del viento, turbulencias climáticas repentinas y la necesidad de combinar fuentes híbridas (solar + eólica) para estabilizar la red.
+### Escenario 2: Sala de la Independencia ("El Grito Libertador")
+- **Descripción:** Sala señorial con arquitectura colonial, muros blancos de tapia pisada, vigas de madera y estandartes tricolores.
+- **¿Qué ocurre aquí?** El jugador restaura los objetos emblemáticos del 20 de Julio de 1810 y las batallas de Independencia de 1819.
 
-### Escenario 3: Metrópolis "Neovalle 2050"
-- **Descripción:** Gran centro urbano altamente tecnificado con rascacielos inteligentes, hospitales de alta complejidad, trenes eléctricos y fábricas robotizadas.
-- **¿Qué ocurre aquí?** Gran complejidad de demanda con horas pico intensas, olas de calor y tormentas que ponen a prueba la arquitectura completa de la Smart Grid.
+### Escenario 3: Sala de Tradición Regional ("Colombia Viva")
+- **Descripción:** Espacio lleno de luz natural, colores festivos, texturas de caña flecha, fique y madera de chonta.
+- **¿Qué ocurre aquí?** El jugador celebra y clasifica las artesanías, instrumentos y tradiciones de las distintas regiones geográficas del país.
 
 ---
 
 ## Misión 11: Crear la Historia (Guion Narrativo)
-- **Inicio:** Neovalle vive bajo una densa nube de humo proveniente de una planta de combustión obsoleta que falla constantemente, provocando cortes en hospitales y escuelas. Valeria es nombrada aprendiz de operadora en la central de despacho.
-- **Conflicto:** Una ordenanza climática exige clausurar la planta fósil en un plazo de 3 días. La ciudad quedará a oscuras si no se construye una red inteligente basada en fuentes renovables capaces de soportar la demanda variable.
-- **Desarrollo:** Valeria instala generadores limpios, canaliza energía a través de bancos de baterías y supera tormentas y olas de frío mientras equilibra los voltajes y frecuencias de cada sector.
-- **Final:** Gracias al cálculo riguroso y a la gestión del jugador, Neovalle alcanza el equilibrio 100% renovable. La chimenea de carbón es desmantelada y Valeria recibe el título de Ingeniera Guardiana de la Red.
+- **Inicio:** Es la víspera de la "Noche de Museos de Colombia". Sara llega al Museo Nacional para su pasantía escolar de grado 11°. Para su sorpresa, un fallo en el sistema de transporte interno ha volcado los baúles y dejado los artefactos mezclados en el vestíbulo principal.
+- **Conflicto:** Faltan pocos minutos para la inauguración oficial. Si las piezas no están colocadas en sus respectivas salas y pedestales con su contexto histórico, el museo no podrá abrir y los visitantes perderán la oportunidad de conocer la historia de su nación.
+- **Desarrollo:** Con la guía de Don Gabriel y su propia observación, Sara viaja mentalmente por cada época. Arrastra la orfebrería dorada a la sala prehispánica, devuelve los sables y floreros a la sala independentista y organiza las marimbas y sombreros en la sala viva.
+- **Final:** Todas las vitrinas brillan perfectamente curadas. El reloj marca la hora cero, las puertas del museo se abren con júbilo y Sara recibe el prestigioso nombramiento de "Guardián de Honor del Patrimonio Cultural de Colombia".
 
 ---
 
-## Misión 12: Storyboard Didáctico
+## Misión 12: Storyboard Didáctico (6 Escenas)
 
 | Escena | ¿Qué ocurre? | ¿Qué hace el jugador? | ¿Qué aprende? |
 | :---: | :--- | :--- | :--- |
-| **1** | El sol asciende en la aldea. La escuela abre y la demanda sube a 40 kW. | Selecciona el ícono de panel solar y lo ubica en la zona despejada; conecta el cable a la subestación. | Que los paneles convierten fotones en potencia eléctrica ($P_{solar} = A \cdot \eta \cdot G$). |
-| **2** | Llega el mediodía: la generación solar supera la demanda ($80\, kW > 50\, kW$). Hay riesgo de sobretensión. | Instala un banco de baterías y activa el interruptor de carga para almacenar el excedente. | La necesidad del almacenamiento para no disipar energía limpia excedente. |
-| **3** | Cae la noche ($19:00$). La generación solar baja a $0\, kW$ y la demanda se mantiene en $30\, kW$. | Conmuta las baterías a modo "descarga" para abastecer al centro de salud. | Que la energía acumulada durante el día sustenta la demanda nocturna. |
-| **4** | El viento comienza a soplar a $12\, m/s$ durante la madrugada. | Despliega turbinas eólicas en la colina costera para suplir la descarga de las baterías. | La complementariedad de las fuentes renovables eólicas y solares. |
-| **5** | Ocurre una ola de frío inesperada; se dispara el uso de calefacción y la red entra en déficit crítico. | Resuelve un desafío de cálculo para priorizar circuitos y evitar el uso de la planta de gas fósil. | Priorización de circuitos críticos y cálculo rápido de demanda vs. capacidad. |
-| **6** | Fin de la jornada: la pantalla muestra el balance energético, la huella evitada y el diploma STEAM. | Analiza el gráfico de rendimiento diario y revisa sus aciertos matemáticos. | Interpretación de curvas de carga y métricas de impacto ambiental. |
+| **1** | Vestíbulo del museo: Don Gabriel le muestra a Sara el baúl de reliquias mezcladas. | Presiona el botón *"Entrar al Museo"* e inicia el Nivel 1. | El valor de la curaduría y la conservación histórica. |
+| **2** | Aparece una pieza dorada flotando en una balsa con figuras humanas ceremoniales. | Lee la tarjeta informativa y arrastra la balsa hacia la vitrina de la Sala Precolombina. | Que la Balsa Muisca representa la ceremonia sagrada en la laguna de Guatavita (El Dorado). |
+| **3** | Aparece un recipiente dorado pulido de cuello estilizado (el Poporo). | Arrastra el Poporo a la vitrina precolombina de la cultura Quimbaya. | Que el Poporo era un objeto ceremonial de la orfebrería Quimbaya usado para el mambeo. |
+| **4** | El jugador entra a la Sala 2 y examina una vasija de loza rota y una espada colonial. | Arrastra el florero y la espada a los pedestales de la Independencia (1810-1819). | El papel del Florero de Llorente en el 20 de Julio y las campañas de Bolívar. |
+| **5** | En la Sala 3 aparece un sombrero tejido con tiras negras y blancas en caña flecha. | Arrastra el sombrero hacia el pedestal de la región Caribe / Cultura Zenú. | Que el Sombrero Vueltiao es símbolo cultural nacional y artesanía ancestral Zenú. |
+| **6** | Fin de la jornada: las tres salas están completas y las vitrinas iluminadas. | Observa su puntuación final, medallas ganadas y el diploma oficial de curador. | Visión panorámica integrada del patrimonio material e inmaterial de Colombia. |
 
 ---
 
@@ -262,81 +265,56 @@ EcoCircuit-Videojuego-STEAM/
 ### 1. Pantalla de Inicio
 ```text
 +------------------------------------------------------------------------+
-|                      ⚡ ECO-CIRCUIT: SMART GRID 2050 ⚡                 |
-|            Proyecto Educativo STEAM - Grado 11° | IE AMTS              |
+|              🇨🇴 TESOROS DE COLOMBIA: GUARDIANES DEL TIEMPO 🇨🇴          |
+|                 Proyecto Educativo STEAM - Grado 11°                   |
 +------------------------------------------------------------------------+
 |                                                                        |
-|                  [ 🌆 ILUSTRACIÓN NEOVALLE SOSTENIBLE ]                |
+|                    [ 🏛️ MUSEO NACIONAL DE COLOMBIA ]                   |
+|                   Restaura nuestra memoria histórica                   |
 |                                                                        |
-|              [ ▶ INICIAR MISIÓN ]      [ 📖 GUÍA & CONCEPTOS ]         |
-|                                                                        |
-|              [ 🏆 TABLA DE MÉRITOS ]    [ ⚙ CONFIGURACIÓN ]             |
+|                  [ ▶ ENTRAR AL MUSEO ]      [ 📖 GUÍA ]                |
 |                                                                        |
 +------------------------------------------------------------------------+
 | Regla de Oro: "Si no puedes explicar cómo funciona, aún no lo creaste"|
 +------------------------------------------------------------------------+
 ```
 
-### 2. Pantalla de Instrucciones / Conceptos STEAM
+### 2. Pantalla de Juego (Phaser 3 Canvas con Drag & Drop)
 ```text
 +------------------------------------------------------------------------+
-| 📖 CENTRO DE ENTRENAMIENTO STEAM: CÓMO GESTIONAR LA RED                |
+| 🏛️ SALA 1: PRECOLOMBINA | ⏱ Tiempo: 00:48 | 🔍 Vidas: [❤️ ❤️ ❤️] | Pts: 200 |
 +------------------------------------------------------------------------+
-| FÓRMULAS & CONCEPTOS CLAVE:                                            |
-|  • Balance de Red:  Balance = P_generada - P_consumo                   |
-|  • P_solar = N_paneles * 0.3 kW * Factor_Sol (0 a 1)                  |
-|  • P_eolica = N_turbinas * 1.5 kW * Factor_Viento                     |
-|  • Baterías: Almacenan exceso (P > 0) / Entregan respaldo (P < 0)       |
 |                                                                        |
-| CONTROLES:                                                             |
-|  [☀️ +Panel] [💨 +Turbina] [🔋 +Batería] [🔌 Interruptor On/Off]      |
-|  Clic en sector para ver demanda | Arrastra componentes a la cuadrícula|
+|  [ VITRINA 1: MUISCA ]     [ VITRINA 2: QUIMBAYA ]    [ VITRINA 3: TAIRONA ] |
+|  +-------------------+     +---------------------+    +--------------------+ |
+|  | (Balsa Dorada)    |     | [ ZONA DE SOLTAR ]  |    | [ ZONA DE SOLTAR ] | |
+|  |     COLOCADA      |     |                     |    |                    | |
+|  +-------------------+     +---------------------+    +--------------------+ |
 |                                                                        |
-|                      [ ⬅ VOLVER ]   [ ¡ENTENDIDO, A JUGAR! ➡ ]        |
++------------------------------------------------------------------------+
+| BANDEJA DE CURADURÍA (PIEZA ACTUAL POR ARRASTRAR):                     |
+|  [ 🏺 POPORO DE ORO ]  --> (¡Arrastra esta pieza a su vitrina correcta!)|
+|  *Pista: Objeto ceremonial de orfebrería ancestral del Cauca medio.*   |
 +------------------------------------------------------------------------+
 ```
 
-### 3. Pantalla Principal de Juego (HUD + Canvas)
+### 3. Pantalla de Resultados y Diploma de Curador
 ```text
 +------------------------------------------------------------------------+
-| [DÍA 1 - 14:00]  ☀️ Sol: 920 W/m² | 💨 Viento: 8.5 m/s | ⏱ 01:45         |
-| Generación: 85 kW | Consumo: 60 kW | Batería: [████████░░] 80% (Cargando)|
-| Estabilidad Red: [██████████] 100% | CO2 Evitado: 42 kg | Pts: 1250    |
+|                     🏆 ¡MISIÓN CUMPLIDA EN EL MUSEO! 🏆                 |
+|             Has protegido el Patrimonio Histórico de Colombia          |
 +------------------------------------------------------------------------+
-| MAPA INTERACTIVO DE LA CIUDAD (CANVAS 2D)                              |
-|                                                                        |
-|  [ ☀️ Solar Farm ] =====> [ SUBESTACIÓN ] =====> [ 🏥 Hospital: 25kW ] |
-|                                   ||                                   |
-|  [ 💨 Parque Eólico ] ===========//=======> [ 🏫 Escuela:  15kW ]      |
-|                                   ||                                   |
-|  [ 🔋 Batería Central ] =========//=======> [ 🏭 Fábrica:  20kW ]      |
-|                                                                        |
-| [ALERTA]: P_gen > P_demanda (+25 kW). Excedente fluyendo a Batería.    |
-+------------------------------------------------------------------------+
-| BARRA DE ACCIÓN:                                                       |
-| [+ Panel Solar ($150)]  [+ Turbina ($400)]  [+ Batería ($250)]         |
-| [🔥 Respaldo Gas (EMERGENCIA - CO2)]        [❓ RESOLVER RETO STEAM]   |
-+------------------------------------------------------------------------+
-```
-
-### 4. Pantalla de Resultados y Diagnóstico Educativo
-```text
-+------------------------------------------------------------------------+
-|                        🎉 ¡MISIÓN 1 COMPLETADA! 🎉                      |
-|                  Nivel 1: Aldea Solar "El Roble"                       |
-+------------------------------------------------------------------------+
-| RESUMEN DE GESTIÓN ELÉCTRICA:                                          |
-|  • Estabilidad Final de la Red: 96% (Excelente)                       |
-|  • Energía Renovable Utilizada: 94.2%                                  |
-|  • Emisiones de CO2 Evitadas:  185 kg CO2eq                            |
-|  • Retos Matemáticos Resueltos: 3 de 3 (+150 pts)                     |
-|  • Puntuación Total: 1,850 Pts Eco                                     |
+| RESUMEN DE CURADURÍA:                                                  |
+|  • Piezas Restauradas: 12 de 12 (100% de Patrimonio Protegido)         |
+|  • Vidas Conservadas: 3 de 3 (+200 pts de Bonificación)                |
+|  • Puntuación Final: 1,450 Puntos de Curaduría                         |
+|  • Insignias: [🥇 Oro Precolombino] [🎖️ Héroe Libertador] [🎨 Folclor] |
 |                                                                        |
 | ¿QUÉ APRENDISTE HOY?                                                   |
-|  "Mantuviste el balance P_gen >= P_demanda usando la batería durante   |
-|   la noche, evitando 12 horas de combustión fósil."                    |
+|  "Identificaste que la Balsa Muisca, el Poporo Quimbaya y el Sombrero  |
+|   Vueltiao son tesoros patrimoniales de nuestra historia diversa."     |
 |                                                                        |
-|           [ 🔄 REPETIR NIVEL ]        [ ➡ SIGUIENTE NIVEL ]           |
+|              [ 🔄 VOLVER A JUGAR ]       [ 📜 VER CRÉDITOS ]           |
 +------------------------------------------------------------------------+
 ```
 
@@ -344,35 +322,34 @@ EcoCircuit-Videojuego-STEAM/
 
 ## Misión 14: Matriz de Integración STEAM
 
-| Pilar STEAM | Aplicación Real y Tangible en EcoCircuit |
+| Pilar STEAM | Aplicación Real y Tangible en Tesoros de Colombia |
 | :--- | :--- |
-| **Ciencia (Science)** | Estudio de la física fotovoltaica (radiación electromagnética), energía cinética del aire, termodinámica de pérdidas por disipación en líneas eléctricas y ciclo de vida del carbono. |
-| **Tecnología (Technology)** | Implementación en JavaScript ES6+, algoritmos de monitoreo de variables en tiempo real, interfaz responsiva e integración de lógica de redes inteligentes (Smart Grids). |
-| **Ingeniería (Engineering)** | Diseño de la topología de la micro-red, cálculo de capacidades de transporte, tolerancia a fallos, balance de carga y prevención de cortocircuitos por sobretensión. |
-| **Arte (Art)** | Diseño visual estético solarpunk en CSS3 y Canvas, iconografía intuitiva, paleta de colores armónica (tonos verdes sostenibles, azules eléctricos y ámbar de advertencia) y animaciones de flujo energético. |
-| **Matemáticas (Math)** | Ecuaciones algebraicas de balance $\Delta P = \sum P_{gen} - \sum P_{dem}$, funciones lineales y cuadráticas de producción, proporciones porcentuales de State-of-Charge (SoC) e interpretación de datos estadísticos. |
+| **Ciencia (Science)** | Conservación de materiales arqueológicos (metalurgia del oro y cobre en tumbaga, fragilidad de cerámicas, preservación de fibras vegetales como caña flecha y madera de chonta). |
+| **Tecnología (Technology)** | Desarrollo en **Phaser 3** aprovechando el sistema nativo de eventos de puntero (`pointerdown`, `drag`, `drop`), gestión de escenas y animaciones interactivas en navegador. |
+| **Ingeniería (Engineering)** | Diseño de la arquitectura de datos para el inventario de piezas, lógica de zonas de anclaje (*Drop Zones*) y diseño de interfaz accesible e intuitiva. |
+| **Arte (Art)** | Ilustración vectorizada de la orfebrería precolombina, recreación estética de salas coloniales y texturas tricolores del folclor colombiano. |
+| **Matemáticas (Math)** | Ordenamiento cronológico en línea de tiempo (siglos AC vs DC), conteo de inventario (porcentaje de piezas restauradas) y sistema de puntuación acumulada. |
 
 ---
 
 ## Misión 15: Game Design Document (GDD Completo)
-*(Resumen de los 17 puntos requeridos en el Cuaderno Grado 11°)*
-1. **Nombre:** EcoCircuit: Smart Grid 2050.
-2. **Problema educativo:** Transición energética y estabilidad de redes con renovables.
+1. **Nombre:** Tesoros de Colombia: Guardianes del Patrimonio.
+2. **Problema educativo:** Desconocimiento y desconexión con el patrimonio cultural e histórico de Colombia.
 3. **Público:** Estudiantes de 14 a 18 años (Grado 10° - 11°).
-4. **Objetivo educativo:** Equilibrar potencia en tiempo real, dimensionar fuentes y minimizar CO2.
-5. **Género:** Simulación, estrategia y puzzle matemático en tiempo real.
-6. **Historia:** Valeria transforma la matriz eléctrica contaminada de Neovalle en una red limpia.
-7. **Personajes:** Valeria "Volt" Gómez (Principal), Dra. Ada Faraday (Mentora).
-8. **Escenarios:** Aldea El Roble (Solar), Punta Huracán (Eólico), Metrópolis Neovalle (Híbrido).
-9. **Mecánicas:** Colocación de generadores, derivación a baterías, resolución de retos de cálculo, desconexión selectiva de cargas.
-10. **Reglas:** Prioridad de hospitales, intermitencia solar, corte eólico por viento extremo, eficiencia de batería 85%, penalización por uso térmico.
-11. **Puntuación:** Base 1000 Pts; $+10$ por hora limpia; $+50$ por reto resuelto; penalización por déficit y CO2.
-12. **Niveles:** 3 niveles con curvas crecientes de dificultad climática y demanda.
-13. **Condición de victoria:** Completar los 3 días virtuales con Estabilidad $> 70\%$ y Cero Apagón Hospitalario.
-14. **Condición de derrota:** Estabilidad de red $= 0\%$ o superación del límite crítico de polución CO2 ($100\%$).
-15. **Elementos STEAM:** Explicados detalladamente en la Misión 14.
-16. **Tecnología:** HTML5, CSS3 moderno, JavaScript ES6+.
-17. **Librería JavaScript propuesta y justificada:** **Phaser 3** (Librería oficial autorizada para videojuegos 2D). Permite arquitectura por escenas (`BootScene`, `MenuScene`, `GameScene`, `UIScene`), sistema de partículas para animar el flujo eléctrico y compatibilidad escolar mediante inclusión directa sin dependencias npm.
+4. **Objetivo educativo:** Identificar y clasificar reliquias colombianas en sus períodos históricos correspondientes.
+5. **Género:** Puzzle didáctico 2D / Clasificador Drag & Drop.
+6. **Historia:** Sara ayuda a ordenar las reliquias mezcladas del Museo Nacional antes de la inauguración.
+7. **Personajes:** Sara Martínez (Aprendiz de Curaduría) y Don Gabriel (Restaurador mentor).
+8. **Escenarios:** Sala Precolombina, Sala de la Independencia y Sala de Patrimonio Vivo Regional.
+9. **Mecánicas:** Arrastrar piezas a vitrinas, lectura de pistas culturales, validación de coincidencia y retroalimentación didáctica.
+10. **Reglas:** 3 vidas por sala, temporizador de 60 s, anclaje obligatorio en zona de vitrina, pista obligatoria en caso de fallo.
+11. **Puntuación:** Base 0 pts; $+100$ por acierto directo; $+50$ con pista; $+200$ por sala perfecta; $-25$ por error.
+12. **Niveles:** 3 salas con 4 artefactos icónicos cada una (12 piezas en total).
+13. **Condición de victoria:** Ubicar las 12 piezas antes de agotar vidas y tiempo.
+14. **Condición de derrota:** Perder las 3 vidas de curador en una sala o expirar el tiempo.
+15. **Elementos STEAM:** Conservación de materiales (Ciencia), Phaser 3 (Tecnología), Taxonomía y dropzones (Ingeniería), Iconografía cultural (Arte), Cronología y métricas (Matemáticas).
+16. **Tecnología:** HTML5, CSS3, JavaScript ES6+ modular.
+17. **Librería JavaScript propuesta y justificada:** **Phaser 3** (Librería oficial autorizada). Facilita el sistema Drag & Drop sin complicaciones de física pesada y asegura los 15 puntos de la rúbrica oficial.
 
 ---
 
@@ -393,17 +370,12 @@ EcoCircuit-Videojuego-STEAM/
 
 # 4. ENTREGA 2: PROTOTIPO FUNCIONAL (30%)
 
-## Misión 16: Selección y Justificación de la Tecnología
-Conforme a la terna de librerías permitidas por la institución (**Phaser**, **p5.js**, **Three.js**):
-
-- **HTML5:** Marcado semántico estructurado para el contenedor del lienzo y modales didácticos.
-- **CSS3:** Sistema de diseño responsivo basado en CSS Grid y Flexbox con variables de temática Solarpunk.
-- **JavaScript (ES6+):** Programación orientada a objetos para la simulación física y modelos matemáticos.
-- **Librería Oficial Seleccionada:** **Phaser 3** (Versión 3.60+ / 3.80+).
-  - *Comparación y Justificación Pedagógica (Prompt IA 10):*
-    1. **Frente a Three.js:** Three.js está orientada a entornos 3D, lo cual añadiría una sobrecarga innecesaria de modelado y shaders para una mecánica de gestión de cuadrícula y balance de red topológico 2D.
-    2. **Frente a p5.js:** Aunque p5.js es excelente para gráficos interactivos simples, carece de un sistema nativo de gestión de escenas de juego, ciclo de vida desacoplado (Preload, Create, Update), emisores de partículas para fluidos eléctricos y manejo optimizado de sprites interactivos con drag-and-drop.
-    3. **Fortalezas de Phaser 3:** Es el estándar por excelencia de desarrollo de videojuegos 2D en web. Permite separar la escena de simulación de la escena de interfaz, ofrece animaciones fluidas a 60 FPS y se distribuye como un único archivo JavaScript (`phaser.min.js`), asegurando los **15 puntos del criterio "Uso de librería"** y garantizando que el juego funcione 100% offline en las computadoras del colegio.
+## Misión 16: Selección y Justificación de la Tecnología (Phaser 3)
+- **HTML5:** Marcado limpio y accesible.
+- **CSS3:** Estilos de museo, paleta cálida y efecto Glassmorphism.
+- **JavaScript (ES6+):** Código modular y estructurado.
+- **Librería Seleccionada:** **Phaser 3**.
+  - *Justificación Pedagógica:* Phaser 3 incluye soporte nativo y de alto rendimiento para interacción Drag & Drop (`gameObject.setInteractive()`, `this.input.setDraggable()`, eventos `drag`, `drop`, `dragend`), lo cual evita programar matemáticas trigonométricas o vectores físicos a mano. Garantiza los 15 puntos de la evaluación y corre de forma 100% offline.
 
 ---
 
@@ -416,21 +388,21 @@ Ver desglose detallado en el [Capítulo 2: Estructura del Proyecto](#2-estructur
 
 | Componente | Descripción Técnica | Estado | Probado |
 | :--- | :--- | :---: | :---: |
-| **1. Pantalla Inicial** | Menú interactivo, título animado, selector de niveles y botón de inicio. | ⏳ Pendiente | [ ] |
-| **2. Pantalla de Instrucciones** | Modal interactivo con manual de juego, fórmulas STEAM y simbología. | ⏳ Pendiente | [ ] |
-| **3. Escenario (Grid / Canvas)** | Cuadrícula de renderizado con subestación, cableado y edificios consumidores. | ⏳ Pendiente | [ ] |
-| **4. Jugador / Operador** | Cursor interactivo, herramientas de colocación y panel de control. | ⏳ Pendiente | [ ] |
-| **5. Controles de Juego** | Botones de compra/arrastre de fuentes (solar, eólico, batería) y conmutadores. | ⏳ Pendiente | [ ] |
-| **6. Mecánica Principal** | Motor físico de balance continuo: $\Delta P = P_{gen}(t) - P_{dem}(t)$. | ⏳ Pendiente | [ ] |
-| **7. Puntuación y HUD** | Marcadores en tiempo real de potencia, batería, estabilidad y Puntos Eco. | ⏳ Pendiente | [ ] |
-| **8. Victoria / Derrota** | Verificadores de condiciones de corte por apagón o éxito al completar el ciclo. | ⏳ Pendiente | [ ] |
-| **9. Contenido Educativo** | Retos matemáticos dinámicos con retroalimentación correctiva inmediata. | ⏳ Pendiente | [ ] |
-| **10. Pantalla Final** | Resumen analítico de desempeño, métricas STEAM y reporte formativo. | ⏳ Pendiente | [ ] |
+| **1. Pantalla Inicial** | Menú interactivo con botón "Entrar al Museo", Guía y Créditos. | ⏳ Pendiente | [ ] |
+| **2. Pantalla de Instrucciones** | Modal con la guía de cómo arrastrar piezas y las 3 vidas. | ⏳ Pendiente | [ ] |
+| **3. Escenario / Sala** | Recreación gráfica de las salas históricas y pedestales de vitrina. | ⏳ Pendiente | [ ] |
+| **4. Jugador / Cursor** | Puntero interactivo de curaduría con respuesta de agarre. | ⏳ Pendiente | [ ] |
+| **5. Controles (Drag & Drop)** | Eventos de ratón y táctil para tomar y soltar piezas en vitrinas. | ⏳ Pendiente | [ ] |
+| **6. Mecánica Principal** | Verificación de coincidencia entre pieza y vitrina histórica. | ⏳ Pendiente | [ ] |
+| **7. Puntuación y HUD** | Marcador de puntos, vidas (lupas) y reloj de 60 segundos. | ⏳ Pendiente | [ ] |
+| **8. Victoria / Derrota** | Comprobación de final de sala y gestión de vidas agotadas. | ⏳ Pendiente | [ ] |
+| **9. Contenido Educativo** | Fichas técnicas de los artefactos y pistas didácticas automáticas. | ⏳ Pendiente | [ ] |
+| **10. Pantalla Final** | Diploma interactivo de Guardián del Patrimonio y resumen. | ⏳ Pendiente | [ ] |
 
 ---
 
 ## Misión 19: Comprensión y Explicación del Código
-*(Sección reservada para documentar las funciones matemáticas nucleares: `calculateSolarOutput(hour, weather)`, `calculateWindOutput(windSpeed)`, `updateGridStability(deltaPower)`, explicando variables, eventos y condiciones).*
+*(Sección reservada para documentar las funciones de interacción `setupDropZones()`, `checkMatch(piece, zone)` y el manejo de estados de Phaser 3).*
 
 ---
 
@@ -443,7 +415,7 @@ Ver registro formal en [Bitácora de Control de Errores y Debugging](#bitácora-
 - Estructura del proyecto: **10 pts**
 - HTML / CSS: **10 pts**
 - JavaScript estructurado: **15 pts**
-- Uso de librería / API Canvas: **15 pts**
+- Uso de librería (Phaser 3): **15 pts**
 - Mecánica principal funcional: **15 pts**
 - Interactividad fluida: **10 pts**
 - Integración educativa real: **10 pts**
@@ -457,27 +429,27 @@ Ver registro formal en [Bitácora de Control de Errores y Debugging](#bitácora-
 # 5. ENTREGA 3: VIDEOJUEGO FINAL Y VALIDACIÓN (40%)
 
 ## Misión 21: Pruebas de Usuario (Matriz de Observación)
-Se aplicará a un mínimo de 3 estudiantes de la institución:
+Se aplicará a 3 compañeros de grado 11°:
 
 | Usuario | Edad / Curso | ¿Entendió las instrucciones? | ¿Pudo jugar sin bloqueos? | ¿Qué problema encontró? |
 | :---: | :---: | :---: | :---: | :--- |
 | **Usuario 1** | 16 años (11°A) | *(Por registrar en fase 3)* | *(Por registrar)* | *(Por registrar)* |
 | **Usuario 2** | 17 años (11°B) | *(Por registrar en fase 3)* | *(Por registrar)* | *(Por registrar)* |
-| **Usuario 3** | 15 años (10°A) | *(Por registrar en fase 3)* | *(Por registrar)* | *(Por registrar)* |
+| **Usuario 3** | 16 años (11°A) | *(Por registrar en fase 3)* | *(Por registrar)* | *(Por registrar)* |
 
 ---
 
 ## Misión 22: Encuesta de Evaluación de Experiencia (10 Preguntas)
-1. ¿Entendiste qué debías hacer desde el primer minuto?
+1. ¿Entendiste de inmediato que debías arrastrar los artefactos a sus vitrinas?
 2. ¿Fue fácil comenzar a jugar?
-3. ¿Las instrucciones fueron claras y suficientes?
-4. ¿Te pareció divertido y desafiante?
-5. ¿La dificultad te pareció adecuada o frustrante?
-6. ¿Qué fue lo más difícil de gestionar en la red?
-7. ¿Qué fue lo más interesante del juego?
-8. ¿Qué cambiarías o agregarías para mejorarlo?
-9. ¿Qué aprendiste sobre la energía solar, el viento y las baterías?
-10. ¿Volverías a jugar para superar tu puntuación?
+3. ¿Las pistas históricas te ayudaron a identificar la época de las piezas?
+4. ¿Te pareció divertido y retador el tiempo límite?
+5. ¿La dificultad fue adecuada o muy exigente?
+6. ¿Qué artefacto te resultó más difícil de ubicar?
+7. ¿Qué fue lo más interesante que aprendiste sobre la cultura de Colombia?
+8. ¿Qué mejorarías en el diseño de las salas del museo?
+9. ¿Reconociste la diferencia entre las culturas precolombinas y la Independencia?
+10. ¿Volverías a jugar para conseguir el diploma de Curador Maestro?
 
 ---
 
@@ -485,61 +457,61 @@ Se aplicará a un mínimo de 3 estudiantes de la institución:
 
 | # | Problema Detectado | Mejora Implementada | ¿Por qué se implementó? | Resultado Obtenido |
 | :-: | :--- | :--- | :--- | :--- |
-| **1** | *(Pruebas iniciales)* | Indicador visual de flujo con partículas luminosas. | El usuario no sabía si la energía iba a la batería o a la ciudad. | Comprensión inmediata del flujo eléctrico. |
-| **2** | *(Pruebas iniciales)* | Alarma sonovirtual y parpadeo al superar 90% de sobrecarga. | Los usuarios quemaban transformadores sin darse cuenta. | Reacción a tiempo y menor frustración. |
-| **3** | *(Pruebas iniciales)* | Pausa táctica automática durante los micro-retos didácticos. | El tiempo seguía corriendo mientras leían la pregunta matemática. | Foco reflexivo en el cálculo sin estrés de tiempo. |
-| **4** | *(Pruebas iniciales)* | Desglose gráfico comparativo al final del nivel. | El jugador quería ver cuántos kg de CO2 ahorró vs una termoeléctrica. | Mayor impacto en la conciencia ambiental. |
-| **5** | *(Pruebas iniciales)* | Modo daltónico / contraste alto para cables y estados. | Dificultad para diferenciar cables activos de inactivos. | Accesibilidad universal en monitores de aula. |
+| **1** | *(Pruebas iniciales)* | Resaltado luminoso en la vitrina al pasar el cursor sobre ella. | El jugador no sabía exactamente dónde soltar el artefacto. | Claridad visual total del área de contacto. |
+| **2** | *(Pruebas iniciales)* | Sonido tradicional de flauta/marimba al acertar una pieza. | Hacía falta refuerzo positivo cultural al lograr la clasificación. | Mayor inmersión y entusiasmo del jugador. |
+| **3** | *(Pruebas iniciales)* | Ficha informativa emergente ampliada con botón "Entendido". | Los usuarios querían leer más sobre la leyenda de El Dorado. | Profundización pedagógica voluntaria. |
+| **4** | *(Pruebas iniciales)* | Animación de retorno suave cuando se suelta fuera de zona. | La pieza desaparecía abruptamente si no tocaba una vitrina. | Jugabilidad más orgánica y pulida. |
+| **5** | *(Pruebas iniciales)* | Botón de reinicio rápido de sala sin recargar toda la página. | Si el usuario perdía las 3 vidas, debía recargar el navegador. | Navegación fluida y mejor experiencia de usuario. |
 
 ---
 
 ## Misión 24: Evaluación y Evidencia Real del Aprendizaje
-- **¿Qué debe aprender?** La relación matemática entre generación, demanda y acumulación en baterías, y la toma de decisiones ecológicas.
-- **¿Cómo lo aprende jugando?** Experimentando directamente las consecuencias de sus decisiones: si no instala baterías de día, la ciudad se apaga de noche; si abusa del generador térmico, pierde por contaminación.
-- **¿Cómo comprobamos el aprendizaje?** Mediante la resolución exitosa de micro-retos cuantitativos dentro del juego y una prueba de validación conceptual pre y post-juego.
+- **¿Qué debe aprender?** La distinción de artefactos arqueológicos precolombinos, sucesos de la Independencia y tradiciones vivas regionales de Colombia.
+- **¿Cómo lo aprende jugando?** Leyendo pistas descriptivas, asociando imágenes a contextos históricos y corrigiendo sus propios errores con la retroalimentación inmediata.
+- **¿Cómo comprobamos el aprendizaje?** Mediante la mejora progresiva en el tiempo de clasificación y el porcentaje de aciertos en la primera intención sin consultar pistas.
 
 ---
 
 ## Misión 25: Auditoría y Checklist de Documentación Final
 - [x] Game Design Document (GDD) completo.
 - [ ] Código fuente documentado y formateado.
-- [ ] Videojuego funcional sin bugs críticos en navegador.
-- [ ] Evidencias de pruebas con usuarios reales (mínimo 3).
+- [ ] Videojuego funcional sin bugs en navegador.
+- [ ] Evidencias de pruebas con 3 usuarios reales.
 - [ ] Registro de errores solucionados.
 - [ ] Registro de 5 mejoras implementadas.
-- [ ] Fuentes de investigación y marco teórico.
+- [ ] Fuentes de investigación y bibliografía.
 - [ ] Bitácora de Inteligencia Artificial al día.
-- [ ] Diapositivas de presentación preparadas.
+- [ ] Presentación para la sustentación.
 
 ---
 
 ## Misión 26: Preparación de la Sustentación (12 Preguntas de Jurado)
-1. **¿Cuál era el problema educativo abordado?**
-2. **¿Qué investigaron teóricamente antes de tirar la primera línea de código?**
-3. **¿Cuál es el objetivo educativo observable y cómo lo evaluaron?**
-4. **¿Cómo funciona el bucle del videojuego (Game Loop)?**
-5. **¿Qué tecnología y API/librería utilizaron y por qué?**
-6. **¿Por qué descartaron motores más pesados en favor de su arquitectura web?**
+1. **¿Cuál era el problema cultural y educativo que abordaron?**
+2. **¿Qué fuentes históricas consultaron (Museo del Oro, Museo Nacional, ICANH)?**
+3. **¿Cuál es el objetivo educativo observable de su juego?**
+4. **¿Cómo funciona el ciclo de vida de Phaser 3 en las escenas de su juego?**
+5. **¿Por qué escogieron Phaser 3 en lugar de p5.js o Three.js?**
+6. **¿Cómo funciona técnicamente el sistema Drag & Drop en su código?**
 7. **¿Cómo se integraron de forma auténtica las 5 disciplinas STEAM?**
-8. **¿Cuáles fueron los 3 problemas de programación más complejos que resolvieron?**
-9. **¿Cómo utilizaron la Inteligencia Artificial de forma ética y reflexiva sin depender ciegamente de ella?**
-10. **¿Qué competencias técnicas y científicas aprendieron durante el proyecto?**
-11. **¿Qué cambios radicales hicieron tras las pruebas de usuario?**
-12. **¿Qué evidencia cuantitativa demuestra que el videojuego realmente enseña y funciona?**
+8. **¿Cuáles fueron los principales desafíos que enfrentaron al programar la interactividad?**
+9. **¿Cómo utilizaron la Inteligencia Artificial como copiloto sin delegar el criterio humano?**
+10. **¿Qué aprendizajes sobre la cultura de Colombia descubrieron ustedes mismos al crear el juego?**
+11. **¿Qué cambios implementaron tras observar las pruebas con sus compañeros?**
+12. **¿Qué evidencia demuestra que el videojuego realmente enseña historia y cultura?**
 
 ---
 
 ## Rúbrica de Evaluación Entrega 3 (100 Puntos)
-- Funcionamiento impecable del videojuego: **15 pts**
+- Funcionamiento del videojuego: **15 pts**
 - Calidad de la experiencia de juego: **10 pts**
-- Integración y evidencia del aprendizaje: **15 pts**
-- Calidad de la programación: **10 pts**
+- Integración del aprendizaje: **15 pts**
+- Programación: **10 pts**
 - Diseño visual y creatividad: **10 pts**
 - Pruebas con usuarios: **10 pts**
 - Mejoras realizadas: **10 pts**
-- Documentación integral (.md / .docx): **5 pts**
-- Uso responsable y reflexivo de IA: **5 pts**
-- Sustentación y defensa ante jurado: **10 pts**
+- Documentación (.md / .docx): **5 pts**
+- Uso responsable de IA: **5 pts**
+- Sustentación: **10 pts**
 - **TOTAL: 100 PUNTOS**
 
 ---
@@ -550,8 +522,8 @@ Se aplicará a un mínimo de 3 estudiantes de la institución:
 
 | Fecha | Necesidad del Proyecto | Prompt Enviado a la IA | Respuesta Utilizada de la IA | Decisión y Adaptación del Equipo |
 | :---: | :--- | :--- | :--- | :--- |
-| **11/11/2026** | Definición conceptual del juego STEAM Grado 11° | *"Actúa como asesor de proyectos educativos STEAM para grado 11... identifica 10 problemas y alternativas"* | Propuesta de microredes eléctricas inteligentes y balance de energía renovable. | Aprobado unánimemente; se ajustó el enfoque a simulación 2D interactiva en Canvas. |
-| **11/11/2026** | Revisión y robustez del objetivo pedagógico | *"Actúa como diseñador instruccional... evalúa el objetivo educativo para estudiantes de 16 años..."* | Recomendó agregar la fórmula de balance $\sum P_{gen} \ge P_{dem}$ y límite de CO2. | Se integraron métricas observables y evaluables en el GDD. |
+| **11/11/2026** | Selección y diseño de temática de bajo impacto matemático | *"Plantear temáticas fáciles sin cálculos físicos o matemáticos..."* | Propuesta de 5 temáticas (Reciclaje, Ciberseguridad, Inmunología, Museo de Historia y Nutrición). | El equipo seleccionó la Opción 4 enfocada en Historia y Cultura de Colombia. |
+| **11/11/2026** | Estructuración pedagógica de las 3 salas colombianas | *"Diseñar 3 salas históricas con artefactos icónicos de Colombia..."* | Propuesta de Sala Precolombina, Sala Independencia y Sala Patrimonio Vivo. | Se aprobó la selección de 12 piezas icónicas (Balsa Muisca, Poporo, Sombrero Vueltiao, etc.). |
 
 ---
 
@@ -559,7 +531,7 @@ Se aplicará a un mínimo de 3 estudiantes de la institución:
 
 | Fecha | Componente | Descripción del Problema / Bug | Causa Raíz Identificada | Solución Aplicada | ¿Funcionó? |
 | :---: | :---: | :--- | :--- | :--- | :---: |
-| *(Ejemplo de inicio)* | Simulación | La batería se descargaba por debajo del 0% mostrando valores negativos. | Falta de control de frontera en la resta de potencia en `tick()`. | Se aplicó función `Math.max(0, currentCharge - dischargeRate)`. | Sí ✅ |
+| *(Ejemplo inicial)* | Drag & Drop | El artefacto quedaba flotando fuera de la pantalla si se soltaba en el borde. | Falta de evento `dragend` con reseteo de coordenadas originales. | Se guardaron `xOriginal` e `yOriginal` para retorno suave con tween. | Sí ✅ |
 
 ---
 
