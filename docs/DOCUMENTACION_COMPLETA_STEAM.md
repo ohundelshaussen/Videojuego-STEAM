@@ -371,8 +371,8 @@ EcoCircuit-Videojuego-STEAM/
 13. **Condición de victoria:** Completar los 3 días virtuales con Estabilidad $> 70\%$ y Cero Apagón Hospitalario.
 14. **Condición de derrota:** Estabilidad de red $= 0\%$ o superación del límite crítico de polución CO2 ($100\%$).
 15. **Elementos STEAM:** Explicados detalladamente en la Misión 14.
-16. **Tecnología:** HTML5, CSS3 moderno, JavaScript nativo modular (Canvas API 2D).
-17. **Librería JavaScript propuesta:** HTML5 Canvas Nativo / Modular JS sin dependencias pesadas (o Phaser 3 vía CDN para portabilidad absoluta en navegadores de laboratorio escolar).
+16. **Tecnología:** HTML5, CSS3 moderno, JavaScript ES6+.
+17. **Librería JavaScript propuesta y justificada:** **Phaser 3** (Librería oficial autorizada para videojuegos 2D). Permite arquitectura por escenas (`BootScene`, `MenuScene`, `GameScene`, `UIScene`), sistema de partículas para animar el flujo eléctrico y compatibilidad escolar mediante inclusión directa sin dependencias npm.
 
 ---
 
@@ -394,11 +394,16 @@ EcoCircuit-Videojuego-STEAM/
 # 4. ENTREGA 2: PROTOTIPO FUNCIONAL (30%)
 
 ## Misión 16: Selección y Justificación de la Tecnología
-- **HTML5:** Marcado semántico estructurado para pantallas modulares (Inicio, Tutorial, Juego, HUD y Resumen).
-- **CSS3:** Sistema de diseño responsivo basado en CSS Grid y Flexbox con variables personalizadas (tema Solarpunk: acentos verdes `#10b981`, azules `#0284c7`, fondos oscuros `#0f172a` para contraste de alto impacto).
-- **JavaScript (ES6+):** Programación orientada a objetos y arquitectura modular con separación clara entre lógica de simulación física (`simulationEngine.js`), manejo de estado (`gameState.js`), y renderizado/UI (`uiController.js`).
-- **Librería / API:** **HTML5 Canvas 2D Nativo + Modular JS**.
-  - *Justificación Técnica Escolar:* No requiere Node.js, npm ni bundlers complejos. Se ejecuta de forma nativa e instantánea en cualquier navegador de los equipos de la sala de cómputo escolar con doble clic o con la extensión Live Server. Proporciona control total sobre la tasa de refresco (60 FPS), dibujo de partículas de corriente y curvas de carga.
+Conforme a la terna de librerías permitidas por la institución (**Phaser**, **p5.js**, **Three.js**):
+
+- **HTML5:** Marcado semántico estructurado para el contenedor del lienzo y modales didácticos.
+- **CSS3:** Sistema de diseño responsivo basado en CSS Grid y Flexbox con variables de temática Solarpunk.
+- **JavaScript (ES6+):** Programación orientada a objetos para la simulación física y modelos matemáticos.
+- **Librería Oficial Seleccionada:** **Phaser 3** (Versión 3.60+ / 3.80+).
+  - *Comparación y Justificación Pedagógica (Prompt IA 10):*
+    1. **Frente a Three.js:** Three.js está orientada a entornos 3D, lo cual añadiría una sobrecarga innecesaria de modelado y shaders para una mecánica de gestión de cuadrícula y balance de red topológico 2D.
+    2. **Frente a p5.js:** Aunque p5.js es excelente para gráficos interactivos simples, carece de un sistema nativo de gestión de escenas de juego, ciclo de vida desacoplado (Preload, Create, Update), emisores de partículas para fluidos eléctricos y manejo optimizado de sprites interactivos con drag-and-drop.
+    3. **Fortalezas de Phaser 3:** Es el estándar por excelencia de desarrollo de videojuegos 2D en web. Permite separar la escena de simulación de la escena de interfaz, ofrece animaciones fluidas a 60 FPS y se distribuye como un único archivo JavaScript (`phaser.min.js`), asegurando los **15 puntos del criterio "Uso de librería"** y garantizando que el juego funcione 100% offline en las computadoras del colegio.
 
 ---
 
