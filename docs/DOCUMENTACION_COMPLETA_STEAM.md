@@ -388,21 +388,25 @@ Ver desglose detallado en el [Capítulo 2: Estructura del Proyecto](#2-estructur
 
 | Componente | Descripción Técnica | Estado | Probado |
 | :--- | :--- | :---: | :---: |
-| **1. Pantalla Inicial** | Menú interactivo con botón "Entrar al Museo", Guía y Créditos. | ⏳ Pendiente | [ ] |
-| **2. Pantalla de Instrucciones** | Modal con la guía de cómo arrastrar piezas y las 3 vidas. | ⏳ Pendiente | [ ] |
-| **3. Escenario / Sala** | Recreación gráfica de las salas históricas y pedestales de vitrina. | ⏳ Pendiente | [ ] |
-| **4. Jugador / Cursor** | Puntero interactivo de curaduría con respuesta de agarre. | ⏳ Pendiente | [ ] |
-| **5. Controles (Drag & Drop)** | Eventos de ratón y táctil para tomar y soltar piezas en vitrinas. | ⏳ Pendiente | [ ] |
-| **6. Mecánica Principal** | Verificación de coincidencia entre pieza y vitrina histórica. | ⏳ Pendiente | [ ] |
-| **7. Puntuación y HUD** | Marcador de puntos, vidas (lupas) y reloj de 60 segundos. | ⏳ Pendiente | [ ] |
-| **8. Victoria / Derrota** | Comprobación de final de sala y gestión de vidas agotadas. | ⏳ Pendiente | [ ] |
-| **9. Contenido Educativo** | Fichas técnicas de los artefactos y pistas didácticas automáticas. | ⏳ Pendiente | [ ] |
-| **10. Pantalla Final** | Diploma interactivo de Guardián del Patrimonio y resumen. | ⏳ Pendiente | [ ] |
+| **1. Pantalla Inicial** | Menú interactivo con botón "Entrar al Museo", Guía y Créditos. | ✅ Construido | [x] |
+| **2. Pantalla de Instrucciones** | Modal con la guía de cómo arrastrar piezas y las 3 vidas. | ✅ Construido | [x] |
+| **3. Escenario / Sala** | Recreación gráfica de las salas históricas y pedestales de vitrina. | ✅ Construido | [x] |
+| **4. Jugador / Cursor** | Puntero interactivo de curaduría con respuesta de agarre. | ✅ Construido | [x] |
+| **5. Controles (Drag & Drop)** | Eventos de ratón y táctil para tomar y soltar piezas en vitrinas. | ✅ Construido | [x] |
+| **6. Mecánica Principal** | Verificación de coincidencia entre pieza y vitrina histórica. | ✅ Construido | [x] |
+| **7. Puntuación y HUD** | Marcador de puntos, vidas (lupas) y reloj de 60 segundos. | ✅ Construido | [x] |
+| **8. Victoria / Derrota** | Comprobación de final de sala y gestión de vidas agotadas. | ✅ Construido | [x] |
+| **9. Contenido Educativo** | Fichas técnicas de los artefactos y pistas didácticas automáticas. | ✅ Construido | [x] |
+| **10. Pantalla Final** | Diploma interactivo de Guardián del Patrimonio y resumen. | ✅ Construido | [x] |
 
 ---
 
 ## Misión 19: Comprensión y Explicación del Código
-*(Sección reservada para documentar las funciones de interacción `setupDropZones()`, `checkMatch(piece, zone)` y el manejo de estados de Phaser 3).*
+El sistema opera sobre la arquitectura modular de Phaser 3 (`BootScene`, `MenuScene`, `GameScene`, `ResultScene`):
+1. **Zonas de Soltado (`setupDropZones`):** Las vitrinas se configuran con `zone.setRectangleDropZone(w, h)` asignando `zone.setData('era', eraId)` para permitir la colisión lógica sin motores de física pesada.
+2. **Ciclo de Drag & Drop:** Se suscriben los eventos nativos `dragstart` (resalta y escala a 1.18), `drag` (sigue puntero), `drop` (valida `artifact.era === zone.getData('era')`) y `dragend` (retorno elástico con tween si no fue soltado en dropzone válida).
+3. **Mecánica de Puntuación y Vidas:** Acierto otorga +100 PTS, reproduce campanada de éxito mediante Web Audio API, genera partículas doradas y fija la pieza en la repisa. El error descuenta 25 PTS, resta 1 lupa de vida, ejecuta vibración de cámara (`shake`) y despliega el modal didáctico `#modal-hint` con la pista histórica.
+4. **Independencia de Recursos Externos:** `BootScene` genera los 12 artefactos patrimoniales y elementos de interfaz de manera vectorial procedural mediante `this.make.graphics()`, permitiendo ejecución 100% offline sin fallos 404 ni dependencia de servidores.
 
 ---
 
@@ -524,6 +528,7 @@ Se aplicará a 3 compañeros de grado 11°:
 | :---: | :--- | :--- | :--- | :--- |
 | **11/11/2026** | Selección y diseño de temática de bajo impacto matemático | *"Plantear temáticas fáciles sin cálculos físicos o matemáticos..."* | Propuesta de 5 temáticas (Reciclaje, Ciberseguridad, Inmunología, Museo de Historia y Nutrición). | El equipo seleccionó la Opción 4 enfocada en Historia y Cultura de Colombia. |
 | **11/11/2026** | Estructuración pedagógica de las 3 salas colombianas | *"Diseñar 3 salas históricas con artefactos icónicos de Colombia..."* | Propuesta de Sala Precolombina, Sala Independencia y Sala Patrimonio Vivo. | Se aprobó la selección de 12 piezas icónicas (Balsa Muisca, Poporo, Sombrero Vueltiao, etc.). |
+| **11/11/2026** | Implementación completa de Entrega 2 (Prototipo Phaser 3) | *"Actúa como Desarrollador Frontend Senior... entrega arquitectura modular con BootScene, MenuScene, GameScene, ResultScene..."* | Generación modular desacoplada con texturas procedurales vectoriales (Canvas/Graphics) y síntesis de audio Web Audio API. | El equipo adoptó la arquitectura 100% offline sin dependencias externas de imágenes ni audio, asegurando portabilidad en salas escolares. |
 
 ---
 
@@ -531,7 +536,9 @@ Se aplicará a 3 compañeros de grado 11°:
 
 | Fecha | Componente | Descripción del Problema / Bug | Causa Raíz Identificada | Solución Aplicada | ¿Funcionó? |
 | :---: | :---: | :--- | :--- | :--- | :---: |
-| *(Ejemplo inicial)* | Drag & Drop | El artefacto quedaba flotando fuera de la pantalla si se soltaba en el borde. | Falta de evento `dragend` con reseteo de coordenadas originales. | Se guardaron `xOriginal` e `yOriginal` para retorno suave con tween. | Sí ✅ |
+| **11/11/2026** | Drag & Drop | El artefacto quedaba flotando fuera de la pantalla si se soltaba en el borde o fuera de una Drop Zone. | Falta de evento `dragend` con verificación de la propiedad `dropped`. | Se implementó captura de `startX` y `startY` con retorno elástico suave animado mediante `this.tweens.add()`. | Sí ✅ |
+| **11/11/2026** | Carga de Assets | Riesgo de fallos HTTP 404 al mover el proyecto a computadores de la sala de cómputo sin conexión a Internet. | Dependencia de archivos externos `.png` y `.mp3` no garantizados en red local escolar. | Se programó `BootScene.js` con dibujo vectorial procedural (`this.make.graphics().generateTexture()`) y un sintetizador nativo Web Audio API. | Sí ✅ |
+| **11/11/2026** | Portabilidad de Módulos | Bloqueo por política de mismo origen (CORS) al abrir el juego con doble clic (`file:///`) si se usan ES Modules puros. | Los navegadores modernos bloquean `<script type="module">` sobre el protocolo `file://`. | Se estructuraron los archivos con importación secuencial clásica y registro explícito en `window`, permitiendo ejecución por doble clic y por Live Server. | Sí ✅ |
 
 ---
 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesoros de Colombia: Guardianes del Patrimonio | Proyecto STEAM Grado 11°</title>
+  
+  <!-- Tipografías de Museo Histórico y UI Moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de Estilos de Museo y Glassmorphism -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Contenedor Principal de la Experiencia Interactiva -->
+  <div class="app-layout">
+    
+    <!-- Encabezado Institucional STEAM -->
+    <header class="app-header">
+      <div class="header-badge">
+        <span class="flag-stripe yellow"></span>
+        <span class="flag-stripe blue"></span>
+        <span class="flag-stripe red"></span>
+        <span class="school-tag">I.E. Angela María Torres Suárez • Grado 11°</span>
+      </div>
+      <h1 class="header-title">Tesoros de Colombia: Guardianes del Patrimonio</h1>
+      <p class="header-subtitle">Museo Nacional de Colombia • Taller de Curaduría y Clasificación Histórica</p>
+    </header>
+
+    <!-- Contenedor Central del Canvas de Phaser 3 (Relación 16:9 / 960x540 px) -->
+    <main class="game-wrapper">
+      <div id="game-container" class="game-canvas-frame" aria-label="Lienzo del Videojuego Tesoros de Colombia"></div>
+    </main>
+
+    <!-- Barra de Control Rápido Inferior -->
+    <nav class="quick-nav" aria-label="Acciones rápidas del museo">
+      <button id="btn-open-guide" class="nav-btn" title="Ver guía histórica de curaduría">
+        <span class="btn-icon">📜</span> Guía del Curador
+      </button>
+      <button id="btn-toggle-sound" class="nav-btn" title="Activar o silenciar audio">
+        <span class="btn-icon" id="sound-icon">🔊</span> <span id="sound-text">Audio: Activo</span>
+      </button>
+      <button id="btn-open-credits" class="nav-btn" title="Ficha pedagógica STEAM">
+        <span class="btn-icon">🏛️</span> Créditos STEAM
+      </button>
+    </nav>
+
+    <!-- Pie Institucional -->
+    <footer class="app-footer">
+      <p>Área de Tecnología e Informática • Proyecto Interdisciplinar STEAM (Ciencia, Tecnología, Ingeniería, Arte y Matemáticas)</p>
+      <p class="footer-rule"><em>«Si no puedes explicar cómo funciona, todavía no puedes decir que lo construiste.»</em></p>
+    </footer>
+
+  </div>
+
+  <!-- ========================================================
+       MODALES DIDÁCTICOS ACCESIBLES (HTML5 + Glassmorphism)
+       ======================================================== -->
+
+  <!-- Modal 1: Guía de Curaduría y Salas Históricas -->
+  <div id="modal-guide" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="guide-title" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-icon-badge">📜</div>
+        <div>
+          <h2 id="guide-title" class="modal-title">Manual Oficial del Curador</h2>
+          <p class="modal-tagline">Museo Nacional de Colombia — Restauración de Reliquias</p>
+        </div>
+        <button class="modal-close-btn" data-close="modal-guide" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <section class="guide-story">
+          <h3>🏛️ La Misión de Sara (17 años)</h3>
+          <p>
+            Sara, una joven aprendiz apasionada por la historia patria, acaba de ingresar al Museo Nacional.
+            En la víspera de la gran inauguración, un lote de <strong>12 valiosos tesoros nacionales</strong> llegó mezclado en las cajas de transporte.
+            Tu deber como Curador Principal es clasificar cada artefacto en la vitrina histórica correspondiente antes de que se agote el tiempo.
+          </p>
+        </section>
+
+        <section class="guide-rooms-grid">
+          <div class="room-card room-precolombino">
+            <h4>Sala 1: Época Precolombina</h4>
+            <span class="room-era-pill">Indígena y Ancestral</span>
+            <p>Culturas milenarias, orfebrería sagrada y cosmovisión lítica.</p>
+            <ul>
+              <li><strong>Balsa Muisca:</strong> Ritual sagrado de Guatavita (El Dorado).</li>
+              <li><strong>Poporo Quimbaya:</strong> Recipiente ceremonial de cal y hojas de coca.</li>
+              <li><strong>Estatua de San Agustín:</strong> Escultura megalítica de guardianes felinos.</li>
+              <li><strong>Pectoral Tairona:</strong> Hombre-murciélago de la Sierra Nevada.</li>
+            </ul>
+          </div>
+
+          <div class="room-card room-independencia">
+            <h4>Sala 2: Gesta de Independencia</h4>
+            <span class="room-era-pill">Colonia y República</span>
+            <p>Símbolos de la lucha patriota, soberanía y libertad.</p>
+            <ul>
+              <li><strong>Florero de Llorente:</strong> Chispa libertadora del 20 de Julio de 1810.</li>
+              <li><strong>Espada de Bolívar:</strong> Acero libertador de Boyacá y Pantano de Vargas.</li>
+              <li><strong>Cartas de Policarpa:</strong> Espionaje y resistencia clandestina de La Pola.</li>
+              <li><strong>Murallas de Cartagena:</strong> Baluartes de piedra coralina contra asedios.</li>
+            </ul>
+          </div>
+
+          <div class="room-card room-patrimonio">
+            <h4>Sala 3: Patrimonio Vivo</h4>
+            <span class="room-era-pill">Tradición Regional</span>
+            <p>Saberes artesanales, música y riqueza folclórica inmaterial.</p>
+            <ul>
+              <li><strong>Sombrero Vueltiao:</strong> Tejido milenario Zenú en caña flecha.</li>
+              <li><strong>Marimba de Chonta:</strong> El poético «piano de la selva» del Pacífico.</li>
+              <li><strong>Canasto Cafetero:</strong> Trabajo campesino en las montañas andinas.</li>
+              <li><strong>Silleta Floral:</strong> Expresión multicolor campesina de Santa Elena.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="guide-rules">
+          <h3>⚖️ Reglas de Juego y Puntuación</h3>
+          <div class="rules-chips">
+            <span class="rule-chip positive">✅ Acierto en Vitrina: +100 Puntos</span>
+            <span class="rule-chip negative">❌ Error de Sala: -25 Puntos y -1 Lupa</span>
+            <span class="rule-chip warning">🔍 Vidas: 3 Lupas de Observación</span>
+            <span class="rule-chip neutral">⏳ Tiempo Límite: 60 Segundos</span>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button class="action-btn primary" data-close="modal-guide">¡Entendido! Entrar al Museo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Pista Pedagógica Inmediata (Al cometer error) -->
+  <div id="modal-hint" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="hint-title" hidden>
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header warning-header">
+        <div class="modal-icon-badge warning-badge">⚠️</div>
+        <div>
+          <h2 id="hint-title" class="modal-title">Corrección de Curaduría</h2>
+          <p class="modal-tagline">El artefacto no pertenece a la sala seleccionada</p>
+        </div>
+        <button class="modal-close-btn" data-close="modal-hint" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="hint-artifact-box">
+          <div id="hint-artifact-icon" class="hint-icon-slot">🏛️</div>
+          <div>
+            <h3 id="hint-artifact-name" class="hint-name">Nombre del Artefacto</h3>
+            <p id="hint-artifact-region" class="hint-region">Región Geográfica</p>
+          </div>
+        </div>
+        <div class="hint-didactic-alert">
+          <p class="hint-label">💡 Pista Histórica Clave:</p>
+          <p id="hint-didactic-text" class="hint-text">
+            Esta pieza no corresponde a esta época. Observa sus materiales y su contexto histórico.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="action-btn secondary" data-close="modal-hint">Intentar de Nuevo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Créditos Institucionales STEAM -->
+  <div id="modal-credits" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="credits-title" hidden>
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <div class="modal-icon-badge">🇨🇴</div>
+        <div>
+          <h2 id="credits-title" class="modal-title">Ficha Técnica del Proyecto STEAM</h2>
+          <p class="modal-tagline">Institución Educativa Angela María Torres Suárez</p>
+        </div>
+        <button class="modal-close-btn" data-close="modal-credits" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <div class="modal-body credits-body">
+        <p><strong>Nivel Educativo:</strong> Educación Media — Grado 11°</p>
+        <p><strong>Área:</strong> Tecnología e Informática (Programación Web y Videojuegos 2D)</p>
+        <p><strong>Motor Gráfico:</strong> Phaser 3 (Canvas HTML5 / WebGL) — 100% Portabilidad Offline</p>
+        <hr class="divider">
+        <h4>Integración Transversal STEAM:</h4>
+        <ul class="steam-list">
+          <li><strong>Ciencia (S):</strong> Conservación de materiales arqueológicos y catalogación de orfebrería, cerámica y fibras naturales.</li>
+          <li><strong>Tecnología (T):</strong> Arquitectura modular en JavaScript ES6+, motor Phaser 3 y síntesis de audio Web Audio API.</li>
+          <li><strong>Ingeniería (E):</strong> Arquitectura de software por escenas desacopladas, zonas de colisión (Drop Zones) y eventos de puntero.</li>
+          <li><strong>Arte (A):</strong> Ilustración vectorial procedural con Canvas/Graphics, paleta cromática colonial y diseño Glassmorphism.</li>
+          <li><strong>Matemáticas (M):</strong> Álgebra booleana condicional, contadores de métricas, cronometría decreciente y algoritmos de suma ponderada.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="action-btn primary" data-close="modal-credits">Cerrar Ficha</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       IMPORTACIÓN SECUENCIAL Y ROBUSTA DE SCRIPTS
+       Compatible con doble clic local (file://) y Live Server
+       ======================================================== -->
+  
+  <!-- 1. Motor Phaser 3 local (con fallback a CDN si se abre aislado) -->
+  <script src="lib/phaser.min.js"></script>
+  <script>
+    if (typeof Phaser === 'undefined') {
+      console.warn('⚠️ Phaser local no detectado en src/lib/phaser.min.js. Conectando con CDN fallback...');
+      document.write('<script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- 2. Configuración global y Base de Datos Didáctica -->
+  <script src="js/config.js"></script>
+
+  <!-- 3. Escenas Modulares de Phaser 3 -->
+  <script src="js/scenes/BootScene.js"></script>
+  <script src="js/scenes/MenuScene.js"></script>
+  <script src="js/scenes/GameScene.js"></script>
+  <script src="js/scenes/ResultScene.js"></script>
+
+  <!-- 4. Punto de Entrada e Inicialización de Phaser.Game -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

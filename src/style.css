@@ -1,0 +1,559 @@
+/* ========================================================
+   TESOROS DE COLOMBIA: GUARDIANES DEL PATRIMONIO
+   Hoja de Estilos de Museo Colonial y Glassmorphism
+   I.E. Angela María Torres Suárez — Grado 11°
+   ======================================================== */
+
+:root {
+  /* Paleta cromática de Museo Histórico Colombiano */
+  --bg-deep: #130f0d;
+  --bg-museum: #1a1512;
+  --bg-surface: #241c18;
+  --bg-card: rgba(36, 28, 24, 0.88);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+
+  /* Acentos de Orfebrería y Salas */
+  --gold-primary: #f59e0b;
+  --gold-bright: #fbbf24;
+  --gold-glow: rgba(245, 158, 11, 0.35);
+  --blue-colonial: #1d4ed8;
+  --blue-light: #60a5fa;
+  --green-emerald: #10b981;
+  --red-patriot: #dc2626;
+
+  /* Textos y bordes */
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --text-dim: #94a3b8;
+  --border-gold: rgba(245, 158, 11, 0.35);
+  --border-glass: rgba(255, 255, 255, 0.12);
+
+  /* Sombras y elevaciones */
+  --shadow-museum: 0 20px 50px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 25px rgba(245, 158, 11, 0.25);
+  --radius-card: 16px;
+  --radius-button: 10px;
+}
+
+/* Reset y caja base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-deep) radial-gradient(circle at 50% 20%, #291e18 0%, #130f0d 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  line-height: 1.5;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Contenedor principal centrado */
+.app-layout {
+  width: 100%;
+  max-width: 1040px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Encabezado Institucional */
+.app-header {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--border-gold);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 4px;
+}
+
+.flag-stripe {
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  border-radius: 2px;
+}
+.flag-stripe.yellow { background: #facc15; }
+.flag-stripe.blue { background: #2563eb; }
+.flag-stripe.red { background: #dc2626; }
+
+.school-tag {
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+}
+
+.header-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px var(--gold-glow);
+}
+
+.header-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Marco del Videojuego (960 x 540 px / 16:9) */
+.game-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-canvas-frame {
+  width: 960px;
+  height: 540px;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #110c0a;
+  border-radius: var(--radius-card);
+  border: 2px solid var(--gold-primary);
+  box-shadow: var(--shadow-museum), var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajuste responsivo del Canvas generado por Phaser */
+.game-canvas-frame canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  border-radius: calc(var(--radius-card) - 2px);
+  object-fit: contain;
+}
+
+/* Barra de Botones Rápidos */
+.quick-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.nav-btn {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-button);
+  padding: 8px 18px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--gold-glow);
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 1.05rem;
+}
+
+/* Pie Institucional */
+.app-footer {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+.footer-rule {
+  color: var(--gold-bright);
+  font-size: 0.82rem;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+/* ========================================================
+   MODALES CON EFECTO GLASSMORPHISM
+   ======================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 7, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.modal-backdrop[hidden] {
+  display: none !important;
+  opacity: 0;
+}
+
+.modal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-museum), 0 0 40px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalEnter 0.25s ease-out;
+}
+
+.modal-card-sm {
+  max-width: 520px;
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 18px 24px;
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.warning-header {
+  border-bottom-color: rgba(239, 68, 68, 0.4);
+}
+
+.modal-icon-badge {
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.warning-badge {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.modal-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--gold-bright);
+}
+
+.warning-header .modal-title {
+  color: #f87171;
+}
+
+.modal-tagline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: var(--gold-bright);
+}
+
+.modal-body {
+  padding: 22px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--gold-primary);
+  border-radius: 3px;
+}
+
+/* Secciones de la Guía */
+.guide-story {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px 16px;
+  border-radius: 10px;
+  border-left: 3px solid var(--gold-primary);
+}
+.guide-story h3 {
+  font-size: 0.95rem;
+  color: var(--gold-bright);
+  margin-bottom: 6px;
+}
+
+.guide-rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.room-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 14px;
+}
+.room-card.room-precolombino { border-top: 3px solid var(--gold-primary); }
+.room-card.room-independencia { border-top: 3px solid var(--blue-light); }
+.room-card.room-patrimonio { border-top: 3px solid var(--green-emerald); }
+
+.room-card h4 {
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+}
+.room-era-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.room-card p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.room-card ul {
+  list-style: none;
+  font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.room-card li strong {
+  color: var(--gold-bright);
+}
+
+.guide-rules h3 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--gold-bright);
+}
+.rules-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.rule-chip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-glass);
+}
+.rule-chip.positive { border-color: rgba(16, 185, 129, 0.5); color: #34d399; }
+.rule-chip.negative { border-color: rgba(239, 68, 68, 0.5); color: #f87171; }
+.rule-chip.warning { border-color: rgba(245, 158, 11, 0.5); color: #fbbf24; }
+.rule-chip.neutral { border-color: rgba(96, 165, 250, 0.5); color: #93c5fd; }
+
+/* Contenedor del Modal de Pista */
+.hint-artifact-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-glass);
+}
+.hint-icon-slot {
+  font-size: 2.2rem;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 8px;
+}
+.hint-name {
+  font-size: 1.05rem;
+  color: var(--gold-bright);
+}
+.hint-region {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.hint-didactic-alert {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid var(--gold-primary);
+  padding: 12px 14px;
+  border-radius: 6px;
+}
+.hint-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.hint-text {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+/* Modal de Créditos */
+.credits-body hr.divider {
+  border: none;
+  border-top: 1px solid var(--border-glass);
+  margin: 10px 0;
+}
+.steam-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.84rem;
+}
+.steam-list strong {
+  color: var(--gold-bright);
+}
+
+/* Pie de Modales */
+.modal-footer {
+  padding: 14px 24px;
+  background: rgba(0, 0, 0, 0.35);
+  border-top: 1px solid var(--border-glass);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  padding: 9px 22px;
+  border-radius: var(--radius-button);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.action-btn.primary {
+  background: var(--gold-primary);
+  color: #1a1512;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+.action-btn.primary:hover {
+  background: var(--gold-bright);
+  transform: translateY(-1px);
+}
+
+.action-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  border-color: var(--border-glass);
+}
+.action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================================
+   RESPONSIVIDAD Y MONITORES ESCOLARES
+   ======================================================== */
+@media (max-width: 992px) {
+  .game-canvas-frame {
+    width: 100%;
+    height: auto;
+  }
+  .header-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-layout {
+    padding: 8px;
+  }
+  .header-title {
+    font-size: 1.15rem;
+  }
+  .quick-nav {
+    gap: 6px;
+  }
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+}
