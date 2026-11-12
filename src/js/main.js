@@ -1,6 +1,6 @@
 /**
  * TESOROS DE COLOMBIA: GUARDIANES DEL PATRIMONIO
- * main.js: Punto de Entrada Principal e Integración de UI Accesible
+ * main.js: Punto de Entrada Principal e Integración de UI de Museo
  * I.E. Angela María Torres Suárez — Grado 11° | Proyecto STEAM
  */
 
@@ -8,25 +8,16 @@
 // 1. INTEGRACIÓN DE MODALES DIDÁCTICOS (HTML5 ACCESIBLE)
 // ========================================================
 
-/**
- * Abre un modal por su ID con foco accesible
- */
 window.openModal = function(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
     modal.removeAttribute('hidden');
-    // Prevenir scroll de la página de fondo si aplicara
     document.body.style.overflow = 'hidden';
-    
-    // Enfocar botón de cierre para accesibilidad
     const closeBtn = modal.querySelector('.modal-close-btn');
     if (closeBtn) closeBtn.focus();
   }
 };
 
-/**
- * Cierra un modal por su ID
- */
 window.closeModal = function(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
@@ -35,22 +26,17 @@ window.closeModal = function(modalId) {
   }
 };
 
-/**
- * Despliega el modal pedagógico con la pista histórica inmediata
- */
 window.showHintModal = function(artifact) {
   const modal = document.getElementById('modal-hint');
   if (!modal) return;
 
-  const iconEl = document.getElementById('hint-artifact-icon');
   const nameEl = document.getElementById('hint-artifact-name');
   const regionEl = document.getElementById('hint-artifact-region');
   const textEl = document.getElementById('hint-didactic-text');
 
-  if (iconEl) iconEl.textContent = artifact.iconEmoji || '🏛️';
-  if (nameEl) nameEl.textContent = artifact.name || 'Artefacto';
-  if (regionEl) regionEl.textContent = `📍 Origen: ${artifact.region || 'Colombia'}`;
-  if (textEl) textEl.textContent = artifact.hint || 'Revisa con detenimiento las características de la época.';
+  if (nameEl) nameEl.textContent = (artifact.name || 'ARTEFACTO').toUpperCase();
+  if (regionEl) regionEl.textContent = `${artifact.region || 'Colombia'} • ${artifact.category || 'Patrimonio Histórico'}`;
+  if (textEl) textEl.textContent = artifact.hint || 'Examina con detenimiento las características y época de esta reliquia.';
 
   window.openModal('modal-hint');
 };
@@ -62,14 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Botones de cierre de modales
   const closeButtons = document.querySelectorAll('[data-close]');
   closeButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       const targetId = btn.getAttribute('data-close');
       window.closeModal(targetId);
       if (window.SoundEffects) window.SoundEffects.playClick();
     });
   });
 
-  // Cerrar modal al hacer clic en el fondo oscuro
+  // Cierre de modal al hacer clic en el backdrop
   const backdrops = document.querySelectorAll('.modal-backdrop');
   backdrops.forEach(backdrop => {
     backdrop.addEventListener('click', (e) => {
@@ -84,44 +70,25 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       backdrops.forEach(b => {
-        if (!b.hasAttribute('hidden')) {
-          window.closeModal(b.id);
-        }
+        if (!b.hasAttribute('hidden')) window.closeModal(b.id);
       });
     }
   });
 
-  // Barra de navegación inferior rápida
-  const btnGuide = document.getElementById('btn-open-guide');
-  if (btnGuide) {
-    btnGuide.addEventListener('click', () => {
-      if (window.SoundEffects) window.SoundEffects.playClick();
-      window.openModal('modal-guide');
-    });
-  }
-
-  const btnCredits = document.getElementById('btn-open-credits');
-  if (btnCredits) {
-    btnCredits.addEventListener('click', () => {
-      if (window.SoundEffects) window.SoundEffects.playClick();
-      window.openModal('modal-credits');
-    });
-  }
-
-  // Alternador de audio (Mute/Unmute)
+  // Alternador de audio en la barra superior minimalista (Cero emojis)
   const btnSound = document.getElementById('btn-toggle-sound');
-  const soundIcon = document.getElementById('sound-icon');
-  const soundText = document.getElementById('sound-text');
+  const soundDot = document.getElementById('sound-status-dot');
+  const soundLabel = document.getElementById('sound-label');
 
   if (btnSound && window.SoundEffects) {
     btnSound.addEventListener('click', () => {
       const isMuted = window.SoundEffects.toggleMute();
       if (isMuted) {
-        if (soundIcon) soundIcon.textContent = '🔇';
-        if (soundText) soundText.textContent = 'Audio: Silenciado';
+        if (soundDot) soundDot.classList.remove('active');
+        if (soundLabel) soundLabel.textContent = 'AUDIO: SILENCIADO';
       } else {
-        if (soundIcon) soundIcon.textContent = '🔊';
-        if (soundText) soundText.textContent = 'Audio: Activo';
+        if (soundDot) soundDot.classList.add('active');
+        if (soundLabel) soundLabel.textContent = 'AUDIO: ACTIVO';
         window.SoundEffects.playClick();
       }
     });
@@ -131,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. INICIALIZACIÓN DEL MOTOR PHASER 3
   // ========================================================
   try {
-    // Registrar escenas en orden de ciclo de vida
     window.GAME_CONFIG.scene = [
       window.BootScene,
       window.MenuScene,
@@ -139,15 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
       window.ResultScene
     ];
 
-    // Instanciación del juego
     window.gameInstance = new Phaser.Game(window.GAME_CONFIG);
 
     console.log(
       '%c🏛️ TESOROS DE COLOMBIA: GUARDIANES DEL PATRIMONIO 🇨🇴',
-      'background: #1a1512; color: #f59e0b; font-size: 14px; font-weight: bold; padding: 6px 12px; border-radius: 6px;'
+      'background: #110d0b; color: #f59e0b; font-size: 13px; font-weight: bold; padding: 6px 12px; border-radius: 4px;'
     );
-    console.log('✅ Phaser 3 inicializado con éxito. Modo de pantalla: FIT 16:9 (960x540 px).');
-    console.log('✅ 12 Reliquias patrimoniales cargadas en base de datos modular.');
+    console.log('✅ Interfaz de museo profesional activada: HUD sobrio, vitrinas con cristal y cero emojis.');
   } catch (error) {
     console.error('❌ Error crítico al inicializar Phaser 3:', error);
   }

@@ -1,41 +1,37 @@
 /* ========================================================
    TESOROS DE COLOMBIA: GUARDIANES DEL PATRIMONIO
-   Hoja de Estilos de Museo Colonial y Glassmorphism
+   Estilos de Museo Moderno y Usabilidad Limpia (UI/UX)
    I.E. Angela María Torres Suárez — Grado 11°
    ======================================================== */
 
 :root {
-  /* Paleta cromática de Museo Histórico Colombiano */
-  --bg-deep: #130f0d;
-  --bg-museum: #1a1512;
-  --bg-surface: #241c18;
-  --bg-card: rgba(36, 28, 24, 0.88);
-  --bg-glass: rgba(255, 255, 255, 0.05);
+  /* Paleta cromática de Museo Histórico */
+  --bg-deep: #0f0c0a;
+  --bg-museum: #16120f;
+  --bg-card: rgba(24, 18, 15, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.04);
 
   /* Acentos de Orfebrería y Salas */
   --gold-primary: #f59e0b;
   --gold-bright: #fbbf24;
-  --gold-glow: rgba(245, 158, 11, 0.35);
-  --blue-colonial: #1d4ed8;
-  --blue-light: #60a5fa;
+  --gold-glow: rgba(245, 158, 11, 0.25);
+  --blue-colonial: #3b82f6;
   --green-emerald: #10b981;
-  --red-patriot: #dc2626;
+  --red-accent: #ef4444;
 
   /* Textos y bordes */
   --text-main: #f8fafc;
-  --text-muted: #cbd5e1;
-  --text-dim: #94a3b8;
-  --border-gold: rgba(245, 158, 11, 0.35);
-  --border-glass: rgba(255, 255, 255, 0.12);
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --border-subtle: rgba(245, 158, 11, 0.25);
+  --border-glass: rgba(255, 255, 255, 0.08);
 
-  /* Sombras y elevaciones */
-  --shadow-museum: 0 20px 50px rgba(0, 0, 0, 0.7);
-  --shadow-glow: 0 0 25px rgba(245, 158, 11, 0.25);
-  --radius-card: 16px;
-  --radius-button: 10px;
+  /* Sombras y radios */
+  --shadow-stage: 0 24px 60px rgba(0, 0, 0, 0.85);
+  --radius-card: 14px;
+  --radius-button: 8px;
 }
 
-/* Reset y caja base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -43,90 +39,109 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: var(--bg-deep) radial-gradient(circle at 50% 20%, #291e18 0%, #130f0d 100%);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg-deep) radial-gradient(circle at 50% 15%, #241a14 0%, #0f0c0a 100%);
   color: var(--text-main);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  line-height: 1.5;
+  justify-content: space-between;
+  overflow: hidden;
+  line-height: 1.4;
   user-select: none;
   -webkit-user-select: none;
 }
 
-/* Contenedor principal centrado */
-.app-layout {
+/* ========================================================
+   BARRA SUPERIOR MINIMALISTA (38px)
+   ======================================================== */
+.app-topbar {
   width: 100%;
-  max-width: 1040px;
-  padding: 16px;
+  height: 38px;
+  background: rgba(18, 14, 12, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
 }
 
-/* Encabezado Institucional */
-.app-header {
-  text-align: center;
-  width: 100%;
+.topbar-brand {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 10px;
 }
 
-.header-badge {
+.flag-indicator {
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid var(--border-gold);
-  border-radius: 999px;
-  padding: 4px 14px;
-  margin-bottom: 4px;
+  flex-direction: column;
+  gap: 1px;
 }
-
-.flag-stripe {
-  display: inline-block;
-  width: 10px;
-  height: 8px;
-  border-radius: 2px;
+.flag-indicator .stripe {
+  display: block;
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
 }
-.flag-stripe.yellow { background: #facc15; }
-.flag-stripe.blue { background: #2563eb; }
-.flag-stripe.red { background: #dc2626; }
+.flag-indicator .stripe.y { background: #facc15; }
+.flag-indicator .stripe.b { background: #2563eb; }
+.flag-indicator .stripe.r { background: #dc2626; }
 
-.school-tag {
-  font-size: 0.78rem;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  color: var(--gold-bright);
+.brand-text {
+  font-size: 0.76rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--text-muted);
   text-transform: uppercase;
 }
 
-.header-title {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 1.65rem;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: #fff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px var(--gold-glow);
-}
-
-.header-subtitle {
-  font-size: 0.88rem;
+.topbar-sound-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: 999px;
+  padding: 4px 12px;
   color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
 }
 
-/* Marco del Videojuego (960 x 540 px / 16:9) */
-.game-wrapper {
+.topbar-sound-btn:hover {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--gold-primary);
+  color: #fff;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #64748b;
+}
+.status-dot.active {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* ========================================================
+   ESCENARIO PRINCIPAL DEL JUEGO (Lienzo 960x540 en foco)
+   ======================================================== */
+.game-stage {
+  flex: 1;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 16px;
 }
 
 .game-canvas-frame {
@@ -134,10 +149,10 @@ body {
   height: 540px;
   max-width: 100%;
   aspect-ratio: 16 / 9;
-  background: #110c0a;
+  background: #110d0b;
   border-radius: var(--radius-card);
-  border: 2px solid var(--gold-primary);
-  box-shadow: var(--shadow-museum), var(--shadow-glow);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-stage), 0 0 30px rgba(245, 158, 11, 0.15);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -145,187 +160,116 @@ body {
   align-items: center;
 }
 
-/* Ajuste responsivo del Canvas generado por Phaser */
 .game-canvas-frame canvas {
   width: 100% !important;
   height: 100% !important;
   display: block;
-  border-radius: calc(var(--radius-card) - 2px);
+  border-radius: calc(var(--radius-card) - 1px);
   object-fit: contain;
 }
 
-/* Barra de Botones Rápidos */
-.quick-nav {
+/* ========================================================
+   PIE SUTIL
+   ======================================================== */
+.app-bottombar {
+  width: 100%;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 4px;
-}
-
-.nav-btn {
-  background: var(--bg-card);
-  color: var(--text-main);
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-button);
-  padding: 8px 18px;
-  font-size: 0.86rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.nav-btn:hover {
-  background: rgba(245, 158, 11, 0.2);
-  border-color: var(--gold-bright);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px var(--gold-glow);
-}
-
-.nav-btn:active {
-  transform: translateY(0);
-}
-
-.btn-icon {
-  font-size: 1.05rem;
-}
-
-/* Pie Institucional */
-.app-footer {
-  text-align: center;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   color: var(--text-dim);
-  margin-top: 6px;
-}
-
-.footer-rule {
-  color: var(--gold-bright);
-  font-size: 0.82rem;
-  margin-top: 3px;
-  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 /* ========================================================
-   MODALES CON EFECTO GLASSMORPHISM
+   MODALES DIDÁCTICOS (GLASSMORPHISM Y JERARQUÍA PROFESIONAL)
    ======================================================== */
-
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(10, 8, 7, 0.82);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(8, 6, 5, 0.86);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
   padding: 16px;
-  opacity: 1;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.2s ease;
 }
 
 .modal-backdrop[hidden] {
   display: none !important;
-  opacity: 0;
 }
 
 .modal-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-gold);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
-  box-shadow: var(--shadow-museum), 0 0 40px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(245, 158, 11, 0.1);
   width: 100%;
-  max-width: 760px;
+  max-width: 740px;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  animation: modalEnter 0.25s ease-out;
+  animation: modalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-card-sm {
-  max-width: 520px;
+  max-width: 480px;
 }
 
-@keyframes modalEnter {
-  from {
-    opacity: 0;
-    transform: scale(0.94) translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .modal-header {
   padding: 18px 24px;
-  background: rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid var(--border-gold);
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid var(--border-glass);
   display: flex;
   align-items: center;
-  gap: 14px;
-  position: relative;
+  justify-content: space-between;
 }
 
-.warning-header {
-  border-bottom-color: rgba(239, 68, 68, 0.4);
+.modal-eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
-.modal-icon-badge {
-  font-size: 1.8rem;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid var(--border-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.warning-badge {
-  background: rgba(239, 68, 68, 0.15);
-  border-color: rgba(239, 68, 68, 0.5);
+.modal-eyebrow.warning {
+  color: var(--red-accent);
 }
 
 .modal-title {
   font-family: 'Cinzel', Georgia, serif;
   font-size: 1.25rem;
-  color: var(--gold-bright);
-}
-
-.warning-header .modal-title {
-  color: #f87171;
-}
-
-.modal-tagline {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #fff;
 }
 
 .modal-close-btn {
-  position: absolute;
-  right: 18px;
-  top: 18px;
   background: transparent;
   border: none;
   color: var(--text-muted);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
   line-height: 1;
-  transition: color 0.2s;
+  padding: 4px;
+  transition: color 0.15s;
 }
 
 .modal-close-btn:hover {
-  color: var(--gold-bright);
+  color: #fff;
 }
 
 .modal-body {
@@ -333,200 +277,224 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  font-size: 0.92rem;
-  color: var(--text-main);
+  gap: 16px;
+  font-size: 0.88rem;
 }
 
-.modal-body::-webkit-scrollbar {
-  width: 6px;
-}
-.modal-body::-webkit-scrollbar-thumb {
-  background: var(--gold-primary);
-  border-radius: 3px;
-}
-
-/* Secciones de la Guía */
-.guide-story {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 14px 16px;
-  border-radius: 10px;
-  border-left: 3px solid var(--gold-primary);
-}
-.guide-story h3 {
-  font-size: 0.95rem;
-  color: var(--gold-bright);
-  margin-bottom: 6px;
-}
-
-.guide-rooms-grid {
+/* --- 3 Pasos Visuales --- */
+.steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
-.room-card {
-  background: rgba(0, 0, 0, 0.3);
+.step-card {
+  background: rgba(0, 0, 0, 0.35);
   border: 1px solid var(--border-glass);
   border-radius: 10px;
-  padding: 14px;
+  padding: 14px 12px;
+  position: relative;
 }
-.room-card.room-precolombino { border-top: 3px solid var(--gold-primary); }
-.room-card.room-independencia { border-top: 3px solid var(--blue-light); }
-.room-card.room-patrimonio { border-top: 3px solid var(--green-emerald); }
 
-.room-card h4 {
-  font-size: 0.88rem;
+.step-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--gold-bright);
+  display: block;
   margin-bottom: 4px;
 }
-.room-era-pill {
-  display: inline-block;
+
+.step-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.step-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+/* --- Resumen de Salas --- */
+.rooms-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.room-pill {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.room-pill strong {
+  color: #fff;
+}
+
+.room-pill .room-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.room-pill.room-precolombino { border-left: 3px solid var(--gold-primary); }
+.room-pill.room-precolombino .room-dot { background: var(--gold-primary); }
+
+.room-pill.room-independencia { border-left: 3px solid var(--blue-colonial); }
+.room-pill.room-independencia .room-dot { background: var(--blue-colonial); }
+
+.room-pill.room-patrimonio { border-left: 3px solid var(--green-emerald); }
+.room-pill.room-patrimonio .room-dot { background: var(--green-emerald); }
+
+/* --- Barra de Reglas --- */
+.rules-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.rule-item {
   font-size: 0.72rem;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-muted);
-  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-glass);
 }
-.room-card p {
+.rule-item.success { color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+.rule-item.danger { color: #f87171; border-color: rgba(239, 68, 68, 0.4); }
+.rule-item.neutral { color: var(--text-muted); }
+
+/* --- Pista Didáctica --- */
+.hint-header-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.hint-artifact-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gold-bright);
+}
+
+.hint-artifact-subtitle {
   font-size: 0.78rem;
   color: var(--text-muted);
-  margin-bottom: 8px;
 }
-.room-card ul {
-  list-style: none;
-  font-size: 0.78rem;
+
+.hint-content-box {
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 3px solid var(--gold-primary);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.hint-tag {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--gold-primary);
+  margin-bottom: 4px;
+}
+
+.hint-body-text {
+  font-size: 0.85rem;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* --- Créditos STEAM --- */
+.credits-info {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.room-card li strong {
-  color: var(--gold-bright);
+.credits-info strong {
+  color: #fff;
 }
 
-.guide-rules h3 {
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-  color: var(--gold-bright);
-}
-.rules-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.rule-chip {
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid var(--border-glass);
-}
-.rule-chip.positive { border-color: rgba(16, 185, 129, 0.5); color: #34d399; }
-.rule-chip.negative { border-color: rgba(239, 68, 68, 0.5); color: #f87171; }
-.rule-chip.warning { border-color: rgba(245, 158, 11, 0.5); color: #fbbf24; }
-.rule-chip.neutral { border-color: rgba(96, 165, 250, 0.5); color: #93c5fd; }
-
-/* Contenedor del Modal de Pista */
-.hint-artifact-box {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  padding: 12px 16px;
-  border: 1px solid var(--border-glass);
-}
-.hint-icon-slot {
-  font-size: 2.2rem;
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(245, 158, 11, 0.1);
-  border-radius: 8px;
-}
-.hint-name {
-  font-size: 1.05rem;
-  color: var(--gold-bright);
-}
-.hint-region {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-.hint-didactic-alert {
-  background: rgba(245, 158, 11, 0.1);
-  border-left: 3px solid var(--gold-primary);
-  padding: 12px 14px;
-  border-radius: 6px;
-}
-.hint-label {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--gold-bright);
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-.hint-text {
-  font-size: 0.88rem;
-  color: var(--text-main);
-  line-height: 1.4;
-}
-
-/* Modal de Créditos */
-.credits-body hr.divider {
-  border: none;
-  border-top: 1px solid var(--border-glass);
-  margin: 10px 0;
-}
-.steam-list {
-  list-style: none;
+.steam-matrix-compact {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 0.84rem;
-}
-.steam-list strong {
-  color: var(--gold-bright);
+  gap: 6px;
 }
 
-/* Pie de Modales */
+.steam-row {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.steam-row span {
+  font-weight: 700;
+  color: var(--gold-bright);
+  display: inline-block;
+  width: 95px;
+}
+
+/* --- Pie de Modales y Botones --- */
 .modal-footer {
   padding: 14px 24px;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.4);
   border-top: 1px solid var(--border-glass);
   display: flex;
   justify-content: flex-end;
 }
 
 .action-btn {
-  padding: 9px 22px;
+  padding: 8px 20px;
   border-radius: var(--radius-button);
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
 }
 
 .action-btn.primary {
-  background: var(--gold-primary);
-  color: #1a1512;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #16120f;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
 }
 .action-btn.primary:hover {
-  background: var(--gold-bright);
+  filter: brightness(1.1);
   transform: translateY(-1px);
 }
 
 .action-btn.secondary {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-main);
   border-color: var(--border-glass);
 }
 .action-btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* ========================================================
@@ -537,23 +505,10 @@ body {
     width: 100%;
     height: auto;
   }
-  .header-title {
-    font-size: 1.35rem;
-  }
 }
 
 @media (max-width: 640px) {
-  .app-layout {
-    padding: 8px;
-  }
-  .header-title {
-    font-size: 1.15rem;
-  }
-  .quick-nav {
-    gap: 6px;
-  }
-  .nav-btn {
-    padding: 6px 12px;
-    font-size: 0.78rem;
+  .steps-grid {
+    grid-template-columns: 1fr;
   }
 }

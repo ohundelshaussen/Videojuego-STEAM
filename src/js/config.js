@@ -17,9 +17,7 @@ class WebAudioSynthesizer {
   init() {
     if (!this.ctx) {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (AudioCtx) {
-        this.ctx = new AudioCtx();
-      }
+      if (AudioCtx) this.ctx = new AudioCtx();
     }
     if (this.ctx && this.ctx.state === 'suspended') {
       this.ctx.resume();
@@ -31,98 +29,72 @@ class WebAudioSynthesizer {
     return this.isMuted;
   }
 
-  // Sonido de clic sutil de interfaz
   playClick() {
     if (this.isMuted) return;
     this.init();
     if (!this.ctx) return;
-
     try {
       const osc = this.ctx.createOscillator();
       const gain = this.ctx.createGain();
       const t = this.ctx.currentTime;
-
       osc.type = 'sine';
       osc.frequency.setValueAtTime(800, t);
-      osc.frequency.exponentialRampToValueAtTime(400, t + 0.05);
-
-      gain.gain.setValueAtTime(0.12, t);
-      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
-
+      osc.frequency.exponentialRampToValueAtTime(400, t + 0.04);
+      gain.gain.setValueAtTime(0.1, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
       osc.connect(gain);
       gain.connect(this.ctx.destination);
-
       osc.start(t);
-      osc.stop(t + 0.05);
-    } catch (e) {
-      // Audio no bloqueante
-    }
+      osc.stop(t + 0.04);
+    } catch (e) {}
   }
 
-  // Campanada dorada de éxito (+100 Puntos)
   playSuccess() {
     if (this.isMuted) return;
     this.init();
     if (!this.ctx) return;
-
     try {
-      const notes = [523.25, 659.25, 783.99, 1046.50]; // Acorde Mayor Do5-Mi5-Sol5-Do6
+      const notes = [523.25, 659.25, 783.99, 1046.50];
       notes.forEach((freq, idx) => {
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
-        const t = this.ctx.currentTime + idx * 0.06;
-
+        const t = this.ctx.currentTime + idx * 0.05;
         osc.type = 'triangle';
         osc.frequency.setValueAtTime(freq, t);
-
-        gain.gain.setValueAtTime(0.18, t);
-        gain.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
-
+        gain.gain.setValueAtTime(0.16, t);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
         osc.connect(gain);
         gain.connect(this.ctx.destination);
-
         osc.start(t);
-        osc.stop(t + 0.35);
+        osc.stop(t + 0.3);
       });
-    } catch (e) {
-      // Audio no bloqueante
-    }
+    } catch (e) {}
   }
 
-  // Tono de advertencia didáctica (-25 Puntos)
   playError() {
     if (this.isMuted) return;
     this.init();
     if (!this.ctx) return;
-
     try {
       const t = this.ctx.currentTime;
       const osc = this.ctx.createOscillator();
       const gain = this.ctx.createGain();
-
       osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(220, t);
-      osc.frequency.exponentialRampToValueAtTime(140, t + 0.22);
-
-      gain.gain.setValueAtTime(0.18, t);
-      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.22);
-
+      osc.frequency.setValueAtTime(200, t);
+      osc.frequency.exponentialRampToValueAtTime(130, t + 0.2);
+      gain.gain.setValueAtTime(0.15, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
       osc.connect(gain);
       gain.connect(this.ctx.destination);
-
       osc.start(t);
-      osc.stop(t + 0.22);
-    } catch (e) {
-      // Audio no bloqueante
-    }
+      osc.stop(t + 0.2);
+    } catch (e) {}
   }
 
-  // Fanfarria triunfal de graduación de curador
   playVictory() {
     if (this.isMuted) return;
     this.init();
     if (!this.ctx) return;
-
     try {
       const melody = [
         { f: 523.25, d: 0.12 },
@@ -134,31 +106,23 @@ class WebAudioSynthesizer {
       melody.forEach(item => {
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
-
         osc.type = 'triangle';
         osc.frequency.setValueAtTime(item.f, cur);
-
-        gain.gain.setValueAtTime(0.25, cur);
+        gain.gain.setValueAtTime(0.22, cur);
         gain.gain.exponentialRampToValueAtTime(0.001, cur + item.d);
-
         osc.connect(gain);
         gain.connect(this.ctx.destination);
-
         osc.start(cur);
         osc.stop(cur + item.d);
         cur += item.d * 0.9;
       });
-    } catch (e) {
-      // Audio no bloqueante
-    }
+    } catch (e) {}
   }
 
-  // Melodía reflexiva de intento agotado
   playGameOver() {
     if (this.isMuted) return;
     this.init();
     if (!this.ctx) return;
-
     try {
       const melody = [
         { f: 392.00, d: 0.2 },
@@ -170,32 +134,25 @@ class WebAudioSynthesizer {
       melody.forEach(item => {
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
-
         osc.type = 'sine';
         osc.frequency.setValueAtTime(item.f, cur);
-
-        gain.gain.setValueAtTime(0.2, cur);
+        gain.gain.setValueAtTime(0.18, cur);
         gain.gain.exponentialRampToValueAtTime(0.001, cur + item.d);
-
         osc.connect(gain);
         gain.connect(this.ctx.destination);
-
         osc.start(cur);
         osc.stop(cur + item.d);
         cur += item.d * 0.85;
       });
-    } catch (e) {
-      // Audio no bloqueante
-    }
+    } catch (e) {}
   }
 }
 
-// Instancia global de audio
 window.SoundEffects = new WebAudioSynthesizer();
 
 // ========================================================
 // 2. BASE DE DATOS DE LOS 12 ARTEFACTOS DEL PATRIMONIO
-// Clasificados en las 3 grandes salas históricas
+// Cero emojis. Clasificados en 3 salas históricas.
 // ========================================================
 window.COLOMBIAN_HERITAGE_DATA = [
   // --- SALA 1: ÉPOCA PRECOLOMBINA / INDÍGENA ---
@@ -204,12 +161,12 @@ window.COLOMBIAN_HERITAGE_DATA = [
     name: 'Balsa Muisca',
     era: 'precolombino',
     eraName: 'Época Precolombina',
-    region: 'Pasca, Cundinamarca (Altiplano Cundiboyacense)',
-    description: 'Obra cumbre de la orfebrería dorada que representa la investidura del cacique en la sagrada laguna de Guatavita, base del mito de El Dorado.',
-    hint: 'Pieza de orfebrería ceremonial de oro votivo vinculada a las lagunas sagradas y caciques del altiplano.',
+    region: 'Pasca, Cundinamarca',
+    category: 'Orfebrería Votiva',
+    description: 'Figura de orfebrería dorada que representa la investidura del cacique en la laguna de Guatavita, origen de la leyenda de El Dorado.',
+    hint: 'Pieza de oro votivo asociada al ritual sagrado de caciques y lagunas del altiplano.',
     color: '#f59e0b',
-    textureKey: 'art_balsa_muisca',
-    iconEmoji: '🛶'
+    textureKey: 'art_balsa_muisca'
   },
   {
     id: 'poporo_quimbaya',
@@ -217,23 +174,23 @@ window.COLOMBIAN_HERITAGE_DATA = [
     era: 'precolombino',
     eraName: 'Época Precolombina',
     region: 'Valle del Río Cauca',
-    description: 'Recipiente sagrado para guardar la cal utilizada en el mambeo ceremonial de las hojas de coca, fundido con la técnica de la cera perdida.',
-    hint: 'Símbolo supremo del arte orfebre Quimbaya precolombino con cuatro esferas superiores y proporciones armoniosas.',
+    category: 'Orfebrería Ceremonial',
+    description: 'Recipiente sagrado para cal y mambeo de hojas de coca, fundido con la técnica de la cera perdida por maestros orfebres.',
+    hint: 'Símbolo del arte orfebre Quimbaya precolombino con cuatro esferas superiores y proporciones armónicas.',
     color: '#eab308',
-    textureKey: 'art_poporo_quimbaya',
-    iconEmoji: '🏺'
+    textureKey: 'art_poporo_quimbaya'
   },
   {
     id: 'estatua_san_agustin',
     name: 'Estatua de San Agustín',
     era: 'precolombino',
     eraName: 'Época Precolombina',
-    region: 'San Agustín, Huila (Macizo Colombiano)',
-    description: 'Monolito megalítico de piedra volcánica tallada con rasgos de chamanes, deidades y felinos guardianes de tumbas funerarias.',
-    hint: 'Escultura lítica milenaria tallada en piedra con colmillos felinos, emblema arqueológico del Macizo Colombiano.',
+    region: 'San Agustín, Huila',
+    category: 'Escultura Lítica',
+    description: 'Monolito megalítico de piedra volcánica tallada con rasgos felinos y deidades guardianas de tumbas funerarias ancestrales.',
+    hint: 'Monolito megalítico tallado en piedra volcánica con colmillos felinos del Macizo Colombiano.',
     color: '#78716c',
-    textureKey: 'art_estatua_san_agustin',
-    iconEmoji: '🗿'
+    textureKey: 'art_estatua_san_agustin'
   },
   {
     id: 'pectoral_tairona',
@@ -241,11 +198,11 @@ window.COLOMBIAN_HERITAGE_DATA = [
     era: 'precolombino',
     eraName: 'Época Precolombina',
     region: 'Sierra Nevada de Santa Marta',
+    category: 'Orfebrería Chamánica',
     description: 'Joya ornamental de oro y tumbaga que personifica al cacique en metamorfosis como hombre-murciélago y hombre-ave.',
-    hint: 'Adorno pectoral ceremonial con orejeras circulares y tocado ritual confeccionado por los orfebres de la Sierra Nevada.',
+    hint: 'Orfebrería ceremonial de la Sierra Nevada con alas laterales y tocado ritual de hombre-murciélago.',
     color: '#d97706',
-    textureKey: 'art_pectoral_tairona',
-    iconEmoji: '🦅'
+    textureKey: 'art_pectoral_tairona'
   },
 
   // --- SALA 2: ÉPOCA COLONIAL E INDEPENDENCIA ---
@@ -254,48 +211,48 @@ window.COLOMBIAN_HERITAGE_DATA = [
     name: 'Florero de Llorente',
     era: 'independencia',
     eraName: 'Independencia y Colonia',
-    region: 'Santafé de Bogotá (Plaza Mayor)',
-    description: 'Pieza de porcelana y loza fina cuyo préstamo denegado el 20 de julio de 1810 detonó el grito independentista de la Nueva Granada.',
-    hint: 'Centro de mesa de porcelana que encendió la chispa patriota y la revuelta popular en Santafé de Bogotá en 1810.',
+    region: 'Santafé de Bogotá',
+    category: 'Loza Colonial',
+    description: 'Centro de mesa de loza fina cuyo préstamo denegado el 20 de julio de 1810 detonó la chispa del grito independentista.',
+    hint: 'Centro de loza fina cuyo préstamo detonó el grito independentista en la Plaza Mayor de 1810.',
     color: '#38bdf8',
-    textureKey: 'art_florero_llorente',
-    iconEmoji: '💐'
+    textureKey: 'art_florero_llorente'
   },
   {
     id: 'espada_bolivar',
     name: 'Espada Libertadora de Bolívar',
     era: 'independencia',
     eraName: 'Independencia y Colonia',
-    region: 'Campaña Libertadora (Boyacá y Vargas)',
-    description: 'Arma de acero toledano con empuñadura de oro entregada a Simón Bolívar como emblema de la soberanía republicana de 1819.',
-    hint: 'Acero patriota con empuñadura cincelada que comandó las batallas decisivas por la libertad republicana.',
+    region: 'Campaña Libertadora',
+    category: 'Armamento Patriota',
+    description: 'Arma de acero toledano con empuñadura de oro que acompañó a Simón Bolívar en las batallas de Boyacá y Pantano de Vargas.',
+    hint: 'Acero de combate con empuñadura cincelada que comandó la Campaña Libertadora de 1819.',
     color: '#94a3b8',
-    textureKey: 'art_espada_bolivar',
-    iconEmoji: '⚔️'
+    textureKey: 'art_espada_bolivar'
   },
   {
     id: 'cartas_policarpa',
     name: 'Cartas de Policarpa Salavarrieta',
     era: 'independencia',
     eraName: 'Independencia y Colonia',
-    region: 'Guaduas / Santafé de Bogotá',
-    description: 'Correspondencia clandestina de espionaje y salvoconductos firmados por La Pola antes de su heroico fusilamiento en la Reconquista.',
-    hint: 'Pliegos manuscritos secretos de la red de inteligencia patriota liderada por la joven heroína mártir neogranadina.',
+    region: 'Guaduas / Santafé',
+    category: 'Documento Histórico',
+    description: 'Correspondencia secreta de espionaje patriota redactada por La Pola antes de su fusilamiento durante la Reconquista española.',
+    hint: 'Pliegos manuscritos de la red clandestina de espionaje patriota de la heroína mártir neogranadina.',
     color: '#fef08a',
-    textureKey: 'art_cartas_policarpa',
-    iconEmoji: '📜'
+    textureKey: 'art_cartas_policarpa'
   },
   {
     id: 'murallas_cartagena',
     name: 'Murallas de Cartagena',
     era: 'independencia',
     eraName: 'Independencia y Colonia',
-    region: 'Cartagena de Indias (Caribe)',
-    description: 'Baluartes militares de cantería y coral erigidos en la colonia para repeler piratas y resistir el asedio español de Pablo Morillo en 1815.',
-    hint: 'Complejo defensivo de piedra coralina que le otorgó el título inmortal de «Ciudad Heroica» a la urbe caribeña.',
+    region: 'Cartagena de Indias',
+    category: 'Fortificación Militar',
+    description: 'Baluartes de piedra coralina erigidos para repeler asedios piratas y resistir el bloqueo realista de Pablo Morillo en 1815.',
+    hint: 'Baluartes militares de piedra coralina que otorgaron a la ciudad caribeña el título de Ciudad Heroica.',
     color: '#cbd5e1',
-    textureKey: 'art_murallas_cartagena',
-    iconEmoji: '🏰'
+    textureKey: 'art_murallas_cartagena'
   },
 
   // --- SALA 3: PATRIMONIO VIVO Y TRADICIÓN REGIONAL ---
@@ -304,36 +261,36 @@ window.COLOMBIAN_HERITAGE_DATA = [
     name: 'Sombrero Vueltiao Zenú',
     era: 'patrimonio_vivo',
     eraName: 'Patrimonio Vivo y Tradición',
-    region: 'Tuchín, Córdoba y Sucre (Región Caribe)',
-    description: 'Símbolo cultural de Colombia tejido a mano en caña flecha por artesanos Zenú, cuyos trenzados plasman la fauna y flora sagrada.',
-    hint: 'Prenda artesanal con franjas geométricas bicolores trenzadas en caña flecha por las comunidades indígenas Zenú.',
+    region: 'Tuchín, Córdoba',
+    category: 'Tejido Tradicional',
+    description: 'Prenda insignia nacional tejida a mano en caña flecha por artesanos Zenú, con franjas geométricas que plasman su cosmovisión.',
+    hint: 'Tejido artesanal en caña flecha con franjas bicolores de la cosmogonía indígena Zenú.',
     color: '#fde047',
-    textureKey: 'art_sombrero_vueltiao',
-    iconEmoji: '🤠'
+    textureKey: 'art_sombrero_vueltiao'
   },
   {
     id: 'marimba_chonta',
     name: 'Marimba de Chonta del Pacífico',
     era: 'patrimonio_vivo',
     eraName: 'Patrimonio Vivo y Tradición',
-    region: 'Litoral Pacífico Colombiano',
-    description: 'El célebre «piano de la selva», instrumento de percusión con tablas de palma de chonta y tubos de guadua, Patrimonio de la Humanidad (UNESCO).',
-    hint: 'Instrumento musical folclórico del Pacífico afrocolombiano confeccionado con madera de chonta y resonadores de guadua.',
+    region: 'Litoral Pacífico',
+    category: 'Instrumento Folclórico',
+    description: 'Instrumento ancestral de percusión con tablas de palma de chonta y tubos de guadua, reconocido como Patrimonio de la Humanidad.',
+    hint: 'Instrumento ancestral del Pacífico afrocolombiano conocido poéticamente como el piano de la selva.',
     color: '#92400e',
-    textureKey: 'art_marimba_chonta',
-    iconEmoji: '🪵'
+    textureKey: 'art_marimba_chonta'
   },
   {
     id: 'canasto_cafetero',
     name: 'Canasto Cafetero de Bejuco',
     era: 'patrimonio_vivo',
     eraName: 'Patrimonio Vivo y Tradición',
-    region: 'Paisaje Cultural Cafetero (Caldas, Quindío, Risaralda)',
-    description: 'Cesto artesanal tejido en fibras vegetales que acompaña la recolección manual grano a grano del café suave colombiano en las montañas.',
-    hint: 'Artesanía campesina andina atada a la cintura de los recolectores en las laderas del Eje Cafetero.',
+    region: 'Paisaje Cultural Cafetero',
+    category: 'Artesanía Campesina',
+    description: 'Cesto tradicional tejido en fibras de bejuco, utilizado por los recolectores campesinos en las laderas andinas del Eje Cafetero.',
+    hint: 'Cesto de fibras vegetales atado a la cintura de los campesinos recolectores en las laderas andinas.',
     color: '#b45309',
-    textureKey: 'art_canasto_cafetero',
-    iconEmoji: '🧺'
+    textureKey: 'art_canasto_cafetero'
   },
   {
     id: 'silleta_floral',
@@ -341,11 +298,11 @@ window.COLOMBIAN_HERITAGE_DATA = [
     era: 'patrimonio_vivo',
     eraName: 'Patrimonio Vivo y Tradición',
     region: 'Santa Elena, Antioquia',
-    description: 'Monumental estructura de madera tapizada con orquídeas y flores tradicionales cargada a la espalda por las familias campesinas silleteras.',
-    hint: 'Monumento viviente de madera y flores multicolores que desfila cada agosto celebrando la tradición campesina antioqueña.',
+    category: 'Patrimonio Inmaterial',
+    description: 'Monumental estructura de madera cubierta con decenas de variedades florales cultivadas por familias campesinas silleteras.',
+    hint: 'Estructura monumental de madera y flores multicolores cargada a la espalda por campesinos silleteros.',
     color: '#ec4899',
-    textureKey: 'art_silleta_floral',
-    iconEmoji: '🌸'
+    textureKey: 'art_silleta_floral'
   }
 ];
 
@@ -353,6 +310,7 @@ window.COLOMBIAN_HERITAGE_DATA = [
 window.MUSEUM_ROOMS = {
   precolombino: {
     id: 'precolombino',
+    textureKey: 'pedestal_precolombino',
     title: 'SALA 1: PRECOLOMBINA',
     subtitle: 'Orfebrería y Lítica Ancestral',
     badgeColor: '#f59e0b',
@@ -364,6 +322,7 @@ window.MUSEUM_ROOMS = {
   },
   independencia: {
     id: 'independencia',
+    textureKey: 'pedestal_independencia',
     title: 'SALA 2: INDEPENDENCIA',
     subtitle: 'Gesta Libertadora y República',
     badgeColor: '#60a5fa',
@@ -375,6 +334,7 @@ window.MUSEUM_ROOMS = {
   },
   patrimonio_vivo: {
     id: 'patrimonio_vivo',
+    textureKey: 'pedestal_patrimonio_vivo',
     title: 'SALA 3: PATRIMONIO VIVO',
     subtitle: 'Tradición y Saberes Regionales',
     badgeColor: '#34d399',
@@ -398,10 +358,7 @@ window.GAME_CONFIG = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
-  backgroundColor: '#1a1512',
-  physics: {
-    default: false // Cero físicas complejas: jugabilidad 100% Drag & Drop puro
-  },
-  // Las clases de escena se registran en main.js tras su carga
+  backgroundColor: '#110d0b',
+  physics: { default: false },
   scene: []
 };

@@ -1,7 +1,7 @@
 /**
  * TESOROS DE COLOMBIA: GUARDIANES DEL PATRIMONIO
- * ResultScene: Pantalla de Resultados, Diploma de Curador y Medallas
- * I.E. Angela María Torres Suárez — Grado 11° | Proyecto STEAM
+ * ResultScene: Pantalla de Resultados y Gran Diploma de Curador
+ * Rediseño Limpio de Museo: Cero Emojis y Tipografía Sobria
  */
 
 class ResultScene extends Phaser.Scene {
@@ -24,21 +24,13 @@ class ResultScene extends Phaser.Scene {
     const width = this.cameras.main.width;
     const height = this.cameras.main.height;
 
-    this.cameras.main.fadeIn(500, 19, 15, 13);
+    this.cameras.main.fadeIn(500, 17, 13, 11);
 
-    // ========================================================
-    // 1. FONDO DE SALA DE PROTOCOLO DEL MUSEO
-    // ========================================================
     const bg = this.add.graphics();
-    bg.fillStyle(0x130f0d, 1).fillRect(0, 0, width, height);
+    bg.fillStyle(0x110d0b, 1).fillRect(0, 0, width, height);
+    bg.lineStyle(1, 0xf59e0b, 0.35);
+    bg.strokeRoundedRect(20, 20, width - 40, height - 40, 12);
 
-    // Estampado de fondo con marco perimetral
-    bg.lineStyle(2, 0xf59e0b, 0.4);
-    bg.strokeRoundedRect(20, 20, width - 40, height - 40, 14);
-
-    // ========================================================
-    // 2. DISPARO DE AUDIO SEGÚN EL RESULTADO
-    // ========================================================
     if (this.isVictory) {
       window.SoundEffects.playVictory();
       this.createVictoryView(width, height);
@@ -47,74 +39,65 @@ class ResultScene extends Phaser.Scene {
       this.createDefeatView(width, height);
     }
 
-    // ========================================================
-    // 3. BOTONES DE NAVEGACIÓN POSTERIOR
-    // ========================================================
     this.createNavigationButtons(width, height);
   }
 
-  // ========================================================
-  // VISTA DE VICTORIA: GRAN DIPLOMA DEL PATRIMONIO NACIONAL
-  // ========================================================
   createVictoryView(w, h) {
-    // 1. Tarjeta estilo Pergamino / Diploma Oficial
+    // Tarjeta del Diploma Oficial
     const cert = this.add.graphics();
-    cert.fillStyle(0x221a14, 0.95);
-    cert.fillRoundedRect(w / 2 - 320, 40, 640, 395, 14);
-    cert.lineStyle(2, 0xf59e0b, 0.9);
-    cert.strokeRoundedRect(w / 2 - 320, 40, 640, 395, 14);
+    cert.fillStyle(0x1c1511, 0.95);
+    cert.fillRoundedRect(w / 2 - 310, 42, 620, 390, 12);
+    cert.lineStyle(1.5, 0xf59e0b, 0.8);
+    cert.strokeRoundedRect(w / 2 - 310, 42, 620, 390, 12);
 
-    // Borde interior fino
-    cert.lineStyle(1, 0xfde047, 0.35);
-    cert.strokeRoundedRect(w / 2 - 310, 50, 620, 375, 10);
+    cert.lineStyle(1, 0xffffff, 0.08);
+    cert.strokeRoundedRect(w / 2 - 302, 50, 604, 374, 8);
 
-    // Cinta tricolor decorativa en el cabezal del diploma
-    cert.fillStyle(0xfacc15, 1).fillRect(w / 2 - 200, 55, 400, 4);
-    cert.fillStyle(0x2563eb, 1).fillRect(w / 2 - 200, 59, 400, 2);
-    cert.fillStyle(0xdc2626, 1).fillRect(w / 2 - 200, 61, 400, 2);
+    // Filete tricolor muy sutil
+    cert.fillStyle(0xfacc15, 1).fillRect(w / 2 - 160, 56, 106, 2);
+    cert.fillStyle(0x2563eb, 1).fillRect(w / 2 - 54, 56, 108, 2);
+    cert.fillStyle(0xdc2626, 1).fillRect(w / 2 + 54, 56, 106, 2);
 
-    // Textos Oficiales
-    this.add.text(w / 2, 78, 'REPÚBLICA DE COLOMBIA • MUSEO NACIONAL', {
+    this.add.text(w / 2, 76, 'REPÚBLICA DE COLOMBIA • MUSEO NACIONAL', {
       fontFamily: 'Plus Jakarta Sans, sans-serif',
-      fontSize: '11px',
+      fontSize: '10px',
       color: '#f59e0b',
       letterSpacing: 2,
       fontStyle: 'bold'
     }).setOrigin(0.5);
 
-    this.add.text(w / 2, 110, 'GRAN DIPLOMA DE CURADOR DEL PATRIMONIO', {
+    this.add.text(w / 2, 106, 'GRAN DIPLOMA DE CURADOR DEL PATRIMONIO', {
       fontFamily: 'Cinzel, Georgia, serif',
-      fontSize: '22px',
+      fontSize: '20px',
       fontStyle: 'bold',
       color: '#ffffff',
       shadow: { offsetX: 0, offsetY: 2, color: '#f59e0b', blur: 10, fill: true }
     }).setOrigin(0.5);
 
-    this.add.text(w / 2, 142,
-      'Se certifica con honores que Sara y su equipo de curaduría (Grado 11°)\n' +
-      'han clasificado y resguardado con rigor las reliquias de la nación.',
+    this.add.text(w / 2, 136,
+      'Se certifica con honores la labor de curaduría y salvaguarda\n' +
+      'de las 12 reliquias históricas del patrimonio de la nación.',
       {
         fontFamily: 'Plus Jakarta Sans, sans-serif',
         fontSize: '12px',
-        color: '#e2e8f0',
+        color: '#cbd5e1',
         align: 'center',
         lineSpacing: 3
       }
     ).setOrigin(0.5);
 
-    // Medalla física animada a la izquierda
-    const medal = this.add.image(w / 2 - 220, 240, 'medal_diploma').setScale(1.2);
+    // Medalla física
+    const medal = this.add.image(w / 2 - 215, 235, 'medal_diploma').setScale(1.15);
     this.tweens.add({
       targets: medal,
-      scaleX: 1.28,
-      scaleY: 1.28,
-      duration: 1500,
+      scaleX: 1.22,
+      scaleY: 1.22,
+      duration: 1600,
       yoyo: true,
       repeat: -1,
       ease: 'Sine.easeInOut'
     });
 
-    // Rango honorífico obtenido
     let rankTitle = 'Guardián del Patrimonio';
     let rankColor = '#fbbf24';
     if (this.score >= 1200) {
@@ -128,146 +111,136 @@ class ResultScene extends Phaser.Scene {
       rankColor = '#34d399';
     }
 
-    this.add.text(w / 2 - 220, 290, rankTitle, {
+    this.add.text(w / 2 - 215, 285, rankTitle.toUpperCase(), {
       fontFamily: 'Cinzel, Georgia, serif',
-      fontSize: '11px',
+      fontSize: '10px',
       fontStyle: 'bold',
       color: rankColor,
       align: 'center',
-      wordWrap: { width: 140 }
+      wordWrap: { width: 130 }
     }).setOrigin(0.5);
 
-    // Cuadro de Métricas de Curaduría
+    // Métricas
     const metricsBox = this.add.graphics();
-    metricsBox.fillStyle(0x19120e, 0.85);
-    metricsBox.fillRoundedRect(w / 2 - 120, 180, 410, 145, 10);
-    metricsBox.lineStyle(1, 0xf59e0b, 0.4);
-    metricsBox.strokeRoundedRect(w / 2 - 120, 180, 410, 145, 10);
+    metricsBox.fillStyle(0x130e0c, 0.9);
+    metricsBox.fillRoundedRect(w / 2 - 120, 175, 400, 145, 8);
+    metricsBox.lineStyle(1, 0xf59e0b, 0.35);
+    metricsBox.strokeRoundedRect(w / 2 - 120, 175, 400, 145, 8);
 
     const leftColX = w / 2 - 95;
-    const rightColX = w / 2 + 115;
-    const row1Y = 215;
-    const row2Y = 265;
+    const rightColX = w / 2 + 105;
+    const row1Y = 210;
+    const row2Y = 260;
 
-    this.renderMetric(leftColX, row1Y, '🏛️ Reliquias:', `${this.restoredCount} / ${this.totalArtifacts}`, '#60a5fa');
-    this.renderMetric(rightColX, row1Y, '🏆 Puntos Obtenidos:', `${this.score} PTS`, '#facc15');
-    this.renderMetric(leftColX, row2Y, '🔍 Lupas Conservadas:', `${this.lives} / ${this.maxLives}`, '#34d399');
-    this.renderMetric(rightColX, row2Y, '⏳ Tiempo Restante:', `${this.timeLeft} s`, '#f87171');
+    this.renderMetric(leftColX, row1Y, 'RELIQUIAS CATALOGADAS:', `${this.restoredCount} / ${this.totalArtifacts}`, '#60a5fa');
+    this.renderMetric(rightColX, row1Y, 'PUNTUACIÓN TOTAL:', `${this.score} PTS`, '#facc15');
+    this.renderMetric(leftColX, row2Y, 'LUPAS CONSERVADAS:', `${this.lives} / ${this.maxLives}`, '#34d399');
+    this.renderMetric(rightColX, row2Y, 'TIEMPO RESTANTE:', `${this.timeLeft}s`, '#f87171');
 
-    // Efecto de lluvia de confeti / destellos
     this.createConfettiShower(w, h);
   }
 
-  // ========================================================
-  // VISTA DE INTENTO AGOTADO (RETROALIMENTACIÓN FORMATIVA)
-  // ========================================================
   createDefeatView(w, h) {
     const card = this.add.graphics();
-    card.fillStyle(0x221714, 0.95);
-    card.fillRoundedRect(w / 2 - 300, 45, 600, 390, 14);
-    card.lineStyle(2, 0xef4444, 0.8);
-    card.strokeRoundedRect(w / 2 - 300, 45, 600, 390, 14);
+    card.fillStyle(0x1c1310, 0.95);
+    card.fillRoundedRect(w / 2 - 290, 48, 580, 380, 12);
+    card.lineStyle(1.5, 0xef4444, 0.7);
+    card.strokeRoundedRect(w / 2 - 290, 48, 580, 380, 12);
 
     this.add.text(w / 2, 85, 'CURADURÍA INCOMPLETA', {
       fontFamily: 'Cinzel, Georgia, serif',
-      fontSize: '26px',
+      fontSize: '24px',
       fontStyle: 'bold',
       color: '#f87171'
     }).setOrigin(0.5);
 
     const motiveText = this.reason === 'lives'
-      ? '¡Se agotaron las 3 lupas de observación histórica!'
-      : '¡El tiempo de inauguración del museo ha concluido!';
+      ? 'Se agotaron las 3 lupas de observación histórica.'
+      : 'El tiempo límite de catalogación ha concluido.';
 
-    this.add.text(w / 2, 125, motiveText, {
+    this.add.text(w / 2, 120, motiveText.toUpperCase(), {
       fontFamily: 'Plus Jakarta Sans, sans-serif',
-      fontSize: '14px',
+      fontSize: '11px',
       color: '#fca5a5',
-      fontStyle: 'bold'
+      fontStyle: 'bold',
+      letterSpacing: 1
     }).setOrigin(0.5);
 
-    // Mensaje pedagógico reflexivo
     const message =
-      'El estudio del patrimonio de Colombia exige rigurosidad, observación\n' +
-      'y análisis de las épocas históricas. ¡No te desanimes, Sara!\n' +
-      'Consulta la Guía del Curador para repasar y vuelve a intentarlo.';
+      'El estudio del patrimonio exige rigurosidad, observación y análisis\n' +
+      'de las características históricas. Consulta la Guía de Curaduría\n' +
+      'y pon a prueba tus conocimientos nuevamente.';
 
-    this.add.text(w / 2, 180, message, {
+    this.add.text(w / 2, 172, message, {
       fontFamily: 'Plus Jakarta Sans, sans-serif',
-      fontSize: '13px',
-      color: '#e2e8f0',
+      fontSize: '12px',
+      color: '#cbd5e1',
       align: 'center',
       lineSpacing: 4
     }).setOrigin(0.5);
 
-    // Métricas alcanzadas
     const mBox = this.add.graphics();
-    mBox.fillStyle(0x18100d, 0.9);
-    mBox.fillRoundedRect(w / 2 - 220, 240, 440, 95, 8);
-    mBox.lineStyle(1, 0xf59e0b, 0.35);
-    mBox.strokeRoundedRect(w / 2 - 220, 240, 440, 95, 8);
+    mBox.fillStyle(0x130e0c, 0.9);
+    mBox.fillRoundedRect(w / 2 - 210, 235, 420, 90, 8);
+    mBox.lineStyle(1, 0xf59e0b, 0.3);
+    mBox.strokeRoundedRect(w / 2 - 210, 235, 420, 90, 8);
 
-    this.renderMetric(w / 2 - 180, 285, '🏛️ Piezas Ubicadas:', `${this.restoredCount} / ${this.totalArtifacts}`, '#60a5fa');
-    this.renderMetric(w / 2 + 40, 285, '🏆 Puntuación Lograda:', `${this.score} PTS`, '#facc15');
+    this.renderMetric(w / 2 - 170, 280, 'PIEZAS RESTAURADAS:', `${this.restoredCount} / ${this.totalArtifacts}`, '#60a5fa');
+    this.renderMetric(w / 2 + 50, 280, 'PUNTUACIÓN LOGRADA:', `${this.score} PTS`, '#facc15');
   }
 
   renderMetric(x, y, label, val, valColor) {
     this.add.text(x, y - 10, label, {
       fontFamily: 'Plus Jakarta Sans, sans-serif',
-      fontSize: '11px',
-      color: '#94a3b8'
+      fontSize: '10px',
+      color: '#94a3b8',
+      letterSpacing: 0.5
     });
 
     this.add.text(x, y + 8, val, {
       fontFamily: 'Cinzel, Georgia, serif',
-      fontSize: '17px',
+      fontSize: '16px',
       fontStyle: 'bold',
       color: valColor
     });
   }
 
-  // ========================================================
-  // LLUVIA DE CONFETI Y ESTRELLAS DORADAS
-  // ========================================================
   createConfettiShower(w, h) {
-    for (let i = 0; i < 30; i++) {
-      const x = Phaser.Math.Between(40, w - 40);
-      const y = Phaser.Math.Between(10, h - 100);
+    for (let i = 0; i < 24; i++) {
+      const x = Phaser.Math.Between(60, w - 60);
+      const y = Phaser.Math.Between(20, h - 80);
       const star = this.add.image(x, y, 'particle_gold')
-        .setScale(Phaser.Math.FloatBetween(0.4, 0.9))
+        .setScale(Phaser.Math.FloatBetween(0.35, 0.75))
         .setAlpha(0);
 
       this.tweens.add({
         targets: star,
-        y: y + Phaser.Math.Between(30, 80),
+        y: y + Phaser.Math.Between(25, 70),
         alpha: { from: 0.8, to: 0 },
-        duration: Phaser.Math.Between(1200, 2400),
+        duration: Phaser.Math.Between(1200, 2200),
         repeat: -1,
-        delay: Phaser.Math.Between(0, 2000),
+        delay: Phaser.Math.Between(0, 1800),
         ease: 'Quad.easeOut'
       });
     }
   }
 
-  // ========================================================
-  // BOTONES INTERACTIVOS DE NAVEGACIÓN
-  // ========================================================
   createNavigationButtons(w, h) {
     const btnY = 465;
 
-    // Botón 1: "Reintentar Curaduría"
-    this.createButton(w / 2 - 160, btnY, 210, 42, '🔄 Jugar de Nuevo', 0xf59e0b, 0x130f0d, () => {
+    // Botón 1: "NUEVA CURADURÍA"
+    this.createButton(w / 2 - 140, btnY, 210, 42, 'NUEVA CURADURÍA', 0xf59e0b, 0x110d0b, () => {
       window.SoundEffects.playClick();
-      this.cameras.main.fadeOut(350, 19, 15, 13);
+      this.cameras.main.fadeOut(350, 17, 13, 11);
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
         this.scene.start('GameScene');
       });
     });
 
-    // Botón 2: "Volver al Menú Principal"
-    this.createButton(w / 2 + 70, btnY, 210, 42, '🏛️ Menú Principal', 0x241a14, 0xf8fafc, () => {
+    // Botón 2: "MENÚ PRINCIPAL"
+    this.createButton(w / 2 + 90, btnY, 210, 42, 'MENÚ PRINCIPAL', 0x1d1612, 0xf8fafc, () => {
       window.SoundEffects.playClick();
-      this.cameras.main.fadeOut(350, 19, 15, 13);
+      this.cameras.main.fadeOut(350, 17, 13, 11);
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
         this.scene.start('MenuScene');
       });
@@ -279,18 +252,19 @@ class ResultScene extends Phaser.Scene {
 
     const bg = this.add.graphics();
     bg.fillStyle(bgColor, 1);
-    bg.fillRoundedRect(-w / 2, -h / 2, w, h, 8);
+    bg.fillRoundedRect(-w / 2, -h / 2, w, h, 6);
     if (strokeColor) {
-      bg.lineStyle(1.5, strokeColor, 0.8);
-      bg.strokeRoundedRect(-w / 2, -h / 2, w, h, 8);
+      bg.lineStyle(1, strokeColor, 0.6);
+      bg.strokeRoundedRect(-w / 2, -h / 2, w, h, 6);
     }
     container.add(bg);
 
     const label = this.add.text(0, 0, text, {
-      fontFamily: 'Plus Jakarta Sans, sans-serif',
-      fontSize: '13px',
+      fontFamily: 'Cinzel, Georgia, serif',
+      fontSize: '12px',
       fontStyle: 'bold',
-      color: typeof textColor === 'number' ? `#${textColor.toString(16)}` : textColor
+      color: typeof textColor === 'number' ? `#${textColor.toString(16)}` : textColor,
+      letterSpacing: 1
     }).setOrigin(0.5);
     container.add(label);
 
@@ -298,21 +272,21 @@ class ResultScene extends Phaser.Scene {
     container.setInteractive({ useHandCursor: true });
 
     container.on('pointerover', () => {
-      this.tweens.add({ targets: container, scaleX: 1.05, scaleY: 1.05, duration: 120 });
+      this.tweens.add({ targets: container, scaleX: 1.04, scaleY: 1.04, duration: 120 });
       bg.clear();
       bg.fillStyle(0xfbbf24, 1);
-      bg.fillRoundedRect(-w / 2, -h / 2, w, h, 8);
-      label.setColor('#130f0d');
+      bg.fillRoundedRect(-w / 2, -h / 2, w, h, 6);
+      label.setColor('#110d0b');
     });
 
     container.on('pointerout', () => {
       this.tweens.add({ targets: container, scaleX: 1.0, scaleY: 1.0, duration: 120 });
       bg.clear();
       bg.fillStyle(bgColor, 1);
-      bg.fillRoundedRect(-w / 2, -h / 2, w, h, 8);
+      bg.fillRoundedRect(-w / 2, -h / 2, w, h, 6);
       if (strokeColor) {
-        bg.lineStyle(1.5, strokeColor, 0.8);
-        bg.strokeRoundedRect(-w / 2, -h / 2, w, h, 8);
+        bg.lineStyle(1, strokeColor, 0.6);
+        bg.strokeRoundedRect(-w / 2, -h / 2, w, h, 6);
       }
       label.setColor(typeof textColor === 'number' ? `#${textColor.toString(16)}` : textColor);
     });
