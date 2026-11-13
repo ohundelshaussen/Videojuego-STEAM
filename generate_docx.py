@@ -2,9 +2,9 @@
 import docx
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
-from docx.oxml import OxmlElement, parse_xml
-from docx.oxml.ns import nsdecls, qn
+from docx.enum.table import WD_TABLE_ALIGNMENT
+from docx.oxml import parse_xml
+from docx.oxml.ns import nsdecls
 
 def set_cell_background(cell, hex_color):
     tcPr = cell._element.get_or_add_tcPr()
@@ -26,11 +26,11 @@ def create_document():
         section.left_margin = Inches(1.0)
         section.right_margin = Inches(1.0)
 
-    # Colores corporativos del proyecto
+    # Colores corporativos institucionales
     COLOR_PRIMARY = RGBColor(26, 43, 76)       # Azul noche institucional #1a2b4c
-    COLOR_GOLD = RGBColor(194, 120, 3)          # Oro patrimonial #c27803
+    COLOR_GOLD = RGBColor(180, 110, 0)          # Oro patrimonial #b46e00
     COLOR_DARK = RGBColor(33, 37, 41)           # Gris oscuro texto #212529
-    COLOR_MUTED = RGBColor(108, 117, 125)       # Gris secundario #6c757d
+    COLOR_MUTED = RGBColor(100, 110, 120)       # Gris secundario
 
     # ========================================================
     # PORTADA INSTITUCIONAL
@@ -43,19 +43,19 @@ def create_document():
     run_inst.font.bold = True
     run_inst.font.color.rgb = COLOR_PRIMARY
 
-    doc.add_paragraph() # Espacio
+    doc.add_paragraph()
 
     p_title = doc.add_paragraph()
     p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run_title = p_title.add_run("TESOROS DE COLOMBIA:\nGUARDIANES DEL PATRIMONIO")
     run_title.font.name = "Georgia"
-    run_title.font.size = Pt(26)
+    run_title.font.size = Pt(25)
     run_title.font.bold = True
     run_title.font.color.rgb = COLOR_GOLD
 
     p_sub = doc.add_paragraph()
     p_sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run_sub = p_sub.add_run("Cuaderno Oficial de Construcción, Diseño de Videojuego Educativo con JavaScript (Phaser 3) e Inteligencia Artificial")
+    run_sub = p_sub.add_run("Cuaderno Oficial de Construcción, Diseño y Programación de Videojuego Educativo con JavaScript e Inteligencia Artificial")
     run_sub.font.name = "Calibri"
     run_sub.font.size = Pt(12)
     run_sub.font.italic = True
@@ -64,15 +64,14 @@ def create_document():
     doc.add_paragraph()
     doc.add_paragraph()
 
-    # Caja de Datos del Estudiante
-    table_student = doc.add_table(rows=5, cols=2)
+    # Tabla de Datos del Estudiante (Sin repositorio según lo solicitado)
+    table_student = doc.add_table(rows=4, cols=2)
     table_student.alignment = WD_TABLE_ALIGNMENT.CENTER
     student_data = [
+        ("Nombre del Videojuego:", "Tesoros de Colombia: Guardianes del Patrimonio"),
         ("Estudiante Desarrolladora:", "Lorena Alexandra Avila Hundelshaussen"),
-        ("Grado y Curso:", "11° — Grado 11-01"),
-        ("Área Académica:", "Tecnología e Informática"),
-        ("Lead Auditor & Supervisor Técnico:", "AI Lead Engineer"),
-        ("Repositorio Oficial GitHub:", "https://github.com/ohundelshaussen/Videojuego-STEAM.git")
+        ("Curso y Grado:", "Grado 11° (11-01)"),
+        ("Docente / Área Académica:", "Área de Tecnología e Informática")
     ]
     for idx, (label, val) in enumerate(student_data):
         row = table_student.rows[idx]
@@ -97,7 +96,7 @@ def create_document():
     doc.add_paragraph()
     doc.add_paragraph()
 
-    # Regla de Oro en Portada
+    # Regla de Oro
     p_rule = doc.add_paragraph()
     p_rule.alignment = WD_ALIGN_PARAGRAPH.CENTER
     r_rule = p_rule.add_run("«Si no puedes explicar cómo funciona, todavía no puedes decir que lo construiste.»")
@@ -125,10 +124,9 @@ def create_document():
     r.font.color.rgb = COLOR_PRIMARY
 
     p = doc.add_paragraph()
-    p.add_run("Durante este proyecto convertimos una necesidad pedagógica en un ").font.name = "Calibri"
-    b = p.add_run("videojuego educativo funcional")
-    b.font.bold = True
-    p.add_run(". No comenzamos escribiendo código sin reflexionar. Seguimos rigurosamente el ciclo formativo STEAM:").font.name = "Calibri"
+    p.add_run("Durante este proyecto convertí una necesidad pedagógica en un ")
+    p.add_run("videojuego educativo funcional").font.bold = True
+    p.add_run(". No comencé escribiendo código al azar, sino siguiendo la metodología formativa STEAM:")
 
     p_cycle = doc.add_paragraph()
     p_cycle.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -137,20 +135,19 @@ def create_document():
     r_cycle.font.color.rgb = COLOR_GOLD
     r_cycle.font.size = Pt(9.5)
 
-    doc.add_paragraph("Para lograrlo integramos de manera equilibrada:", style='List Bullet')
     doc.add_paragraph("Pensamiento computacional y lógica algorítmica.", style='List Bullet')
     doc.add_paragraph("Diseño de videojuegos 2D con arquitectura por escenas en Phaser 3.", style='List Bullet')
     doc.add_paragraph("Programación estructurada en JavaScript ES6+ sin variables globales contaminantes.", style='List Bullet')
-    doc.add_paragraph("Diseño gráfico vectorial procedural con Canvas API y efectos Glassmorphism.", style='List Bullet')
-    doc.add_paragraph("Investigación histórica y patrimonial en fuentes del Museo del Oro y el ICANH.", style='List Bullet')
-    doc.add_paragraph("Uso ético y reflexivo de la Inteligencia Artificial como copiloto formativo.", style='List Bullet')
+    doc.add_paragraph("Diseño gráfico vectorial procedural con Canvas API y efectos de galería de museo.", style='List Bullet')
+    doc.add_paragraph("Investigación histórica rigurosa en fuentes del Museo del Oro, Museo Nacional e ICANH.", style='List Bullet')
+    doc.add_paragraph("Uso responsable y reflexivo de la Inteligencia Artificial como copiloto técnico.", style='List Bullet')
 
     # Pregunta Clave
     p_box = doc.add_paragraph()
     r_q = p_box.add_run("¿Qué aprenderá el jugador al jugar?\n")
     r_q.font.bold = True
     r_q.font.color.rgb = COLOR_PRIMARY
-    p_box.add_run("El jugador aprenderá a identificar, contextualizar y clasificar 12 reliquias emblemáticas de Colombia en sus tres períodos históricos (Precolombina, Independencia y Tradición Regional), reconociendo su procedencia geográfica y su valor patrimonial sin necesidad de memorización tediosa.")
+    p_box.add_run("El jugador aprenderá a reconocer, ubicar cronológicamente y clasificar doce piezas y símbolos del patrimonio cultural e histórico de Colombia en tres grandes salas: la Época Precolombina, la Gesta de Independencia y Colonia, y el Patrimonio Vivo de las Regiones Colombianas, comprendiendo el valor de la conservación arqueológica sin memorización pasiva.")
 
     # Tabla de las 3 Entregas
     h2 = doc.add_heading(level=2)
@@ -191,7 +188,6 @@ def create_document():
     r.font.name = "Georgia"
     r.font.color.rgb = COLOR_PRIMARY
 
-    # Misión 1 a 4
     doc.add_heading("Misión 1: Encontrar un Problema", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
     p = doc.add_paragraph()
     p.add_run("• Problema abordado: ").font.bold = True
@@ -207,21 +203,21 @@ def create_document():
     p = doc.add_paragraph()
     p.add_run("Se investigaron 5 conceptos clave fundamentales en fuentes oficiales del Museo del Oro, el Museo Nacional y el ICANH:\n")
     p.add_run("1. Metalurgia Precolombina y Aleación Tumbaga: ").font.bold = True
-    p.add_run("Unión de oro y cobre para forjar figuras votivas ceremoniales.\n")
+    p.add_run("Unión intencional de oro y cobre para forjar figuras votivas ceremoniales con menor punto de fusión.\n")
     p.add_run("2. El Rito de Guatavita y El Dorado: ").font.bold = True
-    p.add_run("La Balsa Muisca como testimonio de la ofrenda sagrada en la laguna.\n")
+    p.add_run("La Balsa Muisca como testimonio de la ofrenda sagrada del cacique en la laguna.\n")
     p.add_run("3. El Motín del 20 de Julio de 1810: ").font.bold = True
-    p.add_run("El Florero de Llorente como detonante social de la Independencia.\n")
+    p.add_run("El Florero de Llorente como detonante social planificado de la Independencia en Santafé.\n")
     p.add_run("4. Patrimonio Inmaterial de la Humanidad: ").font.bold = True
-    p.add_run("Música de marimba del Pacífico y el tejido del Sombrero Vueltiao Zenú.\n")
+    p.add_run("Música de marimba tradicional del Pacífico y el tejido en caña flecha del Sombrero Vueltiao Zenú.\n")
     p.add_run("5. Principios de Conservación de Museo: ").font.bold = True
-    p.add_run("Preservación de piezas controlando luz, temperatura e integridad física.")
+    p.add_run("Preservación de piezas controlando luz, humedad e integridad física.")
 
     doc.add_heading("Misión 3: Definir el Jugador", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
     p = doc.add_paragraph()
     p.add_run("• Edad: ").font.bold = True; p.add_run("14 a 18 años (Grado 10° y 11°).\n")
     p.add_run("• Intereses: ").font.bold = True; p.add_run("Juegos casuales interactivos, puzzles de clasificación y estética limpia.\n")
-    p.add_run("• Necesidad educativa: ").font.bold = True; p.add_run("Aprender historia de Colombia jugando, sin memorización pasiva ni fórmulas pesadas.")
+    p.add_run("• Necesidad educativa: ").font.bold = True; p.add_run("Aprender historia de Colombia mediante la interacción activa, sin memorización pasiva.")
 
     doc.add_heading("Misión 4: Objetivo Educativo Definitivo", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
     p = doc.add_paragraph()
@@ -273,20 +269,92 @@ def create_document():
     doc.add_page_break()
 
     # ========================================================
-    # SECCIÓN 3: ENTREGA 2 — PROTOTIPO FUNCIONAL (30%)
+    # SECCIÓN 3: ENTREGA 2 — PROTOTIPO FUNCIONAL Y ARQUITECTURA
     # ========================================================
     h1 = doc.add_heading(level=1)
-    r = h1.add_run("3. ENTREGA 2: PROTOTIPO FUNCIONAL (30%)")
+    r = h1.add_run("3. ENTREGA 2: PROTOTIPO FUNCIONAL Y ARQUITECTURA TÉCNICA (30%)")
     r.font.name = "Georgia"
     r.font.color.rgb = COLOR_PRIMARY
 
-    doc.add_heading("Misión 16: Selección y Justificación de la Tecnología (Phaser 3)", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
+    doc.add_heading("Misión 16: Selección y Justificación de la Tecnología", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
     p = doc.add_paragraph()
-    p.add_run("La institución autoriza tres posibles librerías: Phaser, p5.js y Three.js. Se seleccionó y justificó ").font.name = "Calibri"
+    p.add_run("Entre las opciones analizadas (Phaser, p5.js y Three.js), se eligió formalmente ").font.name = "Calibri"
     p.add_run("Phaser 3").font.bold = True
-    p.add_run(" porque proporciona soporte nativo para eventos Drag & Drop de puntero, desacopla el ciclo en escenas modulares, garantiza 60 FPS estables y asegura los 15 puntos específicos de la rúbrica oficial de la Entrega 2.")
+    p.add_run(" como motor principal 2D. Phaser proporciona soporte nativo para eventos Drag & Drop de puntero, desacopla el ciclo de vida en escenas modulares, garantiza 60 FPS estables y asegura los 15 puntos específicos de la rúbrica oficial.")
 
-    doc.add_heading("Misión 18: Construcción Modular por Componentes (10 de 10)", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
+    doc.add_heading("Arquitectura de Software y Desglose Exhaustivo de Carpetas", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
+    p = doc.add_paragraph()
+    p.add_run("El proyecto adopta una Arquitectura Basada en Escenas (Scene-Driven Architecture) con separación de responsabilidades en tres capas: presentación web (HTML/CSS), lógica del juego (Phaser 3) y servicios de datos/audio.")
+
+    file_expl = [
+        ("src/index.html", "Host DOM principal. Aloja el contenedor del lienzo #game-container (960x540 px) y los modales didácticos semánticos (#modal-guide, #modal-hint, #modal-credits). Permite consultar instrucciones sin sobrecargar el canvas gráfico."),
+        ("src/style.css", "Sistema de diseño visual. Define variables de color patrimoniales (:root), tipografías Cinzel y Plus Jakarta Sans, maquetación Flexbox/Grid y efectos translúcidos Glassmorphism con backdrop-filter: blur(12px)."),
+        ("src/lib/phaser.min.js", "Librería oficial de Phaser 3 (v3.80.1) almacenada localmente para garantizar portabilidad escolar 100% offline sin depender de conexiones a internet."),
+        ("src/js/config.js", "Archivo central de datos. Aloja el catálogo JSON COLOMBIAN_HERITAGE_DATA con las 12 reliquias, la geometría de las 3 salas MUSEUM_ROOMS, la configuración del motor PHASER_CONFIG y el sintetizador WebAudioSynthesizer."),
+        ("src/js/main.js", "Punto de entrada. Conecta el evento DOMContentLoaded con la inicialización de new Phaser.Game(), vincula los botones exteriores y gestiona la apertura y cierre de modales."),
+        ("src/js/scenes/BootScene.js", "Escena de precarga técnica. Erradica los errores 404 generando proceduralmente las texturas vectoriales de los 12 artefactos y las 3 vitrinas de museo mediante this.make.graphics()."),
+        ("src/js/scenes/MenuScene.js", "Menú principal. Controla la navegación inicial, presenta los títulos institucionales y expone los botones jerárquicos INICIAR CURADURÍA, CÓMO JUGAR y CRÉDITOS STEAM."),
+        ("src/js/scenes/GameScene.js", "Núcleo de jugabilidad. Gestiona las 3 Drop Zones, la bandeja activa, los eventos de puntero (dragstart, drag, drop, dragend), el temporizador de 60s y el HUD superior."),
+        ("src/js/scenes/ResultScene.js", "Pantalla de evaluación final. Recibe las métricas de la partida, calcula el rango del curador, dibuja el diploma y permite reiniciar la experiencia.")
+    ]
+    for fn, desc in file_expl:
+        p_f = doc.add_paragraph()
+        p_f.add_run("• " + fn + ": ").font.bold = True
+        p_f.add_run(desc)
+
+    doc.add_heading("Diccionario e Inventario de Variables del Sistema", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
+    table_var = doc.add_table(rows=11, cols=4)
+    table_var.alignment = WD_TABLE_ALIGNMENT.CENTER
+    var_data = [
+        ("score", "Number (Entero)", "GameScene", "Puntos acumulados en la sesión de juego."),
+        ("lives", "Number (Entero)", "GameScene", "Contador de vidas restantes (3 lupas iniciales)."),
+        ("timeLeft", "Number (Entero)", "GameScene", "Segundos restantes en el cronómetro de la partida."),
+        ("restoredCount", "Number (Entero)", "GameScene", "Cantidad de reliquias clasificadas exitosamente."),
+        ("totalArtifacts", "Number (Entero)", "GameScene", "Meta total de piezas a clasificar (12 piezas)."),
+        ("artifactQueue", "Array<Object>", "GameScene", "Lista de reliquias barajada mediante algoritmo Fisher-Yates."),
+        ("currentArtifactData", "Object", "GameScene", "Objeto JSON de la reliquia activa en la bandeja inferior."),
+        ("activeArtifactSprite", "Phaser.Image", "GameScene", "Sprite interactivo arrastrable visible en el canvas."),
+        ("dropZones", "Object", "GameScene", "Referencias a las tres áreas invisibles de soltado."),
+        ("COLOMBIAN_HERITAGE_DATA", "Array<Object>", "Global (window)", "Catálogo inmutable con los datos históricos de las piezas.")
+    ]
+    hdr = table_var.rows[0]
+    hdr.cells[0].paragraphs[0].add_run("Variable").font.bold = True
+    hdr.cells[1].paragraphs[0].add_run("Tipo").font.bold = True
+    hdr.cells[2].paragraphs[0].add_run("Ámbito").font.bold = True
+    hdr.cells[3].paragraphs[0].add_run("Función en el Sistema").font.bold = True
+    for c in hdr.cells:
+        set_cell_background(c, "1A2B4C")
+        c.paragraphs[0].runs[0].font.color.rgb = RGBColor(255, 255, 255)
+        set_cell_margins(c, 100, 100, 120, 120)
+
+    for idx, (v1, v2, v3, v4) in enumerate(var_data, start=1):
+        row = table_var.rows[idx]
+        row.cells[0].paragraphs[0].add_run(v1).font.bold = True
+        row.cells[1].paragraphs[0].add_run(v2)
+        row.cells[2].paragraphs[0].add_run(v3)
+        row.cells[3].paragraphs[0].add_run(v4)
+        for c in row.cells:
+            set_cell_background(c, "F8F9FA" if idx % 2 == 0 else "FFFFFF")
+            set_cell_margins(c, 80, 80, 120, 120)
+
+    doc.add_heading("Modelo de Almacenamiento y Gestión de Datos", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
+    p = doc.add_paragraph()
+    p.add_run("1. Persistencia en Memoria Volátil (Heap): ").font.bold = True
+    p.add_run("El estado del juego reside en la memoria de la escena activa, garantizando lectura y escritura a 60 FPS sin sobrecargar el navegador.\n")
+    p.add_run("2. Phaser Data Manager (setData / getData): ").font.bold = True
+    p.add_run("Se asocian metadatos directamente a los objetos del juego (ej. gameObject.setData('artifactData', data)), desacoplando la lógica de la representación gráfica.\n")
+    p.add_run("3. Comunicación entre Escenas: ").font.bold = True
+    p.add_run("Las métricas finales se transfieren a ResultScene como un objeto JSON estructurado al finalizar la partida.")
+
+    doc.add_heading("Implementación de Librerías y Módulos Técnicos", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
+    p = doc.add_paragraph()
+    p.add_run("• Phaser 3: ").font.bold = True
+    p.add_run("Se utilizan los módulos Phaser.Game, Phaser.Scene, Phaser.Scale (FIT y CENTER_BOTH), Phaser.GameObjects.Graphics para dibujo procedural, Phaser.GameObjects.Zone para Drop Zones, y Phaser.Time.Clock para cronometría.\n")
+    p.add_run("• Web Audio API: ").font.bold = True
+    p.add_run("Sintetizador procedural sin archivos externos. Utiliza AudioContext, OscillatorNode para generar frecuencias senoidales y triangulares, y GainNode para envolventes exponenciales (exponentialRampToValueAtTime) que eliminan chasquidos.")
+
+    # Tabla Componentes
+    doc.add_heading("Construcción Modular por Componentes (10 de 10)", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
     table_comp = doc.add_table(rows=11, cols=4)
     table_comp.alignment = WD_TABLE_ALIGNMENT.CENTER
     comp_data = [
@@ -321,28 +389,40 @@ def create_document():
             set_cell_background(c, "F8F9FA" if idx % 2 == 0 else "FFFFFF")
             set_cell_margins(c, 80, 80, 120, 120)
 
-    # Explicación del Código y Regla de Oro
-    doc.add_heading("Misión 19: Comprensión del Código (Regla de Oro Institucional)", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
-    p = doc.add_paragraph()
-    p.add_run("«Si no puedes explicar cómo funciona, todavía no puedes decir que lo construiste.»\n").font.bold = True
-    p.add_run("El sistema opera mediante escuchadores de eventos reactivos sobre Phaser.Scene. Al soltar una pieza, el evento ").font.name = "Calibri"
-    p.add_run("this.input.on('drop')").font.bold = True
-    p.add_run(" recupera el objeto JSON ").font.name = "Calibri"
-    p.add_run("artifactData").font.bold = True
-    p.add_run(" y compara ").font.name = "Calibri"
-    p.add_run("artifactData.era === dropZone.getData('era')").font.bold = True
-    p.add_run(". Si hay coincidencia, la pieza se traslada a la repisa y se desactiva su interacción mediante ").font.name = "Calibri"
-    p.add_run("gameObject.disableInteractive()").font.bold = True
-    p.add_run("; en caso de fallo, el evento ").font.name = "Calibri"
-    p.add_run("dragend").font.bold = True
-    p.add_run(" activa una animación suave con ").font.name = "Calibri"
-    p.add_run("this.tweens.add()").font.bold = True
-    p.add_run(" que regresa el objeto a su origen.")
+    doc.add_heading("Bitácora de Control de Errores (Debugging)", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
+    table_err = doc.add_table(rows=6, cols=4)
+    table_err.alignment = WD_TABLE_ALIGNMENT.CENTER
+    err_data = [
+        ("Drag & Drop", "Artefacto flotando fuera de la pantalla al soltar en bordes.", "Captura de startX y startY con retorno elástico con this.tweens.add().", "Sí"),
+        ("Carga de Assets", "Riesgo de error 404 al mover el juego a computadores sin internet.", "Dibujo vectorial procedural en BootScene.js y audio nativo Web Audio API.", "Sí"),
+        ("Portabilidad Web", "Bloqueo CORS al abrir con doble clic local (file://).", "Importación clásica de scripts y registro en window sin módulos aislados.", "Sí"),
+        ("Renderizado Sala 3", "Caja verde con línea diagonal en vitrina de Patrimonio Vivo.", "Corrección de clave de textura a pedestal_patrimonio_vivo en BootScene.js.", "Sí"),
+        ("Interfaz Visual", "Saturación por doble encabezado y presencia de emojis.", "Barra superior de 38px, cajas telemétricas de 1px y cero emojis.", "Sí")
+    ]
+    hdr = table_err.rows[0]
+    hdr.cells[0].paragraphs[0].add_run("Componente").font.bold = True
+    hdr.cells[1].paragraphs[0].add_run("Problema Identificado").font.bold = True
+    hdr.cells[2].paragraphs[0].add_run("Solución Técnica Aplicada").font.bold = True
+    hdr.cells[3].paragraphs[0].add_run("¿Funcionó?").font.bold = True
+    for c in hdr.cells:
+        set_cell_background(c, "1A2B4C")
+        c.paragraphs[0].runs[0].font.color.rgb = RGBColor(255, 255, 255)
+        set_cell_margins(c, 100, 100, 120, 120)
+
+    for idx, (e1, e2, e3, e4) in enumerate(err_data, start=1):
+        row = table_err.rows[idx]
+        row.cells[0].paragraphs[0].add_run(e1).font.bold = True
+        row.cells[1].paragraphs[0].add_run(e2)
+        row.cells[2].paragraphs[0].add_run(e3)
+        row.cells[3].paragraphs[0].add_run(e4)
+        for c in row.cells:
+            set_cell_background(c, "F8F9FA" if idx % 2 == 0 else "FFFFFF")
+            set_cell_margins(c, 80, 80, 120, 120)
 
     doc.add_page_break()
 
     # ========================================================
-    # SECCIÓN 4: ENTREGA 3 — VALIDACIÓN, PRUEBAS Y MEJORAS (40%)
+    # SECCIÓN 4: ENTREGA 3 — VALIDACIÓN, PRUEBAS Y SUSTENTACIÓN
     # ========================================================
     h1 = doc.add_heading(level=1)
     r = h1.add_run("4. ENTREGA 3: VALIDACIÓN, PRUEBAS Y SUSTENTACIÓN (40%)")
@@ -422,7 +502,7 @@ def create_document():
     doc.add_page_break()
 
     # ========================================================
-    # SECCIÓN 5: SUSTENTACIÓN Y DEFENSORÍA ANTE EL JURADO
+    # SECCIÓN 5: SUSTENTACIÓN ANTE EL JURADO
     # ========================================================
     h1 = doc.add_heading(level=1)
     r = h1.add_run("5. PREPARACIÓN DE LA SUSTENTACIÓN ANTE EL JURADO (MISIÓN 26)")
@@ -430,7 +510,7 @@ def create_document():
     r.font.color.rgb = COLOR_PRIMARY
 
     p_intro = doc.add_paragraph()
-    p_intro.add_run("A continuación se presentan las respuestas consolidadas a las 12 preguntas oficiales del jurado calificador de Grado 11°:")
+    p_intro.add_run("Respuestas consolidadas a las doce preguntas oficiales del jurado evaluador:")
 
     jury_qa = [
         ("1. ¿Cuál era el problema?", "La pérdida de identidad cultural y el desconocimiento de las raíces históricas y el patrimonio arqueológico de Colombia en los jóvenes de bachillerato."),
@@ -461,7 +541,7 @@ def create_document():
     # SECCIÓN 6: DECLARACIÓN Y REFLEXIÓN FINAL
     # ========================================================
     h1 = doc.add_heading(level=1)
-    r = h1.add_run("6. DECLARACIÓN DE ÉTICA, AUTORÍA Y REFLEXIÓN INDIVIDUAL")
+    r = h1.add_run("6. DECLARACIÓN DE AUTORÍA ÉTICA Y REFLEXIÓN INDIVIDUAL")
     r.font.name = "Georgia"
     r.font.color.rgb = COLOR_PRIMARY
 
@@ -475,9 +555,9 @@ def create_document():
     p_sign.add_run("\nEstudiante Desarrolladora: ").font.bold = True
     p_sign.add_run("Lorena Alexandra Avila Hundelshaussen\n")
     p_sign.add_run("Institución Educativa: ").font.bold = True
-    p_sign.add_run("Angela María Torres Suárez — Grado 11°\n")
+    p_sign.add_run("Angela María Torres Suárez — Grado 11° (11-01)\n")
     p_sign.add_run("Firma: _____________________________________________\n")
-    p_sign.add_run("Fecha: 11 de Noviembre de 2026")
+    p_sign.add_run("Fecha: 12 de Noviembre de 2026")
 
     doc.add_heading("Reflexión Final Individual", level=2).runs[0].font.color.rgb = COLOR_PRIMARY
     refl_data = [
@@ -505,7 +585,7 @@ def create_document():
     r_f.font.size = Pt(11)
     r_f.font.color.rgb = COLOR_PRIMARY
 
-    # Guardar documento
+    # Guardar documento Word
     output_path = r"d:\Users\Oscar\Proyectos\Videojuego-STEAM\docs\Cuaderno_Videojuego_STEAM_Grado11_Lorena_Avila.docx"
     doc.save(output_path)
     print(f"Documento generado exitosamente en: {output_path}")

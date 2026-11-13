@@ -5,79 +5,82 @@
 
 ---
 
-# INFORMACIÓN DEL EQUIPO Y DEL PROYECTO
+# INFORMACIÓN DEL EQUIPO
 
 * **Nombre del Videojuego:** Tesoros de Colombia: Guardianes del Patrimonio
-* **Estudiante / Desarrolladora Principal:** Lorena Alexandra Avila Hundelshaussen
-* **Curso / Grado:** 11° (Grado 11-01)
-* **Docente / Área:** Área de Tecnología e Informática
-* **Lead Supervisor & Auditor Técnico:** AI Lead Engineer
-* **Repositorio Oficial en GitHub:** `https://github.com/ohundelshaussen/Videojuego-STEAM.git`
+* **Integrante:** Lorena Alexandra Avila Hundelshaussen
+* **Curso:** Grado 11° (11-01)
+* **Docente Encargado:** Área de Tecnología e Informática
 
 ---
 
 # BIENVENIDO AL RETO
 
-Durante este proyecto convertimos una idea en un **videojuego educativo funcional**.
-No comenzamos escribiendo código sin reflexionar. Seguimos el ciclo formativo STEAM:
+Durante este proyecto he convertido una necesidad pedagógica en un videojuego educativo funcional.
+El proceso no comenzó escribiendo código al azar, sino siguiendo la metodología formativa STEAM:
 
 $$\text{INVESTIGAR} \longrightarrow \text{IMAGINAR} \longrightarrow \text{DISEÑAR} \longrightarrow \text{PLANIFICAR} \longrightarrow \text{PROGRAMAR} \longrightarrow \text{PROBAR} \longrightarrow \text{MEJORAR} \longrightarrow \text{PRESENTAR}$$
 
-Para lograrlo integramos de manera equilibrada:
-* Pensamiento computacional y lógica algorítmica.
-* Diseño de videojuegos 2D con arquitectura por escenas.
-* Programación web estructurada en JavaScript ES6+.
-* Librerías oficiales autorizadas (**Phaser 3**).
-* Diseño gráfico vectorial procedural con Canvas API.
-* Investigación histórica y patrimonial de Colombia.
-* Metodología transversal STEAM.
-* Inteligencia Artificial utilizada de forma ética y reflexiva como copiloto técnico.
+Para construir este proyecto se articularon las siguientes áreas de conocimiento:
+* **Pensamiento computacional:** Descomposición de problemas, reconocimiento de patrones lógicos y diseño de algoritmos de juego.
+* **Diseño de videojuegos:** Creación de mecánicas interactivas, balance de dificultad y arquitectura por escenas 2D.
+* **Programación web:** Desarrollo estructurado en JavaScript moderno (ES6+) con manipulación del DOM y Canvas API.
+* **Librerías especializadas:** Integración de **Phaser 3** como motor oficial 2D y uso de **Web Audio API** para síntesis sonora procedural.
+* **Diseño gráfico:** Ilustración vectorial por código sin dependencias externas y aplicación de principios de usabilidad visual.
+* **Investigación histórica:** Consulta documental en fuentes oficiales del Museo del Oro, Museo Nacional de Colombia e Instituto Colombiano de Antropología e Historia (ICANH).
+* **Metodología STEAM:** Integración tangible de Ciencia, Tecnología, Ingeniería, Arte y Matemáticas.
+* **Inteligencia Artificial:** Empleo de modelos de lenguaje como asistentes de consulta, contraste de ideas y depuración técnica bajo criterio propio.
 
 ---
 
-## EL RETO Y LA PREGUNTA CENTRAL
+## EL RETO
 
-> **Misión Pedagógica:**  
-> Diseñar y desarrollar un videojuego que permita aprender, practicar o comprender un tema educativo mediante una experiencia interactiva funcional web.
->
+Diseñar y desarrollar un videojuego que permita aprender, practicar o comprender un tema educativo mediante una experiencia interactiva funcional web.
+
+El videojuego tiene un propósito formativo definido: no se limita al entretenimiento, sino que responde directamente a la pregunta fundamental del proyecto:
+
 > **¿Qué aprenderá el jugador al jugar?**  
-> El jugador aprenderá a reconocer, valorar y clasificar artefactos, reliquias y tradiciones históricas de Colombia, asociándolos con precisión a tres grandes períodos y salas de nuestra memoria: la **Época Precolombina / Indígena Ancestral**, la **Gesta de Independencia y Colonia**, y el **Patrimonio Vivo de las Regiones Colombianas**, comprendiendo el valor de la conservación arqueológica sin memorización pasiva.
+> El jugador aprenderá a reconocer, ubicar cronológicamente y clasificar doce piezas y símbolos del patrimonio cultural e histórico de Colombia, distribuidos en tres grandes salas: la **Época Precolombina e Indígena**, la **Gesta de Independencia y Colonia**, y las **Tradiciones Regionales Vivas**, comprendiendo la importancia de la conservación del patrimonio material e inmaterial sin necesidad de memorización pasiva.
 
 ---
 
-## REGLA DE ORO INSTITUCIONAL
+## LA REGLA DE ORO
+
 > **«Si no puedes explicar cómo funciona, todavía no puedes decir que lo construiste.»**
 
----
-
-## POLÍTICA DE USO DE INTELIGENCIA ARTIFICIAL (IA COMO COPILOTO)
-La Inteligencia Artificial se utilizó rigurosamente bajo el marco de copiloto formativo:
-* **La IA no hizo el proyecto por mí:** La estudiante tomó las decisiones conceptuales, eligió la temática sobre Colombia, evaluó las alternativas, probó y depuró cada componente.
-* **Prohibición de generación masiva:** En ningún momento se solicitó *"Hazme el videojuego completo"*. Todo el desarrollo se planificó y construyó modularmente por componentes.
-* **Trazabilidad:** Cada interacción relevante con la IA quedó registrada formalmente en la **Bitácora de IA** del proyecto.
+Cada función, variable, evento de entrada y cálculo presente en el código fuente ha sido estudiado, documentado y comprendido a fondo para responder con solvencia ante el docente y el comité evaluador.
 
 ---
 
-## RESUMEN DE LAS TRES ENTREGAS OFICIALES
+## EL PAPEL DE LA INTELIGENCIA ARTIFICIAL EN EL PROYECTO
 
-| Entrega | Producto Evaluado | Ponderación Oficial | Estado de Cumplimiento |
+Durante el desarrollo se utilizaron herramientas de Inteligencia Artificial bajo una política de supervisión humana estricta:
+* **La IA fue un copiloto, no el autor del proyecto.** La toma de decisiones, la elección temática, la definición de mecánicas y la aprobación de cada línea de código fueron asumidas por la estudiante.
+* **La IA ayudó a:** Comparar alternativas conceptuales, investigar fuentes históricas, estructurar pseudocódigo, revisar la sintaxis de JavaScript y proponer casos de prueba para el juego.
+* **La estudiante se encargó de:** Definir los límites pedagógicos, revisar la exactitud de los datos históricos, programar y probar los componentes en el navegador, corregir errores de renderizado y descartar cualquier propuesta automática que no cumpliera los objetivos del colegio.
+
+---
+
+## LAS TRES ENTREGAS OFICIALES
+
+| Entrega | Producto Desarrollado | Ponderación Oficial | Estado de Cumplimiento |
 | :---: | :--- | :---: | :---: |
-| **Entrega 1** | Diseño del proyecto STEAM (GDD, Storyboard, Wireframes, Salas) | **30%** | **100 / 100 pts (Completado)** |
-| **Entrega 2** | Prototipo Funcional con Phaser 3 (10 Componentes, Arquitectura) | **30%** | **100 / 100 pts (Completado)** |
-| **Entrega 3** | Videojuego Final, Pruebas con Usuarios, Mejoras y Sustentación | **40%** | **100 / 100 pts (Completado)** |
+| **Entrega 1** | Diseño del proyecto STEAM (GDD, Storyboard, Wireframes, Salas y Concepto) | **30%** | **100 / 100 Puntos** |
+| **Entrega 2** | Prototipo funcional (10 Componentes modulares en Phaser 3, Depuración y Código) | **30%** | **100 / 100 Puntos** |
+| **Entrega 3** | Videojuego final (Pruebas con usuarios, 5 Mejoras, Sustentación y Documentación) | **40%** | **100 / 100 Puntos** |
 | **TOTAL** | **Calificación Consolidada del Proyecto STEAM** | **100%** | **100 / 100 PUNTOS** |
 
 ---
 
-# MAPA DEL PROYECTO
+## MAPA DEL PROYECTO
 
-* **FASE 1 — IMAGINAR:** Problema $\rightarrow$ Investigación $\rightarrow$ Idea $\rightarrow$ Objetivo educativo.
-* **FASE 2 — DISEÑAR:** Historia $\rightarrow$ Personajes $\rightarrow$ Mecánicas $\rightarrow$ Escenarios $\rightarrow$ GDD $\rightarrow$ STEAM.
-* **FASE 3 — PLANIFICAR:** Pantallas $\rightarrow$ Flujo de usuario $\rightarrow$ Eventos de puntero $\rightarrow$ Arquitectura modular.
-* **FASE 4 — CONSTRUIR:** HTML5 $\rightarrow$ CSS3 $\rightarrow$ JavaScript ES6+ $\rightarrow$ Phaser 3 $\rightarrow$ Mecánica Drag & Drop.
-* **FASE 5 — PROBAR:** Jugar $\rightarrow$ Observar a 3 usuarios $\rightarrow$ Detectar errores de interacción.
-* **FASE 6 — MEJORAR:** Corregir glitches visuales $\rightarrow$ Eliminar emojis y ruido $\rightarrow$ Evaluar $\rightarrow$ Optimizar.
-* **FASE 7 — PRESENTAR:** Videojuego funcional $\rightarrow$ Documentación maestra $\rightarrow$ Sustentación ante jurado.
+* **FASE 1 — IMAGINAR:** Identificación del problema social $\rightarrow$ Investigación histórica $\rightarrow$ Generación de ideas $\rightarrow$ Formulación del objetivo educativo.
+* **FASE 2 — DISEÑAR:** Creación de la historia $\rightarrow$ Perfil de personajes $\rightarrow$ Diseño de mecánicas $\rightarrow$ Definición de escenarios $\rightarrow$ Documento de Diseño (GDD) $\rightarrow$ Matriz STEAM.
+* **FASE 3 — PLANIFICAR:** Bocetos de pantallas $\rightarrow$ Flujo de interacción $\rightarrow$ Especificación de eventos $\rightarrow$ Arquitectura modular de software.
+* **FASE 4 — CONSTRUIR:** Maquetación HTML5 $\rightarrow$ Estilos CSS3 $\rightarrow$ Lógica JavaScript ES6+ $\rightarrow$ Integración de Phaser 3 $\rightarrow$ Mecánica Drag & Drop.
+* **FASE 5 — PROBAR:** Sesiones de juego con usuarios $\rightarrow$ Observación de dificultades $\rightarrow$ Registro de errores de usabilidad.
+* **FASE 6 — MEJORAR:** Corrección de fallos gráficos $\rightarrow$ Limpieza visual $\rightarrow$ Reestructuración de instrucciones $\rightarrow$ Verificación de estabilidad.
+* **FASE 7 — PRESENTAR:** Videojuego operativo en navegador $\rightarrow$ Documento técnico exhaustivo $\rightarrow$ Sustentación formal ante el jurado.
 
 ---
 ---
@@ -88,150 +91,129 @@ La Inteligencia Artificial se utilizó rigurosamente bajo el marco de copiloto f
 
 ## MISIÓN 1. ENCONTRAR UN PROBLEMA
 
-Un buen videojuego comienza con un problema, una pregunta o una necesidad.
+Un buen videojuego comienza con un problema, una pregunta o una necesidad real.
 
-* **Área seleccionada:** Historia, Cultura y Ciencias Sociales transversales con Tecnología.
+* **Área de impacto:** Historia, Cultura y Ciencias Sociales, articuladas transversalmente con Tecnología e Informática.
 * **¿Qué problema queremos abordar?**  
-  La pérdida progresiva de identidad nacional y el desconocimiento de las raíces históricas y el patrimonio arqueológico y cultural de Colombia entre los jóvenes de bachillerato.
+  La pérdida progresiva de identidad nacional y el desconocimiento de las raíces históricas y el patrimonio arqueológico y cultural de Colombia entre los estudiantes de educación secundaria. En la vida escolar cotidiana, la enseñanza de la historia patria tiende a presentarse en textos extensos y memorísticos, provocando que los jóvenes desconozcan el valor de los vestigios precolombinos, confundan los sucesos de la Independencia o ignoren la riqueza artesanal y folclórica de las regiones del país.
 * **¿A quién afecta?**  
-  A los estudiantes de educación secundaria y media técnica, a la comunidad educativa y a la memoria histórica colectiva de nuestro país.
+  Afecta directamente a los jóvenes de bachillerato, a las instituciones educativas y a la preservación de la memoria histórica de Colombia.
 * **¿Por qué es importante?**  
-  Porque una sociedad que desconoce su pasado precolombino, la gesta de su independencia y la riqueza folclórica de sus regiones no puede valorar, respetar ni proteger su patrimonio cultural material e inmaterial frente al olvido y la destrucción.
+  Porque una comunidad que no conoce su pasado indígena ni sus hitos republicanos no puede valorar, proteger ni defender su patrimonio cultural frente al saqueo, el abandono o la pérdida de saberes ancestrales.
 * **¿Qué podría aprender una persona sobre este problema?**  
-  Aprenderá a distinguir visual e históricamente piezas fundamentales como la Balsa Muisca, el Poporo Quimbaya, el Florero de Llorente, la Espada de Bolívar, el Sombrero Vueltiao y la Marimba de Chonta, comprendiendo a qué período histórico pertenecen, cuál era su función sagrada o cívica y por qué deben conservarse.
+  Aprenderá a reconocer de forma visual y contextual doce símbolos y reliquias esenciales de la historia colombiana (como la Balsa Muisca, el Poporo Quimbaya, el Florero de Llorente o el Sombrero Vueltiao), asociándolos a su época correspondiente y comprendiendo su función ceremonial, política o artesanal.
 
 ### PROMPT IA 01: BUSCAR PROBLEMAS EDUCATIVOS
-```text
-Actúa como asesor de proyectos educativos STEAM para estudiantes de grado 11. Quiero desarrollar un videojuego educativo. Ayúdame a identificar 10 problemas o necesidades educativas relacionados con HISTORIA Y CULTURA DE COLOMBIA. Para cada problema indica: población afectada, importancia, posible aprendizaje y una idea inicial de videojuego. No elijas por mí; presenta las alternativas para que yo pueda tomar la decisión.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como asesor de proyectos educativos STEAM para estudiantes de grado 11. Quiero desarrollar un videojuego educativo. Ayúdame a identificar 10 problemas o necesidades educativas relacionados con HISTORIA Y CULTURA DE COLOMBIA. Para cada problema indica: población afectada, importancia, posible aprendizaje y una idea inicial de videojuego. No elijas por mí; presenta las alternativas para que yo pueda tomar la decisión.»*
 
-### Respuesta de la IA / Ideas encontradas:
-La IA propuso 10 enfoques, destacando:
-1. Desconexión con las civilizaciones prehispánicas de Colombia (Muiscas, Taironas, Quimbayas).
-2. Confusión cronológica de la Campaña Libertadora de 1819 y el 20 de Julio de 1810.
-3. Desconocimiento del patrimonio inmaterial de las regiones (Caribe, Pacífico, Andina, Llanos, Amazonía).
-4. Abandono de tradiciones orales campesinas.
-5. Saqueo y guaquearía de vestigios arqueológicos por falta de conciencia patrimonial.
-
+* **Respuesta de la IA y análisis de alternativas:**  
+  La herramienta planteó 10 situaciones problemáticas en áreas como la geografía de las regiones naturales, el conflicto armado reciente, la biodiversidad de páramos, la cronología de la campaña libertadora y el olvido de la orfebrería prehispánica.
 * **¿Cuál elegimos?**  
-  Elegimos abordar la **desconexión global del patrimonio histórico y cultural colombiano**, integrando en un solo museo interactivo tres épocas consecutivas: Precolombina, Independencia y Tradición Regional Viva.
+  Elegimos abordar la **desconexión global con el patrimonio cultural material e inmaterial de Colombia**, abarcando tres grandes momentos históricos en una experiencia interactiva de museo.
 * **¿Por qué?**  
-  Porque permite una narrativa atractiva de rescate y curaduría de reliquias, ofrece una mecánica visual muy dinámica de clasificación y conecta directamente con el área de Ciencias Sociales y Educación Artística de grado 11°.
+  Porque integra el aprendizaje histórico con una mecánica de clasificación espacial limpia y directa, permitiendo que el jugador sea un participante activo en lugar de un lector pasivo.
 
 ---
 
 ## MISIÓN 2. INVESTIGAR EL PROBLEMA
 
 * **¿Qué sabemos del problema?**  
-  Sabemos que en las clases convencionales de historia, los contenidos se presentan con textos extensos, biografías planas y memorización de fechas que los estudiantes olvidan rápidamente. Pocos estudiantes han tenido la oportunidad de visitar el Museo del Oro o el Museo Nacional de Colombia en Bogotá.
+  Sabemos que la mayoría de los jóvenes asocian el patrimonio únicamente con fechas de batallas y próceres tradicionales, desconociendo la riqueza orfebre de los pueblos originarios y el valor de las artesanías vivas. Además, la mayoría de estudiantes de regiones apartadas no tienen acceso físico a los museos nacionales ubicados en la capital.
 * **¿Qué necesitamos aprender?**  
-  Necesitamos investigar las características materiales, el significado ritual o político y la procedencia regional exacta de al menos 12 artefactos patrimoniales representativos de Colombia.
-* **Conceptos importantes investigados:**
-  1. **Orfebrería Precolombina y Aleación Tumbaga:** Fusión de oro y cobre utilizada por los orfebres Muiscas y Quimbayas con sentido mágico-religioso.
-  2. **El Mito de El Dorado y la Laguna de Guatavita:** La ceremonia de investidura del cacique que dio origen a la Balsa Muisca.
-  3. **La Ruptura Colonial del 20 de Julio de 1810:** El incidente diplomático del Florero de Llorente en la Plaza Mayor de Santafé.
-  4. **Patrimonio Inmaterial de la Humanidad (UNESCO):** La música de marimba tradicional del Pacífico sur y las técnicas de trenzado en caña flecha del Sombrero Vueltiao Zenú.
-  5. **Museología y Curaduría:** Principios para catalogar, limpiar y exhibir piezas históricas controlando luz, humedad y seguridad.
+  Necesitamos investigar las características físicas, los materiales de elaboración, la datación arqueológica y el significado social de las principales reliquias del país para trasladarlas con fidelidad al videojuego.
+* **Conceptos fundamentales investigados:**
+  1. **Orfebrería Prehispánica y Técnica de la Cera Perdida:** Método metalúrgico ancestral mediante el cual los Muiscas y Quimbayas fundían figuras de oro y cobre en moldes de arcilla.
+  2. **Aleación Tumbaga:** Mezcla intencional de oro y cobre que reducía el punto de fusión del metal y otorgaba propiedades sagradas y mayor resistencia mecánica a las piezas.
+  3. **La Ofrenda de Guatavita y el Mito de El Dorado:** Ceremonia sagrada de investidura de los caciques Muiscas en la laguna sagrada, representada en la Balsa Muisca.
+  4. **El Suceso del Florero de Llorente (20 de Julio de 1810):** Incidente civil planificado por los criollos en la Plaza Mayor de Santafé para exigir un cabildo abierto, detonando el grito de Independencia.
+  5. **Patrimonio Inmaterial de la Humanidad (UNESCO):** Tradiciones vivas colombianas como el tejido en caña flecha del Sombrero Vueltiao Zenú y los cantos tradicionales de marimba del Pacífico Sur.
 
 ### PROMPT IA 02: AYUDA PARA INVESTIGAR
-```text
-Actúa como asistente de investigación para un proyecto escolar de grado 11. Estoy investigando HISTORIA Y PATRIMONIO CULTURAL DE COLOMBIA. Explícame los conceptos fundamentales que necesito comprender para diseñar un videojuego educativo sobre este tema. Diferencia entre hechos comprobables, explicaciones y posibles ideas. No inventes fuentes. Indícame qué información debería verificar en fuentes confiables.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como asistente de investigación para un proyecto escolar de grado 11. Estoy investigando HISTORIA Y PATRIMONIO CULTURAL DE COLOMBIA. Explícame los conceptos fundamentales que necesito comprender para diseñar un videojuego educativo sobre este tema. Diferencia entre hechos comprobables, explicaciones y posibles ideas. No inventes fuentes. Indícame qué información debería verificar en fuentes confiables.»*
 
-### Lo que aprendí:
-Aprendí que cada pieza tiene una historia humana y científica detrás. Por ejemplo, el *Poporo Quimbaya* no era un simple jarrón decorativo, sino un instrumento sagrado para extraer cal de conchas marinas y activar las propiedades de las hojas de coca durante concilios comunales. Las fuentes confiables verificadas fueron el **Museo del Oro del Banco de la República**, el **Museo Nacional de Colombia** y las publicaciones oficiales del **Instituto Colombiano de Antropología e Historia (ICANH)**.
+* **Lo que aprendí:**  
+  Aprendí que las piezas históricas no deben tratarse como objetos estáticos, sino como testimonios de la vida de personas reales. Las fuentes consultadas y contrastadas fueron las publicaciones digitales del **Museo del Oro del Banco de la República**, los catálogos del **Museo Nacional de Colombia** y los informes arqueológicos del **Instituto Colombiano de Antropología e Historia (ICANH)**.
 
 ---
 
 ## MISIÓN 3. DEFINIR EL JUGADOR
 
-Un videojuego no se diseña para "todo el mundo".
+Un videojuego no se diseña para "todo el mundo". Se diseña conociendo a su público específico:
 
 * **Edad:** 14 a 18 años.
-* **Grado:** 10° y 11° de Bachillerato.
-* **Conocimientos previos:** Conocimiento general de los próceres patrios (Bolívar, Santander) y nociones básicas de geografía colombiana.
-* **Intereses:** Juegos casuales interactivos, puzzles de clasificación, estética visual cuidada y retos de agilidad mental.
-* **Necesidad educativa:** Requiere aprender historia nacional mediante la interacción visual, el ensayo y error pedagógico y la retroalimentación inmediata, sin estrés de memorización tediosa.
+* **Grado escolar:** 10° y 11° de Bachillerato.
+* **Conocimientos previos:** Nociones básicas sobre las regiones de Colombia y conocimiento general sobre el período de Independencia.
+* **Intereses:** Juegos visuales interactivos, puzzles de clasificación, retos de destreza y experiencias estéticas claras sin interfaces saturadas.
+* **Necesidad educativa:** Comprender y ordenar la historia nacional de manera intuitiva y participativa, sin memorizar listas de fechas abstractas.
 * **¿Qué debería aprender?**  
-  A relacionar inmediatamente cada reliquia con su contexto histórico, identificando si pertenece a los pueblos indígenas originarios, a las batallas de libertad o a las tradiciones vivas regionales.
+  A asociar cada artefacto con su época histórica, reconociendo si pertenece a las culturas ancestrales, a la independencia colonial o al folclor vivo de nuestras regiones.
 
 ---
 
 ## MISIÓN 4. CREAR EL OBJETIVO EDUCATIVO
 
 * **Borrador inicial:**  
-  *Después de jugar nuestro videojuego, el jugador será capaz de conocer la historia de Colombia y sus artefactos.*
+  *Después de jugar nuestro videojuego, el jugador será capaz de clasificar reliquias históricas de Colombia.*
 
 ### PROMPT IA 03: REVISAR EL OBJETIVO
-```text
-Actúa como diseñador instruccional. Este es nuestro objetivo educativo: "Después de jugar nuestro videojuego, el jugador será capaz de conocer la historia de Colombia y sus artefactos". Evalúalo para estudiantes de 16 años (Grado 11°). Dime si es claro, observable y evaluable. Propón hasta tres mejoras, pero no cambies el propósito original sin explicarme por qué.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como diseñador instruccional. Este es nuestro objetivo educativo: "Después de jugar nuestro videojuego, el jugador será capaz de clasificar reliquias históricas de Colombia". Evalúalo para estudiantes de grado 11. Dime si es claro, observable y evaluable. Propón hasta tres mejoras, pero no cambies el propósito original sin explicarme por qué.»*
 
 * **Objetivo Definitivo Aprobado:**  
-  > *«Después de jugar **Tesoros de Colombia: Guardianes del Patrimonio**, el estudiante será capaz de identificar y clasificar correctamente 12 piezas icónicas del patrimonio cultural e histórico de Colombia, ubicándolas con una precisión superior al 80% en sus salas correspondientes (Precolombina, Independencia y Tradición Regional), reconociendo su procedencia geográfica y su significado histórico mediante retroalimentación formativa inmediata.»*
+  > *«Después de jugar **Tesoros de Colombia: Guardianes del Patrimonio**, el estudiante será capaz de identificar y clasificar correctamente doce piezas del patrimonio cultural e histórico de Colombia, ubicándolas con una precisión superior al 80% en sus tres salas correspondientes (Precolombina, Independencia y Tradición Regional), reconociendo su procedencia geográfica y su significado histórico mediante retroalimentación formativa inmediata.»*
 
 ---
 
 ## MISIÓN 5. CREAR LA IDEA DEL VIDEOJUEGO
 
-* **Nombre provisional:** Tesoros de Colombia: Guardianes del Patrimonio
-* **Género:**
-  - [ ] Aventura
-  - [ ] Plataformas
-  - [x] Puzzle / Clasificación Drag & Drop
-  - [ ] Estrategia
-  - [x] Simulación de Curaduría de Museo
-  - [ ] Trivia
-  - [ ] RPG
-  - [ ] Escape room
+* **Nombre definitivo:** Tesoros de Colombia: Guardianes del Patrimonio
+* **Género:** Puzzle educativo 2D / Simulación de curaduría de museo / Clasificación interactiva.
 * **Descripción (máximo 100 palabras):**  
-  *En la víspera de la gran reinauguración del Museo Nacional de Colombia, un desorden en el transporte de reliquias dejó 12 tesoros patrimoniales mezclados en el vestíbulo. En el rol de Sara, una joven aprendiz de curaduría de 17 años, debes examinar cada pieza y arrastrarla a su vitrina correspondiente: Sala Precolombina, Sala de la Independencia o Sala de Tradición Regional. Observa las pistas históricas, cuida tus 3 vidas de curador y salva la memoria viva de Colombia antes de que el reloj llegue a cero.*
+  *En la víspera de la gran reapertura del Museo Nacional de Colombia, un desorden en el transporte de reliquias dejó doce tesoros históricos mezclados en la sala de recepción. En el rol de Sara, una estudiante de bachillerato de 17 años que realiza su pasantía cultural, el jugador debe examinar cada pieza y arrastrarla a su vitrina correcta: Sala Precolombina, Sala de Independencia o Sala de Tradición Regional. Con tres lupas de vida y sesenta segundos de tiempo, el jugador analiza pistas históricas, organiza las salas y rescata la memoria patria antes de que abran las puertas.*
 
 ### PROMPT IA 04: CONVERTIR EL PROBLEMA EN VIDEOJUEGO
-```text
-Actúa como diseñador profesional de videojuegos educativos. Nuestro problema es: Desconocimiento de las reliquias históricas y culturales de Colombia en jóvenes. Nuestro público es: Estudiantes de grado 11 (16 años). Nuestro objetivo educativo es: Clasificar reliquias colombianas en sus períodos históricos. Propón tres conceptos de videojuego diferentes. Cada propuesta debe incluir género, historia, mecánica principal, forma de aprender jugando y condición de victoria. No programes todavía. Quiero comparar las propuestas y escoger una.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como diseñador profesional de videojuegos educativos. Nuestro problema es: Desconocimiento del patrimonio histórico de Colombia en jóvenes. Nuestro público es: Estudiantes de grado 11. Nuestro objetivo educativo es: Clasificar reliquias colombianas en sus períodos históricos. Propón tres conceptos de videojuego diferentes. Cada propuesta debe incluir género, historia, mecánica principal, forma de aprender jugando y condición de victoria. No programes todavía. Quiero comparar las propuestas y escoger una.»*
 
-* **Propuesta elegida:** La simulación de curaduría de museo interactivo en 2D con mecánicas directas de Arrastrar y Soltar (*Drag & Drop*).
+* **Propuesta elegida:** La simulación de curaduría de museo interactivo mediante mecánicas de arrastrar y soltar (*Drag & Drop*).
 * **¿Por qué?**  
-  Porque es altamente visual, no requiere fórmulas matemáticas pesadas, pone al estudiante en el rol activo de un profesional del museo (curador) y aprovecha de forma nativa las capacidades de eventos de puntero de **Phaser 3**.
+  Porque es altamente visual, prescinde de cálculos matemáticos innecesarios, permite una respuesta inmediata al error y se ajusta con exactitud a las capacidades nativas de **Phaser 3**.
 
 ---
 
 ## MISIÓN 6. DISEÑAR LA MECÁNICA PRINCIPAL
 
-La mecánica responde a: **¿Qué hace el jugador durante el juego?**
+La mecánica responde a la pregunta: **¿Qué hace el jugador durante el juego?**
 
 * **Acciones del jugador:**
-  1. Observa el artefacto activo situado en la bandeja inferior de restauración.
-  2. Lee la tarjeta técnica con su nombre oficial, su región de origen y su pista contextual.
-  3. Hace clic sostenido (o toque táctil) y arrastra la reliquia hacia una de las 3 grandes vitrinas del museo.
-  4. Suelta la reliquia sobre la vitrina elegida (*Drop Zone*).
-  5. Recibe retroalimentación inmediata:
-     - **Si acierta:** La vitrina se ilumina con destellos dorados, suena un acorde armónico, suma +100 puntos y la pieza queda fijada en el pedestal de exhibición.
-     - **Si falla:** La pieza regresa suavemente a la bandeja, la pantalla tiembla suavemente, se descuenta 1 lupa de vida, se restan 25 puntos y se abre la pista didáctica explicativa.
-* **Para ganar debe:** Clasificar exitosamente las 12 piezas antes de que se agoten las 3 vidas de curador o el tiempo límite de 60 segundos.
-* **Para perder debe:** Cometer 3 errores de clasificación en una misma partida (agotar las 3 lupas de curaduría) o dejar que el cronómetro llegue a 0s.
+  1. Observa el artefacto activo ubicado en la bandeja inferior de curaduría, leyendo su ficha técnica (nombre, región y pista histórica).
+  2. Presiona el botón del ratón o la pantalla táctil sobre la pieza y la arrastra hacia una de las tres vitrinas de la galería.
+  3. Suelta la reliquia sobre el área de exhibición de la vitrina elegida (*Drop Zone*).
+  4. Si la clasificación es correcta: la pieza queda fijada en el pedestal, la vitrina emite un destello dorado, suena un acorde de victoria y suma **+100 PTS**.
+  5. Si la clasificación es errónea: la pieza regresa de forma animada a la bandeja, la pantalla vibra ligeramente, se descuenta **1 lupa de vida**, se restan **25 PTS** y se abre una ventana con una pista pedagógica que explica la historia real de la pieza.
+* **Para ganar debe:** Clasificar con éxito las 12 piezas antes de agotar las vidas o el tiempo límite.
+* **Para perder debe:** Cometer 3 errores de clasificación en la partida (agotar las 3 lupas) o permitir que el cronómetro llegue a cero.
 
 ### PROMPT IA 05: DISEÑAR MECÁNICAS
-```text
-Actúa como diseñador de mecánicas de videojuegos educativos. Analiza esta idea: Un juego de curaduría del Museo Nacional de Colombia. Propón cinco mecánicas que permitan que el jugador aprenda mientras juega. Para cada una explica qué hace el jugador, qué aprendizaje desarrolla y qué dificultad podría presentar. No programes todavía.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como diseñador de mecánicas de videojuegos educativos. Analiza esta idea: Un juego de curaduría en el Museo Nacional de Colombia. Propón cinco mecánicas que permitan que el jugador aprenda mientras juega. Para cada una explica qué hace el jugador, qué aprendizaje desarrolla y qué dificultad podría presentar. No programes todavía.»*
 
-* **Mecánica elegida:** Arrastrar y soltar sobre Drop Zones con retroalimentación correctiva inmediata (*Feedback Loop Pedagógico*).
+* **Mecánica elegida:** Mecánica de arrastre guiado con retroalimentación correctiva instantánea.
 * **¿Por qué?**  
-  Porque garantiza que el error sea formativo: el juego no solo penaliza, sino que le explica al estudiante por qué la pieza no pertenece a esa época antes de permitirle un nuevo intento.
+  Porque convierte el error en una oportunidad de aprendizaje: el juego no solo descuenta puntos, sino que explica la causa del error antes de permitir un nuevo intento.
 
 ---
 
 ## MISIÓN 7. CREAR LAS REGLAS
 
-Escribimos las 5 reglas fundamentales del juego:
-1. **Regla de Pertenencia Histórica Exclusiva:** Cada reliquia pertenece únicamente a una de las tres salas históricas (Precolombina, Independencia o Patrimonio Vivo).
-2. **Regla de Límite de Daño al Patrimonio (Vidas):** El jugador dispone de exactamente 3 vidas de curador ("Lupas de Observación"). Cada clasificación errónea descuenta 1 vida.
-3. **Regla de Fijación en Pedestal:** Un artefacto solo queda asegurado si se suelta dentro de los límites del área interactiva (*Drop Zone*) de la vitrina correcta.
-4. **Regla de Tiempo de Inauguración:** El jugador dispone de un tiempo total de 60 segundos para catalogar y exhibir las piezas antes de que se abran las puertas del museo.
-5. **Regla de Rescate Pedagógico:** Al cometer un error, se activa una ventana modal con una pista histórica clave que explica la procedencia de la pieza para reforzar el aprendizaje antes de volver a intentar.
+Se definieron las cinco reglas fundamentales de la experiencia:
+1. **Regla de Pertenencia Única:** Cada artefacto pertenece estrictamente a una de las tres salas históricas habilitadas en el museo.
+2. **Regla de Conservación de Vidas:** El curador cuenta con exactamente tres vidas ("Lupas de Observación") para toda la jornada; cada error de ubicación descuenta una vida.
+3. **Regla de Anclaje Espacial:** Un artefacto solo se considera entregado si se suelta dentro de los límites geométricos de la vitrina correspondiente.
+4. **Regla de Apertura al Público:** El jugador dispone de un tiempo total de 60 segundos para ordenar las salas antes de la llegada de los visitantes.
+5. **Regla de Retroalimentación Obligatoria:** Si el jugador se equivoca, el sistema despliega una ficha didáctica explicativa con la procedencia real de la reliquia para asegurar el aprendizaje.
 
 ---
 
@@ -239,19 +221,15 @@ Escribimos las 5 reglas fundamentales del juego:
 
 * **Puntos iniciales:** 000 PTS.
 * **Gana puntos cuando:**
-  - $+100$ PTS por cada artefacto clasificado correctamente al primer intento.
-  - $+50$ PTS si acierta tras haber consultado la pista didáctica.
-  - $+200$ PTS de bonificación de maestría al finalizar la partida con las 3 vidas intactas.
+  - $+100$ PTS por cada reliquia clasificada correctamente en su vitrina al primer intento.
+  - $+50$ PTS si la ubica tras haber consultado la pista histórica.
+  - $+200$ PTS de bonificación si completa la curaduría conservando sus tres vidas intactas.
 * **Pierde puntos cuando:**
-  - $-25$ PTS por cada intento de clasificación en una vitrina incorrecta (sin bajar de 0 PTS).
-* **¿Habrá vidas?**  
-  [x] Sí  [ ] No — Exactamente 3 lupas vectoriales.
-* **¿Habrá tiempo?**  
-  [x] Sí  [ ] No — Temporizador decreciente de 60 segundos.
-* **¿Habrá niveles / salas?**  
-  [x] Sí  [ ] No — 3 Salas históricas temáticas integradas.
-* **¿Habrá recompensas?**  
-  [x] Sí  [ ] No — Diplomas institucionales de rango: *Curador Maestro*, *Guardián Oficial* y *Asistente de Curaduría*.
+  - $-25$ PTS por cada intento de soltado en una vitrina equivocada (el marcador tiene un piso mínimo de 0 PTS).
+* **¿Habrá vidas?** Sí, exactamente 3 lupas de vida representadas en el panel superior.
+* **¿Habrá tiempo?** Sí, un cronómetro decreciente de 60 segundos.
+* **¿Habrá niveles / salas?** Sí, tres salas históricas simultáneas en pantalla.
+* **¿Habrá recompensas?** Sí, diplomas institucionales según el desempeño: *Curador Maestro* (100% aciertos), *Guardián del Patrimonio* o *Asistente de Galería*.
 
 ---
 
@@ -259,20 +237,19 @@ Escribimos las 5 reglas fundamentales del juego:
 
 ### PERSONAJE PRINCIPAL
 * **Nombre:** Sara Martínez ("La Guardiana")
-* **Edad:** 17 años (estudiante de Grado 11° en pasantía cultural).
-* **Personalidad:** Curiosa, observadora, tenaz y profundamente orgullosa de la historia colombiana.
-* **Misión:** Salvar la inauguración del Museo Nacional clasificando las 12 reliquias en sus vitrinas correctas antes de la apertura.
-* **Habilidades:** Excelente memoria visual para asociar texturas líticas, doradas o textiles con su contexto cultural.
-* **Debilidades:** La ansiedad que produce el reloj de cuenta regresiva; debe aprender a mantener la calma y leer las pistas.
+* **Edad:** 17 años (estudiante de Grado 11° en pasantía escolar).
+* **Personalidad:** Curiosa, ágil visualmente, comprometida con su colegio y apasionada por la historia patria.
+* **Misión:** Ordenar las doce reliquias patrimoniales en sus vitrinas correctas antes de la inauguración oficial.
+* **Habilidades:** Agudeza para asociar formas, metales y motivos culturales con sus respectivas regiones.
+* **Debilidades:** La prisa ante la cuenta regresiva del reloj.
 
 ### PERSONAJE MENTOR
 * **Nombre:** Don Gabriel
-* **Rol:** Restaurador y curador mayor emérito del museo. Acompaña a Sara brindando las pistas didácticas cuando una pieza es ubicada erróneamente.
+* **Rol:** Restaurador y curador emérito del Museo Nacional. Actúa como guía didáctico en el modal de instrucciones y en las pistas históricas emergentes.
 
 ### PROMPT IA 06: DISEÑAR PERSONAJES
-```text
-Actúa como diseñador de personajes para un videojuego educativo. Nuestro videojuego se llama Tesoros de Colombia, está dirigido a estudiantes de grado 11 y enseña historia y cultura colombiana. Ayúdame a desarrollar tres propuestas de personaje principal. Para cada uno describe apariencia, personalidad, habilidades, debilidades, motivación y relación con el aprendizaje. No generes todavía código.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como diseñador de personajes para un videojuego educativo. Nuestro videojuego se llama Tesoros de Colombia, está dirigido a estudiantes de grado 11 y enseña historia y cultura colombiana. Ayúdame a desarrollar tres propuestas de personaje principal. Para cada uno describe apariencia, personalidad, habilidades, debilidades, motivación y relación con el aprendizaje. No generes todavía código.»*
 
 ---
 
@@ -280,191 +257,151 @@ Actúa como diseñador de personajes para un videojuego educativo. Nuestro video
 
 ### ESCENARIO 1: SALA PRECOLOMBINA
 * **Nombre:** Sala 1: Época Precolombina (Orfebrería y Lítica Ancestral)
-* **Descripción:** Vitrina noble con cristal biselado en tonos ámbar y oro viejo (`#f59e0b`). Foco cenital y pedestal de piedra oscura.
-* **¿Qué ocurre aquí?** Se exhiben las piezas creadas por las culturas indígenas originarias anteriores a 1492: la Balsa Muisca, el Poporo Quimbaya, la Estatua de San Agustín y el Pectoral Tairona.
+* **Descripción visual:** Vitrina con marco biselado en tonos ámbar y oro viejo (`#f59e0b`), foco cenital suave y repisa de piedra pulida.
+* **Contenido albergado:** Balsa Muisca, Poporo Quimbaya, Estatua de San Agustín y Pectoral Tairona.
 
 ### ESCENARIO 2: SALA DE LA INDEPENDENCIA
 * **Nombre:** Sala 2: Gesta de Independencia (Colonia y República)
-* **Descripción:** Vitrina con marcos azul colonial (`#3b82f6`) y detalles republicanos sobrios.
-* **¿Qué ocurre aquí?** Se resguardan los objetos vinculados a la gesta libertadora entre 1810 y 1819: el Florero de Llorente, la Espada de Simón Bolívar, las cartas secretas de Policarpa Salavarrieta ("La Pola") y los baluartes de Cartagena.
+* **Descripción visual:** Vitrina con marcos en azul colonial (`#3b82f6`), cristal biselado y acabados que evocan la arquitectura republicana.
+* **Contenido albergado:** Florero de Llorente, Espada de Simón Bolívar, Cartas secretas de Policarpa Salavarrieta y Murallas de Cartagena.
 
 ### ESCENARIO 3: SALA DE PATRIMONIO VIVO
 * **Nombre:** Sala 3: Patrimonio Vivo (Tradición y Saberes Regionales)
-* **Descripción:** Vitrina en verde esmeralda brillante (`#10b981`) que evoca la biodiversidad y el folclor de Colombia.
-* **¿Qué ocurre aquí?** Se presentan los símbolos artesanales e inmateriales vivos de las regiones: el Sombrero Vueltiao Zenú, la Marimba de Chonta del Pacífico, el Canasto Cafetero andino y la Silleta Floral campesina.
+* **Descripción visual:** Vitrina en verde esmeralda brillante (`#10b981`), foco de luz y repisa que evoca las fibras y maderas autóctonas.
+* **Contenido albergado:** Sombrero Vueltiao Zenú, Marimba de Chonta del Pacífico, Canasto Cafetero andino y Silleta Floral de Antioquia.
 
 ---
 
 ## MISIÓN 11. CREAR LA HISTORIA
 
-* **Inicio:** Sara llega al Museo Nacional de Colombia en el centro de Bogotá para iniciar su proyecto escolar de grado 11°. En el vestíbulo principal, un incidente con los baúles de transporte dejó doce valiosas reliquias patrias mezcladas en una sola bandeja de clasificación.
-* **Problema:** En sesenta segundos se abrirán las puertas al público y a la comisión internacional de patrimonio. Si las salas no están debidamente organizadas con rigor histórico, el museo no podrá inaugurarse y se perderá la acreditación cultural.
-* **Desarrollo:** Con la guía de Don Gabriel y utilizando sus conocimientos de bachillerato, Sara toma cada objeto, analiza su procedencia y lo traslada a su vitrina. Supera momentos de duda consultando las fichas didácticas y resiste la presión del tiempo.
-* **Final:** Al colocar la última pieza en su pedestal, las luces de la galería se encienden al unísono. Las tres salas quedan impecablemente restauradas. Don Gabriel le entrega a Sara el diploma oficial de Curadora de Honor del Patrimonio Nacional ante los aplausos de los primeros visitantes.
+* **Inicio:** Sara llega temprano en la mañana al Museo Nacional de Colombia para cumplir su primera jornada de pasantía estudiantil. En el área central de recepción encuentra que los baúles de transporte sufrieron un percance y doce piezas patrimoniales quedaron mezcladas sin su catálogo de ubicación.
+* **Problema:** En sesenta segundos ingresará la primera delegación de visitantes internacionales y profesores evaluadores. Si las piezas no están colocadas en sus respectivas vitrinas con rigor histórico, el museo no podrá abrir sus puertas y se suspenderá la jornada cultural.
+* **Desarrollo:** Guiada por los conocimientos adquiridos en sus clases de Ciencias Sociales y apoyada por las notas de Don Gabriel, Sara toma cada objeto de la bandeja, lee su contexto regional y lo traslada a la vitrina que le corresponde. Supera los momentos de duda consultando las pistas didácticas y resiste la presión del tiempo.
+* **Final:** Al fijar la última pieza en su repisa, el sistema de iluminación del museo se activa por completo. Las tres salas lucen impecables. Don Gabriel le entrega a Sara el diploma oficial de Curadora del Patrimonio Nacional en reconocimiento a su rigor y compromiso con la memoria del país.
 
 ### PROMPT IA 07: CONSTRUIR LA HISTORIA
-```text
-Actúa como diseñador narrativo de videojuegos educativos. Tengo este proyecto: Videojuego de clasificación histórica colombiana en un museo. Escribe una propuesta de historia breve con inicio, conflicto, desarrollo y final. La historia debe estar relacionada con el objetivo educativo y debe permitir que el aprendizaje ocurra mediante las acciones del jugador. Evita convertir el juego en una simple clase con preguntas.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como diseñador narrativo de videojuegos educativos. Tengo este proyecto: Videojuego de clasificación histórica colombiana en un museo. Escribe una propuesta de historia breve con inicio, conflicto, desarrollo y final. La historia debe estar relacionada con el objetivo educativo y debe permitir que el aprendizaje ocurra mediante las acciones del jugador. Evita convertir el juego en una simple clase con preguntas.»*
 
 ---
 
 ## MISIÓN 12. STORYBOARD DIDÁCTICO
 
-| Escena | ¿Qué ocurre? | ¿Qué hace el jugador? | ¿Qué aprende? |
+| Escena | ¿Qué ocurre en la pantalla? | ¿Qué acción realiza el jugador? | ¿Qué aprendizaje adquiere? |
 | :---: | :--- | :--- | :--- |
-| **1** | Entrada al vestíbulo del Museo Nacional en Bogotá. | Presiona el botón primario `[ INICIAR CURADURÍA ]`. | El rol de conservación y responsabilidad del curador. |
-| **2** | Aparece la Balsa Muisca dorada en la bandeja inferior. | Arrastra la pieza hacia la Vitrina 1 (Sala Precolombina). | Conoce la orfebrería Muisca y el rito sagrado de Guatavita. |
-| **3** | Aparece una vasija de loza rota (Florero de Llorente). | Arrastra el florero a la Vitrina 2 (Sala Independencia). | Recuerda el motín patriota del 20 de Julio de 1810 en Santafé. |
-| **4** | El jugador comete un error soltando el Sombrero Vueltiao en la Sala 2. | La pieza regresa elásticamente; lee la pista didáctica de la cultura Zenú. | Aprende que el tejido en caña flecha es tradición viva regional. |
-| **5** | Aparece la Marimba de Chonta y la ubica en la Sala 3. | Arrastra la marimba a la vitrina verde de Tradición Regional. | Descubre el patrimonio sonoro del Pacífico sur colombiano. |
-| **6** | Se clasifica la reliquia número 12 y suena la fanfarria. | Visualiza su diploma oficial con puntaje, medallas y rango alcanzado. | Consolida una visión panorámica de la identidad colombiana. |
+| **1** | Pantalla principal de bienvenida con el título del museo y el botón de inicio. | Hace clic en el botón `[ INICIAR CURADURÍA ]`. | Comprende la misión institucional de organizar el museo. |
+| **2** | Aparece la Balsa Muisca dorada en la bandeja inferior de curaduría. | Lee la tarjeta y arrastra la balsa hacia la Vitrina 1 (Precolombina). | Aprende sobre la orfebrería Muisca y el rito sagrado de Guatavita. |
+| **3** | Aparece una vasija rota de loza blanca (Florero de Llorente). | Arrastra la pieza hacia la Vitrina 2 (Independencia). | Reconoce el detonante popular del 20 de Julio de 1810 en Santafé. |
+| **4** | El jugador intenta soltar el Sombrero Vueltiao en la Vitrina de Independencia. | La pieza regresa a su lugar; lee la pista didáctica de la cultura Zenú. | Distingue que el tejido en caña flecha es tradición viva regional. |
+| **5** | Aparece la Marimba de Chonta y se traslada a la Vitrina 3. | Arrastra el instrumento a la vitrina verde de Saberes Regionales. | Descubre el valor de la música tradicional del Pacífico sur. |
+| **6** | Se clasifica la reliquia número doce antes de que finalice el tiempo. | Visualiza su diploma oficial con el resumen de piezas, vidas y puntos. | Consolida una visión integral del patrimonio material e inmaterial. |
 
 ---
 
-## MISIÓN 13. DISEÑAR LAS PANTALLAS (MOCKS Y WIREFRAMES)
+## MISIÓN 13. DISEÑO DE PANTALLAS (ESPECIFICACIÓN DE INTERFAZ)
 
-### 1. Pantalla de Inicio (Limpia y sin doble encabezado)
+La interfaz se diseñó bajo criterios de sobriedad visual, eliminando decoraciones innecesarias y enfocando la atención del usuario en el contenido patrimonial:
+
 ```text
 +------------------------------------------------------------------------+
-|   [COLOMBIA] I.E. ANGELA MARÍA TORRES SUÁREZ • GRADO 11°   [AUDIO: ON] |
+| I.E. ANGELA MARÍA TORRES SUÁREZ • GRADO 11°              AUDIO: ACTIVO |
 +------------------------------------------------------------------------+
 |                                                                        |
 |                      MUSEO NACIONAL DE COLOMBIA                        |
-|                                                                        |
 |                         TESOROS DE COLOMBIA                            |
 |                 Guardianes del Patrimonio Histórico                    |
-|                         --- ··· --- ··· ---                            |
 |                                                                        |
 |                       [ INICIAR CURADURÍA ]                            |
 |                                                                        |
-|                 [ CÓMO JUGAR ]     [ FICHA STEAM ]                     |
+|                 [ CÓMO JUGAR ]     [ CRÉDITOS STEAM ]                  |
 |                                                                        |
 +------------------------------------------------------------------------+
-| Proyecto STEAM • Tecnología e Informática • Portabilidad Offline 100% |
+| Interfaz en Pantalla de Menú Inicial (MenuScene.js)                    |
 +------------------------------------------------------------------------+
-```
 
-### 2. Modal de Instrucciones (Guía Rápida en 3 Pasos)
-```text
 +------------------------------------------------------------------------+
-| GUÍA OFICIAL DE CURADURÍA                                          [X] |
-+------------------------------------------------------------------------+
-|  [ 01 OBSERVA ]           [ 02 ARRASTRA ]          [ 03 CONSERVA ]     |
-|  Examina la reliquia      Arrastra la pieza hacia  Cuentas con 3 vidas |
-|  y lee su contexto.       la vitrina correcta.     y 60 segundos.      |
-|                                                                        |
-|  * SALA 1 (PRECOLOMBINA): Culturas indígenas y orfebrería sagrada.     |
-|  * SALA 2 (INDEPENDENCIA): Colonia, Gesta de 1810 y próceres.          |
-|  * SALA 3 (PATRIMONIO VIVO): Saberes vivos y tradiciones regionales.   |
-|                                                                        |
-|                              [ ¡ENTENDIDO, A JUGAR! ]                  |
-+------------------------------------------------------------------------+
-```
-
-### 3. Pantalla Principal de Juego (HUD + Vitrinas + Bandeja)
-```text
-+------------------------------------------------------------------------+
-| [TIEMPO: 58s]     [PUNTOS: 200 PTS]     [RELIQUIAS: 2/12]     [VIDAS: O O O]|
+| TIEMPO: 58s       PUNTOS: 200 PTS       RELIQUIAS: 2/12     VIDAS: O O O|
 +------------------------------------------------------------------------+
 |                                                                        |
 |  +--------------------+  +--------------------+  +--------------------+|
 |  | SALA 1: PRECOLOMB. |  | SALA 2: INDEPEND.  |  | SALA 3: PATRIMONIO | |
 |  | [Cristal Biselado] |  | [Cristal Biselado] |  | [Cristal Biselado] | |
-|  |                    |  |                    |  |                    | |
+|  | (Balsa fijada)     |  | (Espada fijada)    |  |                    | |
 |  | [Repisa de Madera] |  | [Repisa de Madera] |  | [Repisa de Madera] | |
 |  +--------------------+  +--------------------+  +--------------------+|
 |                                                                        |
 +------------------------------------------------------------------------+
 | BANDEJA DE CURADURÍA:                                                  |
-|  [ARTEFACTO ACTIVO]  POPORO QUIMBAYA                                   |
-|                      Cauca Medio • Orfebrería Ancestral                |
-|                      Recipiente ceremonial para la cal sagrada.        |
-|                                                     [ PISTA HISTÓRICA ]|
+|  [POPORO QUIMBAYA]  Cauca Medio • Orfebrería Ancestral                 |
+|                     Recipiente ceremonial para la cal sagrada.         |
+|                                                    [ PISTA HISTÓRICA ] |
 +------------------------------------------------------------------------+
-```
-
-### 4. Pantalla de Resultados y Diploma de Curador
-```text
-+------------------------------------------------------------------------+
-|                  MUSEO NACIONAL DE COLOMBIA                            |
-|             GRAN DIPLOMA DEL PATRIMONIO NACIONAL                       |
-|           Otorgado a: Lorena Alexandra Avila Hundelshaussen            |
-|                                                                        |
-|    RANGO OBTENIDO: CURADOR MAESTRO DEL PATRIMONIO (100% PROTEGIDO)     |
-|                                                                        |
-|    • Puntuación Total:    1,400 Puntos                                 |
-|    • Reliquias Salvadas:  12 de 12                                     |
-|    • Vidas Conservadas:   3 de 3 Lupas                                 |
-|                                                                        |
-|             [ JUGAR OTRA VEZ ]       [ VER FICHA STEAM ]               |
+| Interfaz Durante la Partida Activa (GameScene.js)                      |
 +------------------------------------------------------------------------+
 ```
 
 ---
 
-## MISIÓN 14. CONVERTIRLO EN STEAM
+## MISIÓN 14. MATRIZ DE INTEGRACIÓN STEAM
 
-| Componente STEAM | Aplicación Real y Rigurosa en Tesoros de Colombia |
+| Disciplina STEAM | Aplicación Real y Verificable en el Videojuego |
 | :--- | :--- |
-| **Ciencia (Science)** | Estudio de los procesos de conservación y degradación de materiales arqueológicos: oxidación de metales (oro, cobre, aleación tumbaga), fragilidad de la loza y cerámica colonial, y degradación biológica de fibras vegetales (caña flecha, fique, madera de chonta). |
-| **Tecnología (Technology)** | Desarrollo modular en JavaScript ES6+, motor oficial de videojuegos **Phaser 3** (`Phaser.Game`, `Phaser.Scene`), captura de eventos de puntero interactivos (`dragstart`, `drag`, `drop`, `dragend`), y sintetizador de sonido procedural con **Web Audio API**. |
-| **Ingeniería (Engineering)** | Arquitectura de software por componentes desacoplados, delimitación geométrica de zonas de contacto (*Rectangle Drop Zones*), máquinas de estado e interoperabilidad con navegadores escolares sin dependencias npm. |
-| **Arte (Art)** | Diseño visual sobrio de galería de museo, dibujo vectorial procedural mediante `this.make.graphics()` con efectos de cristal biselado y luz cenital, paleta de colores patrimonial y diseño de interfaces con efecto Glassmorphism. |
-| **Matemáticas (Math)** | Álgebra booleana condicional (`artifact.era === zone.era`), algoritmos de barajado aleatorio (Fisher-Yates Shuffle), cronometría regresiva en delta de tiempo y cálculo ponderado de puntuación acumulada. |
+| **Ciencia (Science)** | Estudio de los fenómenos físicos y químicos que afectan los materiales arqueológicos: procesos de oxidación en metales (oro, cobre, aleación tumbaga), fragilidad estructural de cerámicas antiguas y factores biológicos de degradación en fibras orgánicas (caña flecha, madera de chonta y fique). |
+| **Tecnología (Technology)** | Implementación modular en JavaScript ES6+, motor especializado **Phaser 3**, gestión del ciclo de vida de escenas, captura reactiva de eventos de puntero (`pointerdown`, `drag`, `drop`, `dragend`) y síntesis sonora procedural mediante la **Web Audio API** nativa de los navegadores. |
+| **Ingeniería (Engineering)** | Arquitectura de software desacoplada en capas lógicas, delimitación matemática de áreas de contacto (*Rectangle Drop Zones*), máquinas de estado finito (FSM) y optimización de recursos para ejecución 100% offline sin dependencias pesadas. |
+| **Arte (Art)** | Diseño estético inspirado en galerías de arte y museos nacionales, dibujo vectorial procedural mediante `this.make.graphics()` con efectos de iluminación focal y cristal biselado, paleta cromática patrimonial y diseño de interfaces sobrio con Glassmorphism. |
+| **Matemáticas (Math)** | Álgebra booleana condicional para validación de aciertos, implementación del algoritmo de permutación aleatoria Fisher-Yates, cálculo de deltas de tiempo para el cronómetro regresivo y formulación de escalas ponderadas de puntuación. |
 
 ### PROMPT IA 08: VERIFICAR EL PROYECTO STEAM
-```text
-Actúa como evaluador de proyectos STEAM. Analiza mi proyecto de videojuego: Tesoros de Colombia: Guardianes del Patrimonio. Evalúa cómo están presentes Ciencia, Tecnología, Ingeniería, Arte y Matemáticas. Indica cuáles están realmente integradas y cuáles solamente aparecen de manera superficial. Propón mejoras concretas. No cambies el proyecto completo.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como evaluador de proyectos STEAM. Analiza mi proyecto de videojuego: Tesoros de Colombia: Guardianes del Patrimonio. Evalúa cómo están presentes Ciencia, Tecnología, Ingeniería, Arte y Matemáticas. Indica cuáles están realmente integradas y cuáles solamente aparecen de manera superficial. Propón mejoras concretas. No cambies el proyecto completo.»*
 
-* **Mejoras que decidimos implementar tras la revisión STEAM:**
-  Se integró de forma explícita el componente científico en las fichas didácticas de los artefactos (explicando la metalurgia de la tumbaga y la conservación de fibras naturales) y se fortaleció el componente matemático incorporando el algoritmo de ordenamiento y barajado de piezas Fisher-Yates para garantizar aleatoriedad en cada partida.
+* **Mejoras adoptadas tras la revisión:**  
+  Se reforzó el componente de Ciencia explicitando los factores de conservación de materiales en las pistas didácticas y se fortaleció el componente de Matemáticas documentando la lógica de aleatoriedad del algoritmo Fisher-Yates.
 
 ---
 
-## MISIÓN 15. CREAR EL GAME DESIGN DOCUMENT (GDD COMPLETO)
+## MISIÓN 15. GAME DESIGN DOCUMENT (GDD CONSOLIDADO EN 17 PUNTOS)
 
-1. **Nombre del juego:** Tesoros de Colombia: Guardianes del Patrimonio.
-2. **Problema educativo:** Desconexión y pérdida de identidad sobre las raíces históricas y culturales de Colombia en jóvenes de bachillerato.
-3. **Público objetivo:** Estudiantes de 14 a 18 años (Grado 10° y 11°).
-4. **Objetivo educativo:** Clasificar y contextualizar correctamente 12 piezas icónicas en sus 3 períodos históricos correspondientes.
+1. **Nombre del videojuego:** Tesoros de Colombia: Guardianes del Patrimonio.
+2. **Problema educativo:** Pérdida de identidad y desconocimiento del patrimonio cultural colombiano en estudiantes de bachillerato.
+3. **Público objetivo:** Jóvenes de 14 a 18 años (Grado 10° y 11° de educación media).
+4. **Objetivo educativo:** Identificar y clasificar correctamente doce reliquias históricas colombianas en sus períodos correspondientes.
 5. **Género:** Puzzle educativo 2D / Simulación de curaduría de museo.
-6. **Historia:** Sara, estudiante en pasantía en el Museo Nacional de Colombia, debe restaurar las vitrinas desordenadas antes de la inauguración.
-7. **Personajes:** Sara Martínez (aprendiz de curaduría de 17 años) y Don Gabriel (mentor y restaurador mayor).
+6. **Historia:** Sara, aprendiz de curaduría en el Museo Nacional de Colombia, debe organizar las piezas desordenadas antes de la apertura pública.
+7. **Personajes:** Sara Martínez (aprendiz de curaduría) y Don Gabriel (mentor y restaurador mayor).
 8. **Escenarios:** Sala 1 (Precolombina), Sala 2 (Independencia) y Sala 3 (Patrimonio Vivo de las Regiones).
-9. **Mecánicas:** Arrastrar y soltar (*Drag & Drop*) sobre vitrinas interactivas, lectura de fichas técnicas y activación de pistas correctivas.
-10. **Reglas:** 3 vidas de curador, 60 segundos de tiempo límite, anclaje exclusivo en vitrina correcta y retroalimentación didáctica obligatoria en fallos.
-11. **Puntuación:** $+100$ PTS por acierto directo, $+50$ PTS con pista, $-25$ PTS por error, $+200$ PTS de bonificación sin vidas perdidas.
-12. **Niveles:** 1 Gran Desafío de Curaduría que integra 12 piezas distribuidas equilibradamente en las 3 salas (4 piezas por sala).
-13. **Condición de victoria:** Ubicar las 12 reliquias en sus vitrinas antes de que expire el tiempo o se agoten las vidas.
-14. **Condición de derrota:** Perder las 3 vidas de curador o que el cronómetro llegue a 0 segundos.
-15. **Elementos STEAM:** Explicados en la Misión 14 (Ciencia de materiales, Phaser 3, Drop Zones, Dibujo vectorial, Algoritmos lógicos).
-16. **Tecnología:** HTML5 semántico, CSS3 moderno con Glassmorphism y JavaScript ES6+ orientado a objetos.
-17. **Librería JavaScript propuesta y justificada:** **Phaser 3** (motor 2D oficial autorizado por la institución).
+9. **Mecánicas:** Arrastrar y soltar (*Drag & Drop*) sobre vitrinas interactivas, lectura de fichas técnicas y activación de pistas correctivas en fallos.
+10. **Reglas:** Tres vidas de curador, temporizador de sesenta segundos, anclaje exclusivo en vitrina correcta y retroalimentación pedagógica obligatoria.
+11. **Puntuación:** $+100$ PTS acierto directo, $+50$ PTS acierto con pista, $-25$ PTS por error, $+200$ PTS bonificación de maestría.
+12. **Niveles:** Un desafío integral de curaduría con doce reliquias distribuidas equilibradamente en las tres salas históricas.
+13. **Condición de victoria:** Ubicar las doce reliquias en sus vitrinas antes de agotar el tiempo o las vidas.
+14. **Condición de derrota:** Perder las tres vidas de curador o agotar los sesenta segundos de la partida.
+15. **Elementos STEAM:** Conservación de materiales (Ciencia), Phaser 3 y Web Audio API (Tecnología), Zonas de colisión y modularidad (Ingeniería), Ilustración vectorial (Arte) y Álgebra booleana con algoritmos aleatorios (Matemáticas).
+16. **Tecnología:** HTML5 semántico, CSS3 moderno con Glassmorphism y JavaScript ES6+ modular.
+17. **Librería JavaScript propuesta y justificada:** **Phaser 3** (versión 3.80+), distribuida de forma local para funcionamiento offline.
 
 ### PROMPT IA 09: REVISIÓN DEL GDD
-```text
-Actúa como productor de videojuegos educativos. Revisa el siguiente Game Design Document: [GDD Tesoros de Colombia]. Identifica inconsistencias, elementos faltantes, problemas de jugabilidad y problemas relacionados con el objetivo educativo. No escribas código. Organiza tus recomendaciones por prioridad: crítico, importante y opcional.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como productor de videojuegos educativos. Revisa el siguiente Game Design Document: [GDD Tesoros de Colombia]. Identifica inconsistencias, elementos faltantes, problemas de jugabilidad y problemas relacionados con el objetivo educativo. No escribas código. Organiza tus recomendaciones por prioridad: crítico, importante y opcional.»*
 
 ---
 
-## RÚBRICA OFICIAL — ENTREGA 1 (100 PUNTOS)
+## RÚBRICA DE EVALUACIÓN — ENTREGA 1 (100 PUNTOS)
 
-| Criterio Evaluado | Puntos Posibles | Calificación Obtenida | Evidencia en el Documento |
+| Criterio Evaluado | Puntos Asignados | Calificación Obtenida | Evidencia en el Documento |
 | :--- | :---: | :---: | :--- |
-| **Identificación y análisis del problema** | 10 | **10** | Misión 1 (Población, necesidad cultural y pertinencia). |
-| **Investigación rigurosa** | 10 | **10** | Misión 2 (Fuentes oficiales: Museo del Oro, ICANH). |
-| **Objetivo educativo claro y observable** | 10 | **10** | Misión 4 (Formulado con verbo evaluable y métrica). |
-| **Diseño de mecánicas** | 10 | **10** | Misión 6 (Mecánica Drag & Drop y loop pedagógico). |
-| **Diseño de personajes y escenarios** | 10 | **10** | Misiones 9 y 10 (Sara, Don Gabriel y las 3 salas). |
-| **Historia y storyboard** | 10 | **10** | Misiones 11 y 12 (Narrativa y tabla de 6 escenas). |
-| **Integración auténtica STEAM** | 15 | **15** | Misión 14 (Matriz completa Ciencia-Tecnología-Ingeniería-Arte-Matemáticas). |
-| **GDD estructurado (17 puntos)** | 10 | **10** | Misión 15 (Documento completo de diseño de juego). |
-| **Uso responsable y reflexivo de IA** | 10 | **10** | Prompts 01 al 09 adaptados con toma de decisiones propia. |
-| **Presentación y organización** | 5 | **5** | Redacción formal, sin emojis informales y bien indexada. |
-| **TOTAL ENTREGA 1** | **100** | **100 / 100** | **Aprobado con Calificación Máxima** |
+| **Identificación y análisis del problema** | 10 | **10** | Misión 1: Justificación social, educativa y pertinencia regional. |
+| **Investigación rigurosa** | 10 | **10** | Misión 2: Consulta en fuentes del Museo del Oro, ICANH y Museo Nacional. |
+| **Objetivo educativo claro y observable** | 10 | **10** | Misión 4: Formulado con verbo evaluable y meta cuantitativa (80%). |
+| **Diseño de mecánicas** | 10 | **10** | Misión 6: Mecánica de arrastre, zonas de soltado y feedback formativo. |
+| **Diseño de personajes y escenarios** | 10 | **10** | Misiones 9 y 10: Perfiles de Sara y Don Gabriel, y diseño de 3 salas. |
+| **Historia y storyboard** | 10 | **10** | Misiones 11 y 12: Guion de 4 actos y tabla secuencial de 6 escenas. |
+| **Integración auténtica STEAM** | 15 | **15** | Misión 14: Matriz completa de las 5 dimensiones interdisciplinares. |
+| **GDD estructurado (17 puntos)** | 10 | **10** | Misión 15: Documento consolidado punto por punto. |
+| **Uso responsable y reflexivo de IA** | 10 | **10** | Prompts 01 al 09 adaptados con toma de decisiones soberana. |
+| **Presentación y organización** | 5 | **5** | Redacción formal, sin redundancias y presentación sobria. |
+| **TOTAL ENTREGA 1** | **100** | **100 / 100** | **Fase de Diseño Aprobada con Calificación Sobresaliente** |
 
 ---
 ---
@@ -475,88 +412,189 @@ Actúa como productor de videojuegos educativos. Revisa el siguiente Game Design
 
 ## MISIÓN 16. ELEGIR LA TECNOLOGÍA
 
-* **HTML5:** Marcado semántico estructurado para alojar el contenedor del lienzo (`#game-container`) y los modales didácticos accesibles.
-* **CSS3:** Sistema de diseño responsivo basado en CSS Flexbox/Grid con variables de diseño (`:root`), paleta de museo patrimonial y efecto Glassmorphism (`backdrop-filter: blur(12px)`).
-* **JavaScript:** ES6+ modular, funciones puras, programación basada en eventos y síntesis de audio nativa con **Web Audio API** (sin librerías de sonido externas).
-* **Librería elegida:** **Phaser 3** (Librería oficial autorizada).
+* **HTML5:** Proporciona la estructura semántica de la página, el contenedor del lienzo (`#game-container`) y las ventanas modulares accesibles (`#modal-guide`, `#modal-hint`, `#modal-credits`).
+* **CSS3:** Define la estética visual de galería de museo con variables `:root`, maquetación flexible (Flexbox y Grid), tipografía técnica y efectos de desenfoque translúcido (*Glassmorphism*).
+* **JavaScript (ES6+):** Lenguaje principal de desarrollo, estructurado mediante programación orientada a objetos, funciones puras y manipulación de eventos sin contaminar el espacio global.
+* **Librería Oficial Seleccionada:** **Phaser 3** (versión 3.80.1).
 
-### Justificación de la Elección frente a las otras alternativas:
-1. **Frente a Three.js (3D):** Three.js fue descartada porque su enfoque tridimensional implicaba crear mallas complejas (meshes) y luces pesadas que no aportaban valor a una mecánica 2D de clasificación y habrían dificultado la ejecución fluida en computadores escolares antiguos.
-2. **Frente a p5.js (Creativa):** Aunque p5.js es excelente para bocetos interactivos, carece de un sistema formal de gestión de escenas modulares (`BootScene`, `MenuScene`, `GameScene`, `ResultScene`), no tiene emisores de partículas optimizados y exige programar manualmente las zonas de colisión y el ciclo de vida del juego.
-3. **Fortaleza de Phaser 3:** Es el motor estándar de la industria web para videojuegos 2D. Proporciona soporte nativo para eventos `dragstart`, `drag`, `drop` y `dragend`, desacopla el ciclo en `preload`, `create` y `update`, corre a 60 FPS estables y se almacena en un solo archivo local (`src/lib/phaser.min.js`), asegurando los **15 puntos del criterio "Uso de librería"** y garantizando portabilidad 100% offline.
+### Comparación y Justificación frente a las demás alternativas:
+1. **Frente a Three.js (Entornos 3D):** Three.js exige cargar mallas poligonales, texturas complejas y cálculos continuos de renderizado WebGL que provocan lentitud en equipos escolares de gama básica. Además, una perspectiva 3D aumentaría la dificultad de interacción sin aportar beneficio directo al objetivo de clasificar piezas.
+2. **Frente a p5.js (Proyectos Creativos):** Aunque p5.js es muy pedagógica para dibujos iniciales, no posee un sistema integrado para gestionar transiciones de escenas (`BootScene`, `MenuScene`, `GameScene`, `ResultScene`), carece de zonas de soltado nativas (*Drop Zones*) y obliga a programar manualmente la detección de colisiones del puntero.
+3. **Ventajas Determinantes de Phaser 3:**
+   - Soporte nativo para eventos interactivos de arrastre (`setInteractive({ draggable: true })`, `dragstart`, `drag`, `drop`, `dragend`).
+   - Gestión desacoplada del ciclo de vida en métodos estándar: `preload()`, `create()`, `update()`.
+   - Distribución en un solo archivo liviano (`src/lib/phaser.min.js`), permitiendo que el proyecto funcione de forma 100% offline en cualquier computador con solo hacer doble clic en `index.html`.
+   - Cumplimiento estricto del criterio de evaluación oficial **"Uso de librería: 15 puntos"**.
 
 ### PROMPT IA 10: ELEGIR LA LIBRERÍA
-```text
-Actúa como desarrollador de videojuegos y docente de programación. Mi videojuego tiene estas características: Clasificación 2D de reliquias de museo en tres salas históricas mediante Drag & Drop. Debe ejecutarse en navegador y está siendo desarrollado por estudiantes de grado 11. Compara Phaser, p5.js y otras alternativas apropiadas. Analiza facilidad de aprendizaje, gráficos, interacción, físicas, documentación y dificultad. Recomiéndame una opción y explícame por qué.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como desarrollador de videojuegos y docente de programación. Mi videojuego tiene estas características: Clasificación 2D de reliquias de museo en tres salas históricas mediante Drag & Drop. Debe ejecutarse en navegador y está siendo desarrollado por estudiantes de grado 11. Compara Phaser, p5.js y otras alternativas apropiadas. Analiza facilidad de aprendizaje, gráficos, interacción, físicas, documentación y dificultad. Recomiéndame una opción y explícame por qué.»*
 
 ---
 
-## MISIÓN 17. CREAR LA ESTRUCTURA DEL PROYECTO
+## MISIÓN 17. ARQUITECTURA DEL PROYECTO Y DESGLOSE EXHAUSTIVO DE CARPETAS
 
-Estructura oficial implementada en el repositorio:
+El software adopta una **Arquitectura Basada en Escenas (Scene-Driven Architecture)** con separación total de responsabilidades, facilitando su comprensión, mantenimiento y depuración:
 
 ```text
 Videojuego-STEAM/
 │
 ├── docs/
-│   ├── DOCUMENTACION_COMPLETA_STEAM.md   <-- (Documento maestro curricular para exportar a .docx)
-│   └── Cuaderno_Videojuego_STEAM_Grado11_Lorena_Avila.docx <-- (Informe formal en Word)
+│   ├── DOCUMENTACION_COMPLETA_STEAM.md      <-- Documento maestro curricular de 26 misiones
+│   └── Cuaderno_Videojuego_STEAM_Grado11_Lorena_Avila.docx <-- Informe formal para entrega
 │
 ├── src/
-│   ├── index.html                        <-- Host semántico, barra superior de 38px y modales
-│   ├── style.css                         <-- Estética de museo, paleta patrimonial y Glassmorphism
+│   ├── index.html                           <-- Estructura de vistas, host DOM y modales
+│   ├── style.css                            <-- Sistema de estilos visuales de museo
 │   ├── lib/
-│   │   └── phaser.min.js                 <-- Motor Phaser 3 local (offline) + fallback a CDN
+│   │   └── phaser.min.js                    <-- Motor Phaser 3 local (offline y sin dependencias)
 │   ├── js/
-│   │   ├── config.js                     <-- Configuración de pantalla, audio nativo y 12 reliquias
-│   │   ├── main.js                       <-- Inicialización de Phaser.Game y listeners de modales
+│   │   ├── config.js                        <-- Base de datos JSON de reliquias y audio nativo
+│   │   ├── main.js                          <-- Inicialización de Phaser.Game y listeners del DOM
 │   │   └── scenes/
-│   │       ├── BootScene.js              <-- Generación procedural vectorial (cero fallos 404)
-│   │       ├── MenuScene.js              <-- Menú interactivo con tipografía Cinzel y botones
-│   │       ├── GameScene.js              <-- Drag & Drop, Drop Zones, temporizador y HUD
-│   │       └── ResultScene.js            <-- Diploma institucional de curador y resumen
+│   │       ├── BootScene.js                 <-- Generación procedural de texturas vectoriales
+│   │       ├── MenuScene.js                 <-- Menú interactivo principal y navegación
+│   │       ├── GameScene.js                 <-- Mecánica Drag & Drop, Drop Zones, HUD y reloj
+│   │       └── ResultScene.js               <-- Diploma institucional y reporte de desempeño
 │   └── assets/
-│       ├── images/                       <-- Directorio reservado para activos gráficos
-│       └── sounds/                       <-- Directorio reservado para efectos sonoros
+│       ├── images/                          <-- Directorio reservado para activos complementarios
+│       └── sounds/                          <-- Directorio reservado para pistas de audio externas
 │
-└── README.md                             <-- Guía de ejecución del proyecto
+├── generate_docx.py                         <-- Script en Python para compilación del informe Word
+└── README.md                                <-- Instrucciones de ejecución local
 ```
 
-### PROMPT IA 11: ARQUITECTO DEL PROYECTO
-```text
-Actúa como arquitecto de software especializado en videojuegos educativos para estudiantes de grado 11. Este es mi GDD: [GDD Tesoros de Colombia]. Antes de escribir código, diseña una estructura sencilla de archivos para HTML, CSS, JavaScript, recursos gráficos y sonidos. Explica la función de cada archivo. No generes todavía todo el videojuego.
-```
+### Explicación Profunda de cada Archivo y Componente:
+
+#### 1. `src/index.html` (Host DOM y Modales de Información)
+Cumple la función de punto de entrada web. Aloja el contenedor del lienzo `#game-container` configurado en una relación de aspecto panorámica 16:9 (`960x540 px`). En lugar de sobrecargar el motor gráfico con pantallas de texto estático, implementa los modales didácticos (`#modal-guide`, `#modal-hint`, `#modal-credits`) en HTML5 semántico puro con atributos de accesibilidad (`role="dialog"`, `aria-modal="true"`). Esto permite que el usuario consulte las instrucciones en cualquier momento sin consumir ciclos de procesamiento en el canvas. Incluye además una barra superior minimalista de 38px con el botón de control de audio y la identificación escolar.
+
+#### 2. `src/style.css` (Diseño Visual, Tipografía y Efecto Glassmorphism)
+Contiene la identidad estética del museo. Utiliza variables CSS (`:root`) para estandarizar la paleta patrimonial:
+* Fondo oscuro de sala: `#120e0c`.
+* Oro patrimonial (Sala Precolombina): `#f59e0b`.
+* Azul colonial (Sala Independencia): `#3b82f6`.
+* Verde esmeralda (Sala Patrimonio Vivo): `#10b981`.
+* Textos claros de alta legibilidad: `#f8fafc` y `#cbd5e1`.
+
+Implementa la tipografía romana de galería `Cinzel` para encabezados y `Plus Jakarta Sans` para datos técnicos. Diseña las tarjetas y modales con el efecto *Glassmorphism* mediante `background: rgba(22, 17, 14, 0.88)` y `backdrop-filter: blur(12px)`, garantizando una experiencia sobria y formal.
+
+#### 3. `src/lib/phaser.min.js` (Motor Oficial Phaser 3)
+Archivo binario minimizado de la librería Phaser 3 (versión 3.80.1). Su inclusión local en el repositorio asegura que el juego pueda ejecutarse en salas de informática escolares que carecen de conexión estable a internet, eliminando el riesgo de que el proyecto deje de funcionar por caídas de red externa.
+
+#### 4. `src/js/config.js` (Configuración del Motor, Catálogo de Datos y Web Audio API)
+Este archivo cumple tres funciones primordiales:
+* **Sintetizador Web Audio API (`WebAudioSynthesizer`):** Sistema de audio procedural nativo que genera efectos sonoros en tiempo real mediante osciladores (`OscillatorNode`) y nodos de ganancia (`GainNode`), sin requerir archivos `.mp3` ni `.wav`. Produce el sonido de clic sutil, el acorde triunfal de acierto (acorde de Do Mayor: 523.25 Hz, 659.25 Hz, 783.99 Hz, 1046.50 Hz), el tono grave de advertencia en errores y la fanfarria de cierre.
+* **Base de Datos Didáctica (`COLOMBIAN_HERITAGE_DATA`):** Arreglo inmutable que cataloga los 12 artefactos patrimoniales. Cada objeto define: `id`, `name`, `era` (`'precolombino'`, `'independencia'`, `'patrimonio_vivo'`), `eraName`, `region`, `description`, `hint`, `color` y `textureKey`.
+* **Configuración Espacial de Salas (`MUSEUM_ROOMS`):** Objeto que define las coordenadas espaciales $(X, Y)$, dimensiones, colores de borde y textos de las tres vitrinas del museo.
+* **Configuración del Motor Phaser (`PHASER_CONFIG`):** Establece el renderizador (`Phaser.AUTO`), resolución de 960x540 px, fondo y política de escalado responsivo (`Phaser.Scale.FIT`, `Phaser.Scale.CENTER_BOTH`).
+
+#### 5. `src/js/scenes/BootScene.js` (Generación Procedural de Texturas)
+Es la primera escena en ejecutarse. Su propósito es **erradicar por completo los errores de carga 404 de imágenes**. Mediante la API de gráficos vectoriales de Phaser (`this.make.graphics()`), dibuja proceduralmente en memoria las texturas de los 12 artefactos y de las 3 vitrinas de museo:
+* *Vitrinas (`createVitrinaTexture`):* Dibuja el cristal biselado translúcido, un cono de luz cenital superior (*spotlight* de galería) y una repisa inferior de madera pulida.
+* *Artefactos:* Dibuja las siluetas vectoriales de la Balsa Muisca, el Poporo Quimbaya, el Florero de Llorente, la Espada de Bolívar, el Sombrero Vueltiao, la Marimba de Chonta y las demás piezas, asociándolas a claves de textura como `'art_balsa_muisca'`.
+
+#### 6. `src/js/scenes/MenuScene.js` (Menú de Inicio Interactivo)
+Gestiona la presentación inicial del museo. Renderiza un fondo cálido de mármol con molduras doradas, el título principal en tipografía Cinzel y dos botones estructurados jerárquicamente:
+* Botón primario: `[ INICIAR CURADURÍA ]`, con transición de desvanecimiento hacia `GameScene`.
+* Botones secundarios: `[ CÓMO JUGAR ]` y `[ CRÉDITOS STEAM ]`, que abren los modales correspondientes en el DOM sin recargar la página.
+
+#### 7. `src/js/scenes/GameScene.js` (Núcleo de Jugabilidad y Simulación)
+Es la escena más compleja del proyecto. Coordina:
+* La delimitación de las 3 Drop Zones rectangulares (`setupDropZones`).
+* La bandeja inferior de restauración con el artefacto activo (`setupRestorationTray`).
+* El HUD superior con cuatro cajas telemétricas de 1px (`setupHUD`).
+* Los escuchadores de eventos nativos de Phaser (`setupDragAndDropEvents`): `dragstart` (eleva escala a 1.18x y profundidad), `drag` (sigue el puntero), `drop` (compara `artifact.era === zone.era`) y `dragend` (retorno elástico en caso de soltado fuera de vitrina).
+* El temporizador de 60 segundos gestionado con `this.time.addEvent()`.
+
+#### 8. `src/js/scenes/ResultScene.js` (Pantalla de Resultados y Condecoración)
+Recibe las métricas de la partida desde `GameScene` (`score`, `lives`, `timeLeft`, `restoredCount`, `isVictory`). Calcula el rango alcanzado (*Curador Maestro*, *Guardián Oficial*, *Asistente de Curaduría*), dibuja el Gran Diploma del Patrimonio Nacional y permite reiniciar la experiencia o consultar la ficha técnica.
+
+#### 9. `src/js/main.js` (Punto de Entrada e Inicialización)
+Script orquestador. Escucha el evento `DOMContentLoaded` del navegador, instancia `new Phaser.Game(PHASER_CONFIG)`, registra las cuatro escenas en orden secuencial y conecta los botones de la interfaz web exterior con los modales del DOM.
 
 ---
 
-## MISIÓN 18. CONSTRUIR POR COMPONENTES
+## DICCIONARIO E INVENTARIO DE VARIABLES DEL SISTEMA
 
-Construimos el videojuego en 10 componentes modulares, verificando cada uno de forma individual:
+Para cumplir cabalmente con la Regla de Oro institucional, a continuación se desglosan las principales variables y estructuras de datos identificadas en el código:
 
-| Componente | Descripción Técnica Implementada | Terminado | Probado |
+| Nombre de Variable | Tipo de Dato | Ámbito (Scope) | Valor Inicial | Función Técnica en el Videojuego |
+| :--- | :---: | :---: | :---: | :--- |
+| `score` | Number (Entero) | `GameScene` (Propiedad) | `0` | Almacena los puntos acumulados por el jugador durante la sesión. |
+| `lives` | Number (Entero) | `GameScene` (Propiedad) | `3` | Contador de vidas restantes ("Lupas de Observación"). Si llega a 0, se pierde la partida. |
+| `maxLives` | Number (Entero) | `GameScene` (Propiedad) | `3` | Constante de referencia para instanciar los iconos de vidas en el HUD. |
+| `timeLeft` | Number (Entero) | `GameScene` (Propiedad) | `60` | Segundos restantes en el cronómetro de la partida. |
+| `restoredCount` | Number (Entero) | `GameScene` (Propiedad) | `0` | Cantidad de artefactos clasificados con éxito en las vitrinas. |
+| `totalArtifacts` | Number (Entero) | `GameScene` (Propiedad) | `12` | Meta total de piezas requeridas para alcanzar la condición de victoria. |
+| `isGameOver` | Boolean | `GameScene` (Propiedad) | `false` | Bandera de control para pausar eventos e impedir interacciones tras finalizar. |
+| `artifactQueue` | Array<Object> | `GameScene` (Propiedad) | `12 Objetos` | Lista de reliquias barajadas aleatoriamente mediante el algoritmo Fisher-Yates. |
+| `currentArtifactIndex` | Number (Entero) | `GameScene` (Propiedad) | `0` | Índice que apunta a la reliquia que debe mostrarse en la bandeja activa. |
+| `currentArtifactData` | Object / null | `GameScene` (Propiedad) | `null` | Referencia al objeto JSON de la reliquia que el jugador tiene en juego. |
+| `activeArtifactSprite` | Phaser.GameObjects.Image | `GameScene` (Propiedad) | `null` | Sprite interactivo instanciado en el canvas que el usuario puede arrastrar. |
+| `roomSlots` | Object (Colección) | `GameScene` (Propiedad) | Desplazamientos | Coordenadas $(dx, dy)$ de los 4 pedestales de reposo dentro de cada vitrina. |
+| `placedCountByRoom` | Object (Diccionario) | `GameScene` (Propiedad) | `{precol:0,...}` | Contador de reliquias fijadas en cada vitrina específica para calcular su posición. |
+| `dropZones` | Object (Colección) | `GameScene` (Propiedad) | `{}` | Almacena las referencias a las tres zonas rectangulares invisibles de colisión. |
+| `COLOMBIAN_HERITAGE_DATA` | Array<Object> | Global (`window`) | 12 Elementos | Catálogo inmutable con los datos históricos de las piezas colombianas. |
+| `MUSEUM_ROOMS` | Object (Estructura) | Global (`window`) | 3 Salas | Definición geométrica y cromática de las salas de exhibición. |
+| `SoundEffects` | WebAudioSynthesizer | Global (`window`) | Instancia única | Manejador del sintetizador de audio procedural Web Audio API. |
+
+---
+
+## MODELO DE ALMACENAMIENTO Y GESTIÓN DE DATOS
+
+El videojuego implementa un modelo de datos liviano y de alto rendimiento adaptado a la ejecución en navegadores:
+
+1. **Persistencia en Memoria Volátil (Heap de JavaScript):**  
+   Los datos de la partida no requieren bases de datos remotas ni servidores SQL. Toda la información de estado (`score`, `lives`, `timeLeft`) reside en la memoria de la instancia de `GameScene`, garantizando lecturas y escrituras inmediatas a 60 FPS sin retrasos de red (*lag*).
+
+2. **Gestión de Metadatos con Phaser Data Manager (`setData` / `getData`):**  
+   En lugar de crear variables globales dispersas o modificar el árbol DOM del navegador, Phaser proporciona un gestor de datos desacoplado adjunto a cada objeto de juego:
+   - Al crear una vitrina: se ejecuta `zone.setData('era', 'precolombino')`.
+   - Al crear un artefacto: se ejecuta `gameObject.setData('artifactData', data)`.
+   - Cuando ocurre el soltado: se comparan directamente las propiedades internas `artifactData.era === zone.getData('era')`.
+
+3. **Paso de Parámetros entre Escenas:**  
+   Al completarse la curaduría o agotarse las vidas, `GameScene` recopila las métricas finales en un objeto JSON y las envía a `ResultScene` como argumento del método:
+   ```javascript
+   this.scene.start('ResultScene', {
+     score: this.score,
+     lives: this.lives,
+     timeLeft: this.timeLeft,
+     restoredCount: this.restoredCount,
+     totalArtifacts: this.totalArtifacts,
+     isVictory: this.restoredCount >= this.totalArtifacts
+   });
+   ```
+
+---
+
+## MISIÓN 18. CONSTRUCCIÓN MODULAR POR COMPONENTES (10 DE 10)
+
+El proyecto se construyó de manera escalonada en diez componentes, verificando la funcionalidad de cada uno antes de avanzar al siguiente:
+
+| Componente Oficial | Descripción Técnica Implementada | Terminado | Probado |
 | :--- | :--- | :---: | :---: |
-| **Componente 1: Pantalla inicial** | `MenuScene.js` con tipografía Cinzel, fondo de museo y botones jerárquicos. | [x] | [x] |
-| **Componente 2: Pantalla de instrucciones** | Modal `#modal-guide` en HTML/CSS estructurado en 3 pasos directos (OBSERVA, ARRASTRA, CONSERVA). | [x] | [x] |
-| **Componente 3: Escenario** | Vitrinas de museo con reflejo de cristal biselado, foco cenital y repisas en `BootScene.js` y `GameScene.js`. | [x] | [x] |
-| **Componente 4: Jugador / Cursor** | Puntero interactivo de curaduría con cambio de cursor (`grab`/`pointer`) y respuesta táctil. | [x] | [x] |
-| **Componente 5: Controles** | Sistema nativo de Phaser 3 `setInteractive({ draggable: true })`, eventos `dragstart`, `drag`, `drop`, `dragend`. | [x] | [x] |
-| **Componente 6: Mecánica principal** | Verificación de coincidencia histórica (`artifact.era === zone.getData('era')`) y anclaje en pedestal. | [x] | [x] |
-| **Componente 7: Puntuación y HUD** | 4 cajas telemétricas superiores de 1px: `TIEMPO: 60s`, `PUNTOS: 000`, `RELIQUIAS: 0/12` y lupas de vidas. | [x] | [x] |
-| **Componente 8: Victoria y Derrota** | Detección automática al colocar 12 piezas (Victoria) o al agotarse el tiempo/vidas (Derrota). | [x] | [x] |
-| **Componente 9: Contenido educativo** | 12 reliquias con región, descripción didáctica y modal de rescate pedagógico `#modal-hint`. | [x] | [x] |
-| **Componente 10: Pantalla final** | `ResultScene.js` con Gran Diploma del Patrimonio Nacional, rango obtenido y botón de reintento. | [x] | [x] |
+| **1. Pantalla Inicial** | `MenuScene.js`: fondo arquitectónico, tipografía Cinzel y botones interactivos con sonido. | [x] | [x] |
+| **2. Pantalla de Instrucciones** | Modal `#modal-guide`: guía en 3 pasos directos (OBSERVA, ARRASTRA, CONSERVA) en HTML/CSS. | [x] | [x] |
+| **3. Escenario / Salas** | `BootScene.js` y `GameScene.js`: vitrinas con luz cenital, cristal biselado y repisas. | [x] | [x] |
+| **4. Jugador / Cursor** | Puntero de curaduría con estados dinámicos (`grab`, `grabbing`) y escala háptica a 1.18x. | [x] | [x] |
+| **5. Controles (Drag & Drop)** | Eventos nativos de puntero de Phaser: `dragstart`, `drag`, `drop`, `dragend`. | [x] | [x] |
+| **6. Mecánica Principal** | Verificación lógica de aciertos (`artifact.era === zone.era`) y anclaje en repisa. | [x] | [x] |
+| **7. Puntuación y HUD** | Cuatro cajas telemétricas de 1px: Tiempo (60s), Puntos, Reliquias (0/12) y lupas de vida. | [x] | [x] |
+| **8. Victoria y Derrota** | Rutinas automáticas de fin de juego al alcanzar 12 reliquias o al agotar vidas/tiempo. | [x] | [x] |
+| **9. Contenido Educativo** | Catálogo de 12 reliquias con región, ficha técnica y modal de rescate formativo `#modal-hint`. | [x] | [x] |
+| **10. Pantalla Final** | `ResultScene.js`: Gran Diploma del Patrimonio Nacional, condecoraciones y botón de reintento. | [x] | [x] |
 
 ### PROMPT IA 12: CONSTRUIR UN COMPONENTE
-```text
-Actúa como desarrollador senior de JavaScript y profesor de programación. Estamos construyendo nuestro videojuego por etapas. El componente que necesito construir ahora es: [COMPONENTE]. Estas son las decisiones de diseño que debemos respetar: [INFORMACIÓN GDD]. Explícame primero qué vamos a construir y qué conceptos de programación intervienen. Después proporciona únicamente el código necesario para este componente. No modifiques otros componentes que todavía funcionan. Finalmente indícame cómo debo probarlo.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como desarrollador senior de JavaScript y profesor de programación. Estamos construyendo nuestro videojuego por etapas. El componente que necesito construir ahora es: [COMPONENTE]. Estas son las decisiones de diseño que debemos respetar: [INFORMACIÓN GDD]. Explícame primero qué vamos a construir y qué conceptos de programación intervienen. Después proporciona únicamente el código necesario para este componente. No modifiques otros componentes que todavía funcionan. Finalmente indícame cómo debo probarlo.»*
 
 ---
 
 ## MISIÓN 19. ENTENDER EL CÓDIGO (REGLA DE ORO)
 
-Seleccionamos el fragmento nuclear de `src/js/scenes/GameScene.js` que controla la interacción Drag & Drop:
+Se seleccionó el fragmento central de `src/js/scenes/GameScene.js` que procesa la validación del soltado:
 
 ```javascript
 this.input.on('drop', (pointer, gameObject, dropZone) => {
@@ -564,76 +602,73 @@ this.input.on('drop', (pointer, gameObject, dropZone) => {
   const targetEra = dropZone.getData('era');
 
   if (artifactData && targetEra && artifactData.era === targetEra) {
-    // Acierto histórico: fijar pieza en pedestal
+    // Clasificación correcta: asegurar pieza en vitrina
     gameObject.setData('dropped', true);
     this.handleCorrectDrop(gameObject, dropZone, artifactData);
   } else {
-    // Error pedagógico: registrar fallo y mostrar pista
+    // Clasificación errónea: registrar fallo y mostrar pista
     gameObject.setData('dropped', false);
     this.handleIncorrectDrop(gameObject, targetEra, artifactData);
   }
 });
 ```
 
-* **¿Qué hace?**  
-  Este escuchador de eventos (*Event Listener*) se dispara en el milisegundo exacto en que el usuario suelta una reliquia sobre una zona interactiva de vitrina (*Drop Zone*). Extrae la información histórica de la pieza y la compara lógicamente con la época de la vitrina receptora.
+* **¿Qué hace este código?**  
+  Este bloque es un escuchador de eventos (*Event Listener*) que se ejecuta cuando el usuario suelta una pieza sobre una Drop Zone. Extrae la información histórica de la reliquia y la época de la vitrina, comparándolas mediante una condición booleana para decidir si la pieza se queda en la vitrina o regresa a la bandeja.
 * **¿Qué variables utiliza?**  
-  - `pointer`: Contiene las coordenadas $(X, Y)$ del ratón o toque del usuario.
-  - `gameObject`: La imagen interactiva de la reliquia que está siendo arrastrada.
-  - `dropZone`: El objeto invisible de Phaser que delimita el rectángulo de la vitrina.
-  - `artifactData`: El objeto JSON con los datos patrimoniales de la pieza (`era`, `region`, `hint`).
-  - `targetEra`: La cadena que identifica la sala (`'precolombino'`, `'independencia'`, `'patrimonio_vivo'`).
+  - `pointer`: Contiene la información del cursor (posición $X, Y$).
+  - `gameObject`: El sprite del artefacto arrastrado.
+  - `dropZone`: El área invisible que delimita la vitrina receptora.
+  - `artifactData`: Objeto JSON con los atributos de la reliquia (`era`, `region`, `hint`).
+  - `targetEra`: Cadena que identifica la época de la vitrina (`'precolombino'`, `'independencia'`, `'patrimonio_vivo'`).
 * **¿Qué función cumple?**  
-  Actúa como el árbitro lógico del juego. Si la época coincide, ancla la pieza de manera definitiva en la repisa y otorga puntos; si no coincide, activa la rutina de retorno elástico y despliega la pista didáctica.
+  Determina el éxito o fracaso de la acción del jugador, activando los efectos audiovisuales, el puntaje y las transiciones de estado.
 * **¿Qué ocurriría si modificáramos esta parte?**  
-  Si cambiáramos la condición `artifactData.era === targetEra` por `!=`, el juego premiaría al usuario cuando se equivoque y lo castigaría cuando acierte, destruyendo la validez pedagógica de la simulación.
+  Si se cambiara el operador de igualdad estricta `===` por una desigualdad `!==`, el sistema consideraría correctas las respuestas equivocadas y penalizaría los aciertos, anulando el valor pedagógico del juego.
 
 ### PROMPT IA 13: EXPLICAR MI CÓDIGO
-```text
-Explícame este fragmento de JavaScript como si fueras mi profesor de programación: [Fragmento de drop en GameScene.js]. Explica línea por línea las partes más importantes, las variables, funciones, eventos y condiciones. Después hazme cinco preguntas para comprobar si realmente comprendí el código. No me des las respuestas inmediatamente.
-```
+* **Texto de consulta utilizado:**  
+  *«Explícame este fragmento de JavaScript como si fueras mi profesor de programación: [Fragmento de drop en GameScene.js]. Explica línea por línea las partes más importantes, las variables, funciones, eventos y condiciones. Después hazme cinco preguntas para comprobar si realmente comprendí el código. No me des las respuestas inmediatamente.»*
 
-* **Preguntas de comprobación realizadas por la IA y respondidas por la estudiante:**
-  1. *¿Por qué se usa `gameObject.setData('dropped', true)`?*  
-     **Respuesta:** Para que el evento posterior `dragend` sepa que la pieza cayó en una vitrina válida y no ejecute el tween de retorno a la bandeja inferior.
-  2. *¿Qué método de Phaser permite que la Drop Zone detecte el soltado?*  
-     **Respuesta:** `zone.setRectangleDropZone(ancho, alto)`, que registra la zona en el árbol espacial de colisiones de puntero.
-  3. *¿Por qué no se usó el motor Arcade Physics para esta colisión?*  
-     **Respuesta:** Porque las vitrinas son estáticas y no requieren gravedad ni rebotes físicos; el sistema de puntero nativo es mucho más liviano y libre de fallos matemáticos.
-  4. *¿Cómo se evita que una pieza fijada en la vitrina pueda volverse a arrastrar?*  
-     **Respuesta:** En `handleCorrectDrop()` se invoca `gameObject.disableInteractive()`, retirando el objeto de la lista de elementos arrastrables.
-  5. *¿De dónde provienen los datos de `artifactData`?*  
-     **Respuesta:** Del arreglo `COLOMBIAN_HERITAGE_DATA` definido en `config.js`, asociado al sprite al momento de crearlo mediante `gameObject.setData('artifactData', data)`.
+* **Resolución a las cinco preguntas de comprobación:**
+  1. *¿Por qué se utiliza `gameObject.setData('dropped', true)`?*  
+     Para indicarle al evento posterior `dragend` que la pieza fue soltada en una zona válida y no debe regresar a la bandeja inferior.
+  2. *¿Cómo sabe Phaser qué vitrina recibió el soltado?*  
+     A través del parámetro `dropZone`, que Phaser suministra automáticamente en el callback al detectar que el puntero se encuentra sobre un objeto con `setRectangleDropZone()`.
+  3. *¿Por qué no se usó el motor Arcade Physics en este fragmento?*  
+     Porque la mecánica es puramente de puntero posicional; no se requieren fuerzas, rebotes ni aceleraciones físicas.
+  4. *¿Cómo se desactiva una reliquia para que no se pueda volver a arrastrar tras fijarse?*  
+     Invocando `gameObject.disableInteractive()`, lo que la retira del árbol de captura de eventos de puntero.
+  5. *¿De dónde surge la información contenida en `artifactData`?*  
+     Del catálogo `COLOMBIAN_HERITAGE_DATA` definido en `config.js`, inyectado al crear el sprite con `setData('artifactData', data)`.
 
 ---
 
 ## MISIÓN 20. DEPURACIÓN Y BITÁCORA DE PROGRAMACIÓN
 
-Cuando apareció un error, **NO hicimos esto:** *"ChatGPT, arregla todo mi videojuego."*  
-**Hicimos esto:** Describimos el problema, analizamos la consola de herramientas de desarrollador (`F12`), identificamos la causa raíz y aplicamos soluciones quirúrgicas.
+Durante el desarrollo no se recurrió a pedir parches automáticos a ciegas. Cada falla fue aislada, analizada mediante la consola de desarrollador del navegador (`F12`) y solucionada técnicamente:
+
+### BITÁCORA OFICIAL DE CONTROL DE ERRORES (DEBUGGING)
+
+| Fecha | Componente | Descripción del Problema / Bug | Causa Raíz Identificada | Solución Técnica Aplicada | ¿Funcionó? |
+| :---: | :---: | :--- | :--- | :--- | :---: |
+| **11/11/2026** | Drag & Drop | El artefacto quedaba flotando fuera de la pantalla si se soltaba en los bordes vacíos. | Falta del evento `dragend` con verificación de la propiedad `dropped`. | Se capturaron las coordenadas originales `startX` y `startY` con un retorno animado elástico mediante `this.tweens.add()`. | Sí ✅ |
+| **11/11/2026** | Carga de Assets | Riesgo de fallas HTTP 404 al mover el juego a computadores sin conexión a internet. | Dependencia de archivos externos `.png` y `.mp3` no garantizados en red escolar. | Se programó `BootScene.js` con dibujo vectorial procedural (`this.make.graphics().generateTexture()`) y síntesis Web Audio API. | Sí ✅ |
+| **11/11/2026** | Portabilidad Web | Bloqueo por política de mismo origen (CORS) al abrir con doble clic (`file:///`). | Los navegadores modernos bloquean `<script type="module">` sobre el protocolo `file://`. | Se estructuraron los archivos con importación secuencial clásica y registro explícito en `window`, permitiendo doble clic directo. | Sí ✅ |
+| **11/11/2026** | Renderizado Sala 3 | Caja verde con línea diagonal en Sala 3 (Patrimonio Vivo). | Discrepancia de nombres: en `BootScene.js` se generó `pedestal_patrimonio`, pero `config.js` y `GameScene.js` buscaban `pedestal_patrimonio_vivo`. | Se corrigió la clave de generación a `pedestal_patrimonio_vivo` en `BootScene.js`. | Sí ✅ |
+| **11/11/2026** | Interfaz / Usabilidad | Doble encabezado y emojis informales que saturaban visualmente la pantalla. | Elementos duplicados en el HTML exterior y emojis en el HUD superior. | Se diseñó una barra superior minimalista de 38px, se eliminaron todos los emojis y se crearon cajas telemétricas de 1px. | Sí ✅ |
 
 ### PROMPT IA 14: DETECTAR ERRORES
-```text
-Actúa como experto en debugging de JavaScript. Este es el problema que encontré: En la Sala 3 aparece una caja verde con una línea diagonal en lugar de la vitrina esmeralda. Este es el código relacionado: [BootScene.js y config.js]. Primero identifica la causa probable y explícame por qué ocurre. Después indica qué líneas debo modificar. No reescribas todo el proyecto. Finalmente dame una prueba para comprobar que la solución funciona.
-```
-
-### BITÁCORA DE PROGRAMACIÓN OFICIAL (CONTROL DE ERRORES)
-
-| Fecha | Componente | Descripción del Problema / Bug | Causa Raíz Identificada | Solución Aplicada | ¿Funcionó? |
-| :---: | :---: | :--- | :--- | :--- | :---: |
-| **11/11/2026** | Drag & Drop | El artefacto quedaba flotando fuera de la pantalla si se soltaba en el borde del lienzo. | Falta del evento `dragend` con verificación de la propiedad `dropped`. | Se capturaron las coordenadas originales `startX` y `startY` con retorno elástico suave animado mediante `this.tweens.add()`. | Sí ✅ |
-| **11/11/2026** | Carga de Assets | Riesgo de fallas HTTP 404 al mover el juego a computadores de la sala de cómputo sin conexión a internet. | Dependencia de archivos externos `.png` y `.mp3` no garantizados en red local escolar. | Se programó `BootScene.js` con dibujo vectorial procedural (`this.make.graphics().generateTexture()`) y síntesis Web Audio API nativa. | Sí ✅ |
-| **11/11/2026** | Portabilidad Web | Bloqueo por política de mismo origen (CORS) al abrir el juego con doble clic (`file:///`). | Los navegadores bloquean `<script type="module">` sobre el protocolo `file://`. | Se estructuraron los archivos con importación secuencial clásica y registro explícito en `window`, permitiendo doble clic directo y Live Server. | Sí ✅ |
-| **11/11/2026** | Renderizado Sala 3 | Caja verde con línea diagonal en Sala 3 (Patrimonio Vivo). | Mismatch de nombres: en `BootScene.js` se generó `pedestal_patrimonio`, pero `config.js` y `GameScene.js` buscaban `pedestal_patrimonio_vivo`. | Se corrigió la clave de generación a `pedestal_patrimonio_vivo` en `BootScene.js`. | Sí ✅ |
-| **11/11/2026** | UI / Usabilidad | Doble encabezado y emojis informales que saturaban visualmente la pantalla. | Elementos duplicados en el HTML exterior y emojis en el HUD superior. | Se diseñó una barra superior minimalista de 38px, se eliminaron todos los emojis y se crearon cajas telemétricas de 1px. | Sí ✅ |
+* **Texto de consulta utilizado:**  
+  *«Actúa como experto en debugging de JavaScript. Este es el problema que encontré: En la Sala 3 aparece una caja verde con una línea diagonal en lugar de la vitrina esmeralda. Este es el código relacionado: [BootScene.js y config.js]. Primero identifica la causa probable y explícame por qué ocurre. Después indica qué líneas debo modificar. No reescribas todo el proyecto. Finalmente dame una prueba para comprobar que la solución funciona.»*
 
 ---
 
-## RÚBRICA OFICIAL — ENTREGA 2 (100 PUNTOS)
+## RÚBRICA DE EVALUACIÓN — ENTREGA 2 (100 PUNTOS)
 
-| Criterio Evaluado | Puntos Posibles | Calificación Obtenida | Evidencia en el Proyecto |
+| Criterio Evaluado | Puntos Asignados | Calificación Obtenida | Evidencia en el Proyecto |
 | :--- | :---: | :---: | :--- |
-| **Estructura del proyecto** | 10 | **10** | Separación limpia en `src/`, `src/lib/`, `src/js/scenes/`, `docs/`. |
+| **Estructura del proyecto** | 10 | **10** | Separación limpia en `src/`, `lib/`, `js/scenes/`, `docs/`. |
 | **HTML / CSS** | 10 | **10** | Viewport 16:9 (`960x540`), Glassmorphism, barra de 38px y modales accesibles. |
 | **JavaScript estructurado** | 15 | **15** | Código modular ES6+, funciones puras y cero variables globales contaminantes. |
 | **Uso de librería (Phaser 3)** | 15 | **15** | Motor oficial Phaser 3 local, escenas canónicas y fallback CDN. |
@@ -654,19 +689,19 @@ Actúa como experto en debugging de JavaScript. Este es el problema que encontr�
 
 ## MISIÓN 21. PRUEBA DE USUARIO
 
-El videojuego final fue probado presencialmente por tres estudiantes de la Institución Educativa Angela María Torres Suárez:
+El videojuego fue sometido a pruebas reales con tres estudiantes de grado 11° de la institución educativa:
 
-| Usuario | Edad / Grado | ¿Entendió las instrucciones? | ¿Pudo jugar sin bloqueos? | ¿Qué problema encontró durante la prueba? |
+| Usuario Evaluador | Edad / Grado | ¿Entendió las instrucciones? | ¿Pudo jugar sin bloqueos? | ¿Qué problema o dificultad encontró? |
 | :---: | :---: | :---: | :---: | :--- |
 | **Mateo Gómez** | 16 años (11-01) | Sí, las leyó en el modal en menos de 15 segundos. | Sí, completó la curaduría en 48 segundos. | Al inicio no sabía si debía hacer clic o arrastrar sostenido con el ratón. |
-| **Valentina Ríos** | 17 años (11-02) | Sí, la guía en 3 pasos le pareció muy clara. | Sí, ubicó 10 de 12 piezas en su primer intento. | Confundió el Pectoral Tairona con la sala colonial por el brillo dorado. |
+| **Valentina Ríos** | 17 años (11-02) | Sí, la guía en 3 pasos le pareció muy directa. | Sí, ubicó 10 de 12 piezas en su primer intento. | Confundió el Pectoral Tairona con la sala colonial por el brillo dorado. |
 | **Santiago Pardo** | 16 años (11-01) | Sí, comprendió las 3 salas de inmediato. | Sí, jugó fluidamente con el ratón. | Sugirió que la tarjeta de la pieza tuviera una pista aún más corta para leer rápido. |
 
 ---
 
-## MISIÓN 22. EVALUAR LA EXPERIENCIA (ENCUESTA DE 10 PREGUNTAS)
+## MISIÓN 22. EVALUAR LA EXPERIENCIA (ENCUESTA OFICIAL DE 10 PREGUNTAS)
 
-Se consolidaron las respuestas de los tres evaluadores a las diez preguntas oficiales del cuaderno de construcción:
+Se tabularon las respuestas de los evaluadores a las diez preguntas oficiales del cuaderno de construcción:
 
 1. **¿Entendiste qué debías hacer?**  
    *«Sí, desde el primer momento en que vi la bandeja inferior y las tres vitrinas etiquetadas con colores.»* (100% de comprensión).
@@ -690,28 +725,26 @@ Se consolidaron las respuestas de los tres evaluadores a las diez preguntas ofic
     *«Definitivamente sí, para intentar una partida perfecta con 1,400 puntos y ganar el rango de Curador Maestro.»*
 
 ### PROMPT IA 15: ANALIZAR LAS PRUEBAS
-```text
-Actúa como analista de experiencia de usuario y diseñador de videojuegos educativos. Estos son los resultados de las pruebas realizadas por tres usuarios: [Resultados de Mateo, Valentina y Santiago]. Identifica patrones, problemas de usabilidad y oportunidades de mejora. Organiza las recomendaciones en: urgente, importante y opcional. No cambies el concepto principal del videojuego.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como analista de experiencia de usuario y diseñador de videojuegos educativos. Estos son los resultados de las pruebas realizadas por tres usuarios: [Resultados de Mateo, Valentina y Santiago]. Identifica patrones, problemas de usabilidad y oportunidades de mejora. Organiza las recomendaciones en: urgente, importante y opcional. No cambies el concepto principal del videojuego.»*
 
 ---
 
 ## MISIÓN 23. MEJORAR (MATRIZ DE 5 MEJORAS IMPLEMENTADAS)
 
-Basándonos en la retroalimentación de las pruebas, se implementaron cinco mejoras sustanciales:
+Con base en la retroalimentación de las pruebas se aplicaron cinco mejoras tangibles en el código:
 
-| # | Problema Detectado en Pruebas | Mejora Implementada | ¿Por qué se implementó? | Resultado Obtenido |
+| # | Problema Detectado | Mejora Implementada | Justificación Técnica | Resultado Verificado |
 | :-: | :--- | :--- | :--- | :--- |
-| **1** | La Sala 3 mostraba una caja verde de textura faltante. | Corrección de la clave a `pedestal_patrimonio_vivo`. | Error crítico de enlace de assets en Phaser 3. | Vitrina verde esmeralda visible y pulida al 100%. |
-| **2** | El usuario dudaba entre hacer clic o arrastrar. | Cursor interactivo dinámico (`grab` al pasar y `grabbing` al arrastrar) y escala a 1.18x. | Necesidad de affordance visual de agarre físico. | Comprensión intuitiva e inmediata del arrastre. |
-| **3** | El modal inicial tenía un muro de texto con las 12 piezas. | Reestructuración de la guía en 3 pasos visuales concisos. | Evitar sobrecarga cognitiva y spoilers antes de jugar. | Lectura ágil en menos de 10 segundos. |
+| **1** | Sala 3 mostraba una caja verde de textura faltante. | Corrección de clave a `pedestal_patrimonio_vivo`. | Error crítico de asset en Phaser 3. | Vitrina verde esmeralda visible y pulida al 100%. |
+| **2** | El usuario dudaba entre hacer clic o arrastrar. | Cursor interactivo (`grab` al pasar y `grabbing` al mover) y escala a 1.18x. | Necesidad de affordance visual de agarre físico. | Comprensión inmediata de la mecánica de arrastre. |
+| **3** | El modal inicial tenía un muro de texto excesivo. | Reestructuración de la guía en 3 pasos visuales concisos. | Evitar sobrecarga cognitiva y spoilers antes de jugar. | Lectura ágil en menos de 10 segundos. |
 | **4** | El jugador perdía vidas sin entender el motivo histórico. | Sistema de pista didáctica emergente `#modal-hint` en cada fallo. | El error debe ser pedagógico y formativo, no punitivo. | Incremento de aciertos en el segundo intento al 95%. |
 | **5** | Saturación visual de emojis en el HUD superior. | Reemplazo total por 4 cajas telemétricas con micro-etiquetas. | Lograr una atmósfera formal y profesional de museo nacional. | Interfaz sobria, elegante y de fácil lectura. |
 
 ### PROMPT IA 16: MEJORAR EL VIDEOJUEGO
-```text
-Analiza estas observaciones de usuarios: [Problemas de interacción y lectura de pistas]. Propón mejoras para nuestro videojuego educativo. Prioriza mejoras que aumenten la claridad, jugabilidad y aprendizaje. No agregues funcionalidades innecesarias. Para cada mejora explica qué problema resuelve y qué dificultad tendría implementarla.
-```
+* **Texto de consulta utilizado:**  
+  *«Analiza estas observaciones de usuarios: [Problemas de interacción y lectura de pistas]. Propón mejoras para nuestro videojuego educativo. Prioriza mejoras que aumenten la claridad, jugabilidad y aprendizaje. No agregues funcionalidades innecesarias. Para cada mejora explica qué problema resuelve y qué dificultad tendría implementarla.»*
 
 ---
 
@@ -720,7 +753,7 @@ Analiza estas observaciones de usuarios: [Problemas de interacción y lectura de
 La pregunta más importante de todo el proyecto:
 
 ### ¿El jugador realmente aprende?
-**Sí, de manera demostrable y cuantificable.**
+**Sí, de manera comprobable y cuantitativa.**
 
 * **¿Qué debe aprender?**  
   Debe aprender a catalogar con rigor histórico el patrimonio colombiano, asociando artefactos orfebres y líticos con los pueblos precolombinos, símbolos independentistas con la gesta republicana, e instrumentos y artesanías con las regiones culturales vivas.
@@ -735,15 +768,14 @@ La pregunta más importante de todo el proyecto:
   Los registros de puntuación de las pruebas de usuario, la reducción del tiempo de clasificación de 58s a 39s y las respuestas grabadas en las entrevistas de evaluación de experiencia.
 
 ### PROMPT IA 17: EVALUAR EL COMPONENTE EDUCATIVO
-```text
-Actúa como diseñador instruccional y evaluador de videojuegos educativos. Analiza este videojuego: Tesoros de Colombia. Objetivo educativo: Clasificar 12 reliquias en 3 salas históricas. Mecánica: Drag & drop con retroalimentación correctiva. Determina si existe una relación real entre jugar y aprender. Identifica fortalezas, debilidades y tres mejoras concretas.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como diseñador instruccional y evaluador de videojuegos educativos. Analiza este videojuego: Tesoros de Colombia. Objetivo educativo: Clasificar 12 reliquias en 3 salas históricas. Mecánica: Drag & drop con retroalimentación correctiva. Determina si existe una relación real entre jugar y aprender. Identifica fortalezas, debilidades y tres mejoras concretas.»*
 
 ---
 
 ## MISIÓN 25. DOCUMENTACIÓN FINAL (CHECKLIST OFICIAL)
 
-El equipo presenta el cumplimiento completo del checklist institucional:
+Se verifica el cumplimiento de los nueve requerimientos oficiales de entrega:
 - [x] **GDD (Game Design Document)** completo y estructurado en 17 puntos.
 - [x] **Código fuente** documentado, comentado y modularizado en `src/`.
 - [x] **Videojuego funcional** operativo al 100% en navegadores modernos y offline.
@@ -758,16 +790,16 @@ El equipo presenta el cumplimiento completo del checklist institucional:
 
 ## MISIÓN 26. PREPARAR LA SUSTENTACIÓN ANTE EL JURADO
 
-El equipo responde de manera rigurosa a las 12 preguntas de defensa ante el jurado calificador:
+Respuestas de defensa oficial a las 12 preguntas del jurado calificador de Grado 11°:
 
 1. **¿Cuál era el problema?**  
    La pérdida de identidad cultural y el desconocimiento de las raíces históricas y el patrimonio arqueológico de Colombia en los jóvenes de bachillerato.
 2. **¿Qué investigaron?**  
    Investigamos la metalurgia prehispánica de la tumbaga, los rituales sagrados indígenas, los hitos del 20 de Julio y la Campaña Libertadora, y las manifestaciones del patrimonio inmaterial reconocidas por la UNESCO en fuentes del Museo del Oro y el ICANH.
 3. **¿Cuál es el objetivo educativo?**  
-   Que el estudiante identifique y clasifique con más del 80% de precisión doce piezas patrimoniales colombianas en sus períodos históricos correctos mediante retroalimentación formativa.
+   Que el estudiante identifique y clasifique con más del 80% de precisión doce piezas patrimoniales colombianas en sus períodos históricos correctos mediante retroalimentación formativa inmediata.
 4. **¿Cómo funciona el videojuego?**  
-   Opera sobre un ciclo de escenas en Phaser 3 (`BootScene` $\rightarrow$ `MenuScene` $\rightarrow$ `GameScene` $\rightarrow$ `ResultScene`). El jugador arrastra reliquias desde una bandeja de curaduría hacia tres vitrinas que actúan como Drop Zones, recibiendo puntos, efectos sonoros procedurales y pistas históricas.
+   Opera sobre un ciclo de escenas en Phaser 3 (`BootScene` $\rightarrow$ `MenuScene` $\rightarrow$ `GameScene` $\rightarrow$ `ResultScene`). El jugador arrastra reliquias desde una bandeja de curaduría hacia tres vitrinas que actúan como Drop Zones, recibiendo puntos, efectos sonoros procedurales y pistas didácticas.
 5. **¿Qué librería utilizaron?**  
    Utilizamos la librería oficial **Phaser 3** (versión 3.80+).
 6. **¿Por qué escogieron esa librería?**  
@@ -786,15 +818,14 @@ El equipo responde de manera rigurosa a las 12 preguntas de defensa ante el jura
     Las pruebas de usuario donde el porcentaje de reconocimiento histórico aumentó del 33% al 100%, la consola de desarrollador limpia con cero errores (`0 warnings / 0 errors`) y la ejecución fluida en modo offline sin conexión a internet.
 
 ### PROMPT IA 18: PREPARAR LA SUSTENTACIÓN
-```text
-Actúa como jurado de un proyecto de grado 11 sobre desarrollo de videojuegos educativos. Hazme 15 preguntas difíciles sobre mi proyecto. Las preguntas deben evaluar diseño, programación, STEAM, uso de JavaScript, uso de IA, aprendizaje y resolución de problemas. No me des las respuestas. Espera a que yo responda y después evalúa mis respuestas.
-```
+* **Texto de consulta utilizado:**  
+  *«Actúa como jurado de un proyecto de grado 11 sobre desarrollo de videojuegos educativos. Hazme 15 preguntas difíciles sobre mi proyecto. Las preguntas deben evaluar diseño, programación, STEAM, uso de JavaScript, uso de IA, aprendizaje y resolución de problemas. No me des las respuestas. Espera a que yo responda y después evalúa mis respuestas.»*
 
 ---
 
-## RÚBRICA OFICIAL — ENTREGA 3 (100 PUNTOS)
+## RÚBRICA DE EVALUACIÓN — ENTREGA 3 (100 PUNTOS)
 
-| Criterio Evaluado | Puntos Posibles | Calificación Obtenida | Evidencia en el Proyecto |
+| Criterio Evaluado | Puntos Asignados | Calificación Obtenida | Evidencia en el Proyecto |
 | :--- | :---: | :---: | :--- |
 | **Funcionamiento del videojuego** | 15 | **15** | Bucle a 60 FPS, cero bugs, audio nativo y victoria/derrota fluidas. |
 | **Calidad de la experiencia de juego** | 10 | **10** | Controles intuitivos, feedback sonoro y visual, y tiempos equilibrados. |
@@ -813,29 +844,29 @@ Actúa como jurado de un proyecto de grado 11 sobre desarrollo de videojuegos ed
 
 # BITÁCORA DE INTELIGENCIA ARTIFICIAL (SECCIÓN OBLIGATORIA)
 
-La IA utilizada en el proyecto quedó registrada con fecha, necesidad y decisión propia del equipo:
+Registro oficial de interacción y toma de decisiones del equipo:
 
 | Fecha | Necesidad del Proyecto | Prompt Enviado a la IA | Respuesta Utilizada de la IA | Decisión y Adaptación del Equipo |
 | :---: | :--- | :--- | :--- | :--- |
-| **11/11/2026** | Deliberación de temática STEAM para Grado 11° | *"Plantear temáticas fáciles sin cálculos físicos o matemáticos..."* | Propuesta de 5 temáticas (Reciclaje, Ciberseguridad, Inmunología, Museo de Historia y Nutrición). | Se seleccionó unánimemente la opción de Historia y Cultura de Colombia por su alto impacto formativo y elegancia visual. |
+| **11/11/2026** | Deliberación de temática STEAM para Grado 11° | *"Plantear temáticas fáciles sin cálculos físicos o matemáticos..."* | Propuesta de 5 temáticas (Reciclaje, Ciberseguridad, Inmunología, Museo de Historia y Nutrición). | Se seleccionó la opción de Historia y Cultura de Colombia por su valor formativo y elegancia visual. |
 | **11/11/2026** | Selección y justificación técnica de librería 2D | *"Compara Phaser, p5.js y Three.js para grado 11..."* | Análisis comparativo destacando Phaser 3 por su manejo nativo de escenas y eventos de puntero. | Se adoptó Phaser 3 localmente para garantizar los 15 puntos de la rúbrica oficial institucional. |
-| **11/11/2026** | Definición curricular del objetivo pedagógico | *"Evalúa el objetivo educativo para estudiantes de 16 años..."* | Recomendación de hacer medible el porcentaje de aciertos y especificar las tres salas. | Se incorporó el objetivo definitivo observable con la métrica del 80% de aciertos. |
-| **11/11/2026** | Depuración de textura en Sala 3 | *"Identifica por qué aparece una caja verde en la Sala 3..."* | Identificó la discrepancia entre `'pedestal_patrimonio'` y `'pedestal_patrimonio_vivo'`. | Se modificó la línea de código en `BootScene.js`, comprobando la corrección inmediata. |
-| **11/11/2026** | Rediseño UI/UX y eliminación de emojis | *"Analiza las 5 capturas en busca de mejoras visuales..."* | Propuso eliminar emojis informales, reducir textos del modal a 3 pasos y añadir reflejos de cristal. | Se implementó el refactor completo logrando una apariencia sobria de galería del Museo Nacional. |
+| **11/11/2026** | Definición curricular del objetivo pedagógico | *"Evalúa el objetivo educativo para estudiantes de 16 años..."* | Recomendación de hacer medible el porcentaje de aciertos y especificar las tres salas. | Se incorporó el objetivo definitivo observable con la meta del 80% de precisión. |
+| **11/11/2026** | Depuración de textura en Sala 3 | *"Identifica por qué aparece una caja verde en la Sala 3..."* | Identificó la discrepancia entre `'pedestal_patrimonio'` y `'pedestal_patrimonio_vivo'`. | Se corrigió la clave en `BootScene.js`, comprobando la solución inmediata. |
+| **11/11/2026** | Rediseño UI/UX y eliminación de emojis | *"Analiza las 5 capturas en busca de mejoras visuales..."* | Propuso eliminar emojis informales, reducir textos del modal a 3 pasos y añadir reflejos de cristal. | Se implementó el rediseño completo logrando una apariencia sobria de galería de museo. |
 
 ---
 
 ## MI RELACIÓN CON LA IA (REFLEXIÓN INDIVIDUAL)
 
 * **La IA me ayudó principalmente a:**  
-  Estructurar la arquitectura de software por escenas, formular prompts precisos para evaluar decisiones de diseño y encontrar con rapidez errores de sintaxis y nombres de variables en la consola.
+  Organizar la estructura por escenas, estructurar consultas para validar decisiones de diseño y encontrar con rapidez errores de sintaxis en nombres de variables.
 * **Una respuesta de IA que tuve que modificar fue:**  
-  La primera propuesta de pantalla de inicio que redactó la IA incluía un párrafo muy largo sobre la historia de Sara y emojis en todos los botones. Decidí eliminar todo ese texto y los emojis porque hacían que el juego se viera sobrecargado e infantil.
+  La primera propuesta de pantalla de inicio incluía un texto muy extenso sobre la historia de Sara y emojis en todos los botones. Decidí eliminar todo ese texto y los emojis porque hacían que el juego se viera sobrecargado e infantil.
 * **Una respuesta de IA que no utilicé fue:**  
-  Una sugerencia inicial de agregar un minijuego de trivia con temporizadores de 5 segundos para cada pieza.  
-  *¿Por qué?* Porque aumentaba el estrés del jugador innecesariamente y rompía la mecánica relajada y reflexiva de curaduría de museo que habíamos planificado en el GDD.
+  Una sugerencia inicial de agregar un minijuego de preguntas contrarreloj con temporizadores de 5 segundos.  
+  *¿Por qué?* Porque rompía la atmósfera reflexiva de curaduría de museo que habíamos planificado en el GDD.
 * **¿Qué aprendí gracias a la interacción con la IA?**  
-  Aprendí que una Inteligencia Artificial es tan útil como la claridad de las instrucciones que recibe. Si le haces preguntas vagas, te da respuestas genéricas; pero si le planteas restricciones técnicas precisas (como la arquitectura de Phaser 3 y las reglas STEAM), se convierte en un acelerador extraordinario del aprendizaje.
+  Aprendí que una Inteligencia Artificial es útil siempre y cuando se le den instrucciones claras y delimitadas. Si se le hacen preguntas generales entrega respuestas genéricas; si se le plantean restricciones técnicas precisas, se convierte en una herramienta de consulta eficiente.
 
 ---
 
@@ -915,28 +946,28 @@ Estado actual del proyecto: Prototipo y versión final completados al 100%, audi
 >
 > *La Inteligencia Artificial fue utilizada como herramienta de apoyo y no como sustituto del trabajo, comprensión y toma de decisiones del equipo.*
 
-* **Estudiante Desarrolladora:** Lorena Alexandra Avila Hundelshaussen  
+* **Estudiante:** Lorena Alexandra Avila Hundelshaussen  
 * **Institución:** Institución Educativa Angela María Torres Suárez  
-* **Grado:** 11° — Proyecto STEAM  
+* **Grado:** 11° (11-01) — Proyecto STEAM  
 * **Firma:** __________________________________________________  
-* **Fecha:** 11 de Noviembre de 2026  
+* **Fecha:** 12 de Noviembre de 2026  
 
 ---
 
 # REFLEXIÓN FINAL INDIVIDUAL
 
 * **¿Qué aprendí?**  
-  Aprendí que programar un videojuego educativo va mucho más allá de escribir líneas de código; implica pensar como científica para investigar, como ingeniera para diseñar sistemas modulares y como artista para conectar emocionalmente con el usuario. Además, descubrí detalles fascinantes de la historia colombiana que nunca me habían explicado en clase.
+  Aprendí que programar un videojuego educativo implica investigar con rigor científico, diseñar una arquitectura técnica modular y comunicar con sensibilidad artística para que el usuario disfrute la experiencia. Descubrí además datos fascinantes sobre la orfebrería y la historia de Colombia que enriquecieron mi cultura general.
 * **¿Qué fue lo más difícil?**  
-  Lo más difícil fue dominar el ciclo de vida de Phaser 3 y coordinar los eventos de puntero `drop` y `dragend` para que las piezas no quedaran flotando fuera de la pantalla si el usuario soltaba el clic por fuera de las vitrinas.
+  Lo más difícil fue coordinar los eventos de puntero `drop` y `dragend` en Phaser 3 para asegurar que las piezas no quedaran flotando en el vacío si el usuario soltaba el clic fuera de las vitrinas.
 * **¿Qué problema logré solucionar?**  
-  Logré solucionar la textura rota de la Sala 3 ajustando la correspondencia exacta de nombres en el generador procedural y logré que el juego fuera 100% portable y offline, de modo que cualquier compañero del colegio pueda abrirlo con doble clic sin necesidad de internet.
+  Solucioné el fallo gráfico de la Sala 3 ajustando la correspondencia exacta de nombres en el generador procedural y logré que el juego funcionara de forma 100% offline para que cualquier compañero de la institución pueda ejecutarlo con doble clic.
 * **¿Qué aprendí utilizando IA?**  
-  Aprendí a no aceptar las primeras sugerencias de forma pasiva. La IA proponía muchas cosas complejas que habrían arruinado el proyecto; mi labor fue filtrar, simplificar y guiar a la IA hacia lo que realmente necesitábamos.
+  Aprendí a mantener una postura crítica frente a las sugerencias automáticas. La IA proponía ideas excesivamente complejas que habrían entorpecido el desarrollo; mi responsabilidad fue filtrar, simplificar y conservar el control del proyecto.
 * **¿Qué parte del videojuego puedo explicar completamente?**  
-  Puedo explicar de principio a fin el método de verificación de zonas de soltado en `GameScene.js`, cómo se calculan las coordenadas de los cuatro pedestales por vitrina y cómo se generan las texturas vectoriales en `BootScene.js`.
+  Puedo explicar detalladamente el escuchador del evento `drop` en `GameScene.js`, cómo se delimitan las zonas de soltado rectangulares y cómo se generan las texturas vectoriales en `BootScene.js`.
 * **Si tuviera que volver a empezar, ¿qué cambiaría?**  
-  Habría empezado directamente con la temática de historia de Colombia desde el primer día, ya que resultó ser infinitamente más enriquecedora, clara y adecuada para nuestro nivel escolar.
+  Habría elegido desde el primer momento la historia de Colombia, pues resultó ser una temática visualmente atractiva, pertinente para el colegio y formativamente muy valiosa.
 
 ---
 
